@@ -1,0 +1,222 @@
+{
+	"name": "You, Pac-Man",
+	"shortDescription": "YOU are Pac-Man. Eat your way through the labyrinth!",
+	"longDescription": "YOU are Pac-Man. Collect as many points as possible without getting caught! Eat your way through the labyrinth and beat your highscore.",
+	"coverImage": "Cover.png",
+	"kpis": "0,2,4,5",
+	"detailKPIs": "0,3,4,5,6",
+	"enablePost": true,
+	"deathSound": "Event 9.mp3",
+	"settings": [
+		{
+			"key": "ghosts",
+			"name": "Ghosts",
+			"description": "Deactivate for just collecting points without a challenge",
+			"defaultValue": "true"
+		}
+	],
+	"speech": [
+		{
+			"event": "ENTER_ROOM",
+			"key": "Intro",
+			"text": "Time is ticking. Collect as many elements as you can and find your way out again."
+		},
+		{
+			"event": "SEE_OBJECT",
+			"key": "SafetyZone",
+			"text": "The sign says it's a safety zone. I wonder what happens when you step closer.",
+			"proximity": 1
+		},
+		{
+			"event": "SEE_OBJECT",
+			"key": "Inky",
+			"text": "I'd try avoiding this thing if I were you."
+		},
+		{
+			"event": "HEAR_OBJECT",
+			"key": "Inky",
+			"text": "Do you hear that sound? Seems like we are not alone in this labyrinth."
+		}
+	],
+	"spawnRules": [
+		{
+			"key": "Inky",
+			"enabledFormula": "$ghosts",
+			"objectKeys": [
+				"Inky"
+			],
+			"amountType": "TOTAL",
+			"amount": 2,
+			"dontCountAsObstacle": true,
+			"validRooms": [
+				"2",
+				"3",
+				"4"
+			]
+		},
+		{
+			"key": "SafetyZone",
+			"enabledFormula": "$ghosts",
+			"objectKeys": [
+				"SafetyZone"
+			],
+			"amountType": "PROBABILITY",
+			"amount": 100,
+			"dontCountAsObstacle": true,
+			"stretchToCeiling": true,
+			"restrictions": [
+				"deadend"
+			],
+			"companions": [
+				{
+					"key": "SafetyZoneExplanations",
+					"objectKeys": [
+						"ImageFrame"
+					],
+					"orientation": "OPPOSITE",
+					"dontCountAsObstacle": true,
+					"snap": true,
+					"y": 3
+				}
+			]
+		},
+		{
+			"key": "PowerPills",
+			"layer": "collectibles",
+			"objectKeys": [
+				"PowerPill"
+			],
+			"yRange": [
+				1,
+				2,
+				3
+			],
+			"amountType": "PROBABILITY",
+			"amount": 15,
+			"dontCountAsObstacle": true,
+			"orientation": "RANDOM_SIDE"
+		},
+		{
+			"key": "Fruits",
+			"layer": "collectibles",
+			"objectKeys": [
+				"Apple",
+				"Banana",
+				"Pear",
+				"Mushroom",
+				"Pretzel",
+				"Watermelon"
+			],
+			"yRange": [
+				1,
+				2,
+				3
+			],
+			"amountType": "PROBABILITY",
+			"amount": 20,
+			"dontCountAsObstacle": true,
+			"orientation": "RANDOM_SIDE"
+		},
+		{
+			"key": "Coins",
+			"layer": "collectibles",
+			"objectKeys": [
+				"Collectible"
+			],
+			"yRange": [
+				1,
+				2,
+				3
+			],
+			"amountType": "PROBABILITY",
+			"amount": 100,
+			"dontCountAsObstacle": true,
+			"orientation": "RANDOM_SIDE"
+		},
+		{
+			"key": "Directions",
+			"objectKeys": [
+				"/Base/DirectionIndicator"
+			],
+			"amountType": "PROBABILITY",
+			"amount": 30,
+			"y": 3,
+			"dontCountAsObstacle": true,
+			"minDistance": 1
+		}
+	],
+	"replacements": [
+		{
+			"key": "[walls]",
+			"type": "MATERIAL",
+			"materials": "Wall-Bottom,Wall-Middle,*,Wall-Top"
+		},
+		{
+			"key": "[ceiling]",
+			"type": "MATERIAL",
+			"materials": "Wall-Middle"
+		},
+		{
+			"key": "[ground]",
+			"type": "MATERIAL",
+			"materials": "Wall-Middle"
+		}
+	],
+	"objectSpecs": [
+		{
+			"objectKey": "Apple",
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Banana",
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Collectible",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Inky",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Mushroom",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Pear",
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "PowerPill",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Collectible",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Pretzel",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Watermelon",
+			"pivotType": "CENTER"
+		}
+	]
+}

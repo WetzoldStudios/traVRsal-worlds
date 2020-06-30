@@ -1,0 +1,367 @@
+{
+	"name": "A.I. Take-Over",
+	"shortDescription": "Fight your way through a dangerous maze.",
+	"longDescription": "A hostile A.I. has taken over an elite-forces training ground. Fight your way through and clear out all enemies.",
+	"coverImage": "Cover.png",
+	"kpis": "0,1,2,4",
+	"detailKPIs": "0,1,2,3,4",
+	"enablePost": true,
+	"settings": [
+		{
+			"key": "spiderbots",
+			"name": "Spider Bots",
+			"description": "Walk around and can be a bit scary",
+			"defaultValue": "true"
+		}
+	],
+	"initialVariables": [
+		{
+			"key": "lights",
+			"value": "0"
+		},
+		{
+			"key": "flashlight",
+			"value": "1"
+		}
+	],
+	"speech": [
+		{
+			"event": "ENTER_ROOM",
+			"key": "ShootingRange",
+			"text": "Grab your gear and head on!"
+		},
+		{
+			"event": "ENTER_ROOM",
+			"key": "MiniBoss",
+			"text": "A laser grid activated, blocking the way. Try to find the power source!"
+		},
+		{
+			"event": "VARIABLE_ON",
+			"key": "laser1",
+			"text": "The laser grid is down! You should be able to proceed now."
+		},
+		{
+			"event": "ENTER_TRANSITION",
+			"key": "ShootingRange",
+			"text": "This will not be easy."
+		},
+		{
+			"event": "SEE_OBJECT",
+			"key": "TargetTurret",
+			"text": "Take cover! The turrets shoot on sight."
+		},
+		{
+			"event": "SEE_OBJECT",
+			"key": "SpiderBot",
+			"text": "I'd not try petting this thing if I were you."
+		},
+		{
+			"event": "HEAR_OBJECT",
+			"key": "SpiderBot",
+			"text": "Do you hear that sound? Something is moving in this labyrinth."
+		}
+	],
+	"spawnRules": [
+		{
+			"key": "SpiderBot",
+			"enabledFormula": "$spiderbots",
+			"objectKeys": [
+				"SpiderBot"
+			],
+			"amountType": "TOTAL",
+			"amount": 20,
+			"orientation": "RANDOM_SIDE"
+		},
+		{
+			"key": "Directions",
+			"objectKeys": [
+				"/Base/DirectionIndicator"
+			],
+			"amountType": "PROBABILITY",
+			"amount": 20,
+			"y": 3,
+			"dontCountAsObstacle": true,
+			"minDistance": 0
+		},
+		{
+			"key": "DeadEnds",
+			"objectKeys": [
+				"Barrel",
+				"Barrel2"
+			],
+			"amountType": "PROBABILITY",
+			"amount": 95,
+			"orientation": "PATH_BACK",
+			"restrictions": [
+				"deadend"
+			]
+		},
+		{
+			"key": "CornerCam",
+			"objectKeys": [
+				"CCTV"
+			],
+			"amountType": "PROBABILITY",
+			"amount": 30,
+			"restrictions": [
+				"corner"
+			]
+		},
+		{
+			"key": "Lamps",
+			"objectKeys": [
+				"Lamp3"
+			],
+			"amountType": "PROBABILITY",
+			"amount": 30,
+			"y": 4,
+			"orientation": "FREE_SIDE",
+			"minDistance": 1
+		},
+		{
+			"key": "Targets",
+			"objectKeys": [
+				"TargetTurret"
+			],
+			"amount": 30,
+			"orientation": "PATH_BACK"
+		},
+		{
+			"key": "Targets2",
+			"objectKeys": [
+				"TargetDisc"
+			],
+			"amount": 12,
+			"orientation": "PATH_BACK"
+		},
+		{
+			"key": "IntroTopTargets",
+			"objectKeys": [
+				"TargetDisc"
+			],
+			"amount": 3,
+			"dontCountAsTarget": true,
+			"validSockets": [
+				"ENEMY_TOP"
+			],
+			"validRooms": [
+				"ShootingRange"
+			]
+		},
+		{
+			"key": "IntroBottomTargets",
+			"objectKeys": [
+				"TargetDummy"
+			],
+			"amount": 2,
+			"dontCountAsTarget": true,
+			"validSockets": [
+				"ENEMY_BOTTOM"
+			],
+			"validRooms": [
+				"ShootingRange"
+			]
+		},
+		{
+			"key": "TowerTopTargets",
+			"objectKeys": [
+				"TargetTurret"
+			],
+			"amount": 2,
+			"health": 5,
+			"scale": 400,
+			"validSockets": [
+				"ENEMY_TOP"
+			],
+			"validRooms": [
+				"Pavilion"
+			]
+		},
+		{
+			"key": "TowerSideTargets",
+			"objectKeys": [
+				"HeavyMissileTurret"
+			],
+			"amount": 1,
+			"health": 100,
+			"validSockets": [
+				"ENEMY_SIDE"
+			],
+			"validRooms": [
+				"Pavilion"
+			]
+		},
+		{
+			"key": "TowerBottomTargets",
+			"objectKeys": [
+				"TargetDummy"
+			],
+			"amount": 3,
+			"health": 1,
+			"validSockets": [
+				"ENEMY_BOTTOM"
+			],
+			"validRooms": [
+				"Pavilion"
+			]
+		}
+	],
+	"replacements": [
+		{
+			"key": "[walls]",
+			"type": "MATERIAL",
+			"materials": "WoodenWall"
+		},
+		{
+			"key": "[ceiling]",
+			"type": "MATERIAL",
+			"materials": "/Base/Stone"
+		},
+		{
+			"key": "[ground]",
+			"type": "MATERIAL",
+			"materials": "/Base/Concrete"
+		},
+		{
+			"key": "/Base/Wall",
+			"type": "OBJECT",
+			"objectKey": "WoodenWall",
+			"materials": ""
+		}
+	],
+	"objectSpecs": [
+		{
+			"objectKey": "Barrel",
+			"scale": {
+				"x": 0.5,
+				"y": 0.5,
+				"z": 0.5
+			},
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Barrel2",
+			"scale": {
+				"x": 0.5,
+				"y": 0.5,
+				"z": 0.5
+			},
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Boots",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Can",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "CCTV",
+			"position": {
+				"x": 0.26,
+				"y": 0,
+				"z": 0
+			},
+			"atCeiling": true,
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Lamp3",
+			"PinToSide": true,
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Oil",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Oil2",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Pistol",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "RotatingLaser",
+			"atCeiling": true,
+			"pivotType": "BOTTOM_FRONT_CENTER"
+		},
+		{
+			"objectKey": "Sandbag",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Sign-HighVoltage",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Sign-NoDrinking",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Sign-Trespassing",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "SpiderBot",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Sandbag",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "Spool",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "SwitchBox",
+			"height": 3,
+			"pivotType": "BOTTOM_FRONT_CENTER"
+		},
+		{
+			"objectKey": "TargetDisc",
+			"atCeiling": true,
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "TargetTurret",
+			"atCeiling": true,
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "TimeGranade",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "Wheel",
+			"pivotType": "BOTTOM_CENTER"
+		},
+		{
+			"objectKey": "TimeGranade",
+			"pivotType": "CENTER"
+		},
+		{
+			"objectKey": "WoodenDoorFrame",
+			"position": {
+				"x": 0.01,
+				"y": 0,
+				"z": 0.02
+			},
+			"rotation": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"scale": {
+				"x": 0.4,
+				"y": 1,
+				"z": 0.5
+			},
+			"height": 4,
+			"pivotType": "BOTTOM_FRONT_CENTER"
+		}
+	]
+}
