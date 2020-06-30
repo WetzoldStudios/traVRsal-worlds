@@ -1,0 +1,14 @@
+{
+	"maps": [
+		{
+			"fileName": "HorizontalMaze.tmx"
+		},
+		{
+			"fileName": "HorizontalMazeNoLeft.tmx"
+		},
+		{
+			"fileName": "HorizontalMazeNoRight.tmx"
+		}
+	],
+	"type": "world"
+}

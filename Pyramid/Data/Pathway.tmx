@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="27" nextobjectid="23">
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <group id="6" name="Underground" visible="0">
+  <properties>
+   <property name="Death" type="bool" value="true"/>
+   <property name="Height" type="float" value="4"/>
+   <property name="NoSpawning" type="bool" value="true"/>
+   <property name="Underground" type="bool" value="true"/>
+  </properties>
+  <layer id="10" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Type" value="/Base/Sandstone"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,4,4,
+4,4,4
+</data>
+  </layer>
+  <layer id="8" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+2684354586,3221225497,3221225498,
+2684354585,0,1610612761,
+26,25,1610612762
+</data>
+  </layer>
+  <layer id="20" name="Spikes" width="3" height="3">
+   <properties>
+    <property name="AutoFill" type="bool" value="true"/>
+    <property name="Type" value="Spikes"/>
+   </properties>
+   <data encoding="csv">
+35,35,35,
+35,35,35,
+35,35,35
+</data>
+  </layer>
+ </group>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="GroundLeft" width="3" height="3">
+   <properties>
+    <property name="Type" value="/Base/Sandstone"/>
+   </properties>
+   <data encoding="csv">
+4,0,0,
+4,0,0,
+4,0,0
+</data>
+  </layer>
+  <layer id="19" name="GroundRight" width="3" height="3">
+   <properties>
+    <property name="Type" value="/Base/Sandstone"/>
+   </properties>
+   <data encoding="csv">
+0,0,4,
+0,0,4,
+0,0,4
+</data>
+  </layer>
+  <objectgroup id="4" name="Transitions">
+   <object id="18" gid="8" x="100" y="100" width="50" height="50" rotation="-270">
+    <properties>
+     <property name="MazeRooms" value="/Base/HorizontalMaze"/>
+     <property name="MazeTransitions" type="int" value="2"/>
+     <property name="TargetRoom" value="Pharao"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <layer id="3" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+3221225500,3221225497,3221225498,
+2684354587,0,1610612761,
+26,25,1610612762
+</data>
+  </layer>
+  <layer id="21" name="Walls2" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,0,2684354585,
+0,0,2684354585
+</data>
+  </layer>
+  <objectgroup id="18" name="PathMaze">
+   <properties>
+    <property name="GenerateMaze" type="bool" value="true"/>
+    <property name="MazeType" value="Path"/>
+    <property name="ObjectKey" value="/Base/Sandstone"/>
+   </properties>
+   <object id="15" gid="17" x="100" y="50" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+   <object id="16" gid="17" x="50" y="100" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="22" name="NoSpawnZones">
+   <object id="20" gid="22" x="0" y="100" width="50" height="50" rotation="90"/>
+   <object id="21" gid="22" x="0" y="100" width="50" height="50"/>
+   <object id="22" gid="22" x="0" y="50" width="50" height="50"/>
+  </objectgroup>
+  <layer id="2" name="Ceiling" width="3" height="3" visible="0">
+   <properties>
+    <property name="AtCeiling" type="bool" value="true"/>
+    <property name="Type" value="/Base/Sandstone"/>
+   </properties>
+   <data encoding="csv">
+3,3,3,
+3,3,3,
+3,3,3
+</data>
+  </layer>
+ </group>
+</map>

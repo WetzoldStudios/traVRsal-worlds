@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="67">
+ <properties>
+  <property name="NoSpawning-Targets" type="bool" value="true"/>
+  <property name="NoSpawning-Targets2" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <group id="20" name="Underground" visible="0" locked="1">
+  <properties>
+   <property name="Height" type="float" value="8"/>
+   <property name="NoSpawning" type="bool" value="true"/>
+   <property name="Underground" type="bool" value="true"/>
+  </properties>
+  <layer id="28" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,5,0,
+0,0,0
+</data>
+  </layer>
+  <layer id="27" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,2684354565,0,
+0,0,0
+</data>
+  </layer>
+  <layer id="26" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,3221225477,0,
+0,0,0
+</data>
+  </layer>
+  <layer id="25" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,1610612741,0,
+0,0,0
+</data>
+  </layer>
+  <objectgroup id="14" name="Scenery">
+   <object id="64" gid="34" x="50" y="100" width="50" height="50">
+    <properties>
+     <property name="SceneryName" value="Towers"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="3"/>
+  </properties>
+  <layer id="19" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Materials" value="/Base/Metal"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,0,4,
+4,4,4
+</data>
+  </layer>
+  <objectgroup id="4" name="Transitions">
+   <object id="8" gid="8" x="50" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="MazeRooms" value="/Base/HorizontalMazeNoLeft"/>
+     <property name="MazeTargetPosition" value="2,2"/>
+     <property name="MazeTransitions" type="int" value="1"/>
+     <property name="TargetRoom" value="ElevatorMaze"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <layer id="16" name="Walls" width="3" height="3">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,5,0,
+0,0,0
+</data>
+  </layer>
+  <layer id="23" name="Walls" width="3" height="3">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,3221225477,0,
+0,0,0
+</data>
+  </layer>
+  <layer id="24" name="Walls" width="3" height="3">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,1610612741,0,
+0,0,0
+</data>
+  </layer>
+  <objectgroup id="30" name="Walls2">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="65" gid="5" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,-1"/>
+    </properties>
+   </object>
+   <object id="66" gid="5" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+     <property name="Virtual" type="bool" value="false"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>

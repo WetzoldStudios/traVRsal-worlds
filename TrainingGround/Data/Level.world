@@ -1,0 +1,17 @@
+{
+	"maps": [
+		{
+			"fileName": "ShootingRange.tmx"
+		},
+		{
+			"fileName": "Pavilion.tmx"
+		},
+		{
+			"fileName": "MiniBoss.tmx"
+		},
+		{
+			"fileName": "ElevatorMaze.tmx"
+		}
+	],
+	"type": "world"
+}

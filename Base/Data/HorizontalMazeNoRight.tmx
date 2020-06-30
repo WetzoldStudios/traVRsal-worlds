@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="14" nextobjectid="45">
+ <properties>
+  <property name="Virtual" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Materials" value="[ground]"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,4,4,
+4,4,4
+</data>
+  </layer>
+  <layer id="3" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <data encoding="csv">
+2684354566,0,0,
+2684354565,0,0,
+6,0,0
+</data>
+  </layer>
+  <objectgroup id="12" name="Maze">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="GenerateMaze" type="bool" value="true"/>
+    <property name="HoleProbability" type="float" value="70"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="43" gid="19" x="50" y="150" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
+   <object id="44" gid="19" x="50" y="50" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <layer id="2" name="Ceiling" width="3" height="3" visible="0">
+   <properties>
+    <property name="Materials" value="[ceiling]"/>
+   </properties>
+   <data encoding="csv">
+3,0,0,
+3,0,0,
+3,0,0
+</data>
+  </layer>
+  <layer id="13" name="Ceiling" width="3" height="3" visible="0">
+   <properties>
+    <property name="Anchor" value="1,0"/>
+    <property name="Materials" value="[ceiling]"/>
+   </properties>
+   <data encoding="csv">
+0,3,0,
+0,3,0,
+0,3,0
+</data>
+  </layer>
+ </group>
+</map>

@@ -1,0 +1,17 @@
+{
+	"maps": [
+		{
+			"fileName": "Breach.tmx"
+		},
+		{
+			"fileName": "Combination.tmx"
+		},
+		{
+			"fileName": "Pathway.tmx"
+		},
+		{
+			"fileName": "Pharao.tmx"
+		}
+	],
+	"type": "world"
+}

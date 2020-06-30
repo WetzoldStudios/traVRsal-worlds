@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="19" nextobjectid="66">
+ <properties>
+  <property name="InvisibleGround" type="bool" value="true"/>
+  <property name="IsIntro" type="bool" value="true"/>
+  <property name="Music" value="/Base/FutureWorld_Loading_Loop.ogg"/>
+  <property name="NoAgents" type="bool" value="true"/>
+  <property name="NoSpawning" type="bool" value="true"/>
+  <property name="Scenery" value="ShootingRange"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="3"/>
+  </properties>
+  <objectgroup id="4" name="Transitions">
+   <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="MazeRooms" value="/Base/HorizontalMaze"/>
+     <property name="MazeTransitions" type="int" value="4"/>
+     <property name="Music" value="Modern Dark LOOP.wav"/>
+     <property name="TargetRoom" value="MiniBoss"/>
+    </properties>
+   </object>
+   <object id="55" gid="20" x="100" y="50" width="50" height="50" rotation="180"/>
+  </objectgroup>
+  <layer id="16" name="Walls2" width="3" height="3">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,2684354565,0,
+0,2684354565,0,
+0,2684354565,0
+</data>
+  </layer>
+  <layer id="3" name="Walls" width="3" height="3" visible="0">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <data encoding="csv">
+2684354566,0,0,
+2684354565,0,0,
+6,0,0
+</data>
+  </layer>
+  <objectgroup id="15" name="Objects">
+   <object id="59" type="/Base/Door" gid="13" x="50" y="0" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+     <property name="Type" value="WoodenDoorFrame"/>
+    </properties>
+   </object>
+   <object id="63" type="/Base/Button" gid="24" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+     <property name="Variable" value="lights"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="65" type="WoodenSign" gid="35" x="100" y="0" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+     <property name="ZOffset" type="float" value="0.4"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="18" name="Elevator"/>
+  <objectgroup id="17" name="Items">
+   <properties>
+    <property name="ValidSockets" value="INVENTORY"/>
+   </properties>
+   <object id="60" type="TimeGranade" gid="23" x="100" y="50" width="50" height="50"/>
+   <object id="61" type="Pistol" gid="23" x="100" y="150" width="50" height="50"/>
+   <object id="62" type="/Base/Flashlight" gid="23" x="100" y="100" width="50" height="50">
+    <properties>
+     <property name="Variable" value="flashlight"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="14" name="Scenery">
+   <object id="56" gid="34" x="100" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="SceneryName" value="ShootingRange"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>
