@@ -2,7 +2,7 @@
 
 # Introduction
 
-traVRsal contains an ever growing number of levels to experience. Using the [traVRsal SDK](https://github.com/WetzoldStudios/traVRsal-sdk/wiki) everyone can create these. This repository acts as an inventory of levels and additional examples for everyone to study and reuse.
+traVRsal contains an ever growing number of levels to experience. Using the [traVRsal SDK](https://github.com/WetzoldStudios/traVRsal-sdk) everyone can create these. This repository acts as an inventory of levels and additional examples for everyone to study and reuse.
 
 # Levels
 
