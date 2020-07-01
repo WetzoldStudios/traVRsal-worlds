@@ -12,7 +12,7 @@ traVRsal contains an ever growing number of levels to experience. Using the [tra
 
 # Levels
 
-* [Base (reusable assets)](https://wetzoldstudios.github.io/traVRsal-levels/PacMan)
+* [Base (reusable assets)](https://wetzoldstudios.github.io/traVRsal-levels/Base)
+* [A.I. Take-Over](https://wetzoldstudios.github.io/traVRsal-levels/TrainingGround)
 * [Human Pac-Man](https://wetzoldstudios.github.io/traVRsal-levels/PacMan)
 * [The Pyramid](https://wetzoldstudios.github.io/traVRsal-levels/Pyramid)
-* [A.I. Take-Over](https://wetzoldstudios.github.io/traVRsal-levels/TrainingGround)
