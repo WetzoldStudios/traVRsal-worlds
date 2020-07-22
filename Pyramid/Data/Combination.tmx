@@ -62,6 +62,7 @@
     <properties>
      <property name="Images" value="[variable]"/>
      <property name="Materials" value="/Base/Stone"/>
+     <property name="Snap" type="bool" value="true"/>
      <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="0,1,2"/>
     </properties>
@@ -70,6 +71,7 @@
     <properties>
      <property name="Images" value="[variable]"/>
      <property name="Materials" value="/Base/Stone"/>
+     <property name="Snap" type="bool" value="true"/>
      <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="0,1,2"/>
     </properties>
@@ -79,6 +81,7 @@
      <property name="Anchor" value="-1,0"/>
      <property name="Images" value="[variable]"/>
      <property name="Materials" value="/Base/Stone"/>
+     <property name="Snap" type="bool" value="true"/>
      <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="0,1,2"/>
     </properties>
@@ -87,6 +90,7 @@
     <properties>
      <property name="Images" value="[variable]"/>
      <property name="Materials" value="/Base/Stone"/>
+     <property name="Snap" type="bool" value="true"/>
      <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="0,1,2"/>
     </properties>
@@ -95,6 +99,7 @@
     <properties>
      <property name="Images" value="[variable]"/>
      <property name="Materials" value="/Base/Stone"/>
+     <property name="Snap" type="bool" value="true"/>
      <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="0,1,2"/>
     </properties>

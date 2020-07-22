@@ -189,6 +189,11 @@
                                  "value":"\/Base\/Stone"
                                 }, 
                                 {
+                                 "name":"Snap",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
                                  "name":"Variable",
                                  "type":"string",
                                  "value":"combo-door-?"
@@ -225,6 +230,11 @@
                                  "name":"Materials",
                                  "type":"string",
                                  "value":"\/Base\/Stone"
+                                }, 
+                                {
+                                 "name":"Snap",
+                                 "type":"bool",
+                                 "value":true
                                 }, 
                                 {
                                  "name":"Variable",
@@ -265,6 +275,11 @@
                                  "value":"\/Base\/Stone"
                                 }, 
                                 {
+                                 "name":"Snap",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
                                  "name":"Variable",
                                  "type":"string",
                                  "value":"combo-door-?"
@@ -303,6 +318,11 @@
                                  "value":"\/Base\/Stone"
                                 }, 
                                 {
+                                 "name":"Snap",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
                                  "name":"Variable",
                                  "type":"string",
                                  "value":"combo-door-?"
@@ -339,6 +359,11 @@
                                  "name":"Materials",
                                  "type":"string",
                                  "value":"\/Base\/Stone"
+                                }, 
+                                {
+                                 "name":"Snap",
+                                 "type":"bool",
+                                 "value":true
                                 }, 
                                 {
                                  "name":"Variable",

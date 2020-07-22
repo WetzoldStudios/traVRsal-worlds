@@ -1,6 +1,6 @@
 {
 	"name": "The Pyramid",
-	"shortDescription": "Find the ancient pyramid's treasure before running out of time.",
+	"shortDescription": "Find the ancient pyramid's treasure.",
 	"longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Find the ancient treasure and also your way out again.",
 	"coverImage": "Cover.png",
 	"initialItemRight": "/Base/Flashlight",

@@ -124,6 +124,7 @@
 				"TargetTurret"
 			],
 			"amount": 30,
+			"snap": true,
 			"orientation": "PATH_BACK"
 		},
 		{
@@ -259,12 +260,12 @@
 		{
 			"objectKey": "CCTV",
 			"position": {
-				"x": 0.26,
-				"y": 0,
+				"x": 0,
+				"y": 0.01,
 				"z": 0
 			},
 			"atCeiling": true,
-			"pivotType": "CENTER"
+			"pivotType": "BOTTOM_CENTER"
 		},
 		{
 			"objectKey": "Lamp3",
