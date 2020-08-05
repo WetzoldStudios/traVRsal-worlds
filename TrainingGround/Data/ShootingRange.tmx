@@ -17,10 +17,10 @@
   <objectgroup id="4" name="Transitions">
    <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
     <properties>
-     <property name="MazeRooms" value="/Base/HorizontalMaze"/>
+     <property name="MazeZones" value="/Base/HorizontalMaze"/>
      <property name="MazeTransitions" type="int" value="4"/>
      <property name="Music" value="Modern Dark LOOP.wav"/>
-     <property name="TargetRoom" value="MiniBoss"/>
+     <property name="TargetZone" value="MiniBoss"/>
     </properties>
    </object>
    <object id="55" gid="20" x="100" y="50" width="50" height="50" rotation="180"/>

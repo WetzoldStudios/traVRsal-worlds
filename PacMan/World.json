@@ -17,7 +17,7 @@
 	],
 	"speech": [
 		{
-			"event": "ENTER_ROOM",
+			"event": "ENTER_ZONE",
 			"key": "Intro",
 			"text": "Time is ticking. Collect as many elements as you can and find your way out again."
 		},
@@ -48,7 +48,7 @@
 			"amountType": "TOTAL",
 			"amount": 2,
 			"dontCountAsObstacle": true,
-			"validRooms": [
+			"validZones": [
 				"2",
 				"3",
 				"4"

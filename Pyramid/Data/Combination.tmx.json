@@ -400,14 +400,14 @@
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MazeRooms",
-                                 "type":"string",
-                                 "value":"\/Base\/HorizontalMaze"
-                                }, 
-                                {
                                  "name":"MazeTransitions",
                                  "type":"int",
                                  "value":2
+                                }, 
+                                {
+                                 "name":"MazeZones",
+                                 "type":"string",
+                                 "value":"\/Base\/HorizontalMaze"
                                 }, 
                                 {
                                  "name":"Snap",
@@ -416,6 +416,11 @@
                                 }, 
                                 {
                                  "name":"TargetRoom",
+                                 "type":"string",
+                                 "value":""
+                                }, 
+                                {
+                                 "name":"TargetZone",
                                  "type":"string",
                                  "value":"Pathway"
                                 }],

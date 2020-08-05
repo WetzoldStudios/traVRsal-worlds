@@ -273,11 +273,6 @@
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MazeRooms",
-                                 "type":"string",
-                                 "value":"\/Base\/HorizontalMaze"
-                                }, 
-                                {
                                  "name":"MazeTargetPosition",
                                  "type":"string",
                                  "value":"0,0"
@@ -288,12 +283,22 @@
                                  "value":3
                                 }, 
                                 {
+                                 "name":"MazeZones",
+                                 "type":"string",
+                                 "value":"\/Base\/HorizontalMaze"
+                                }, 
+                                {
                                  "name":"Snap",
                                  "type":"bool",
                                  "value":true
                                 }, 
                                 {
                                  "name":"TargetRoom",
+                                 "type":"string",
+                                 "value":""
+                                }, 
+                                {
+                                 "name":"TargetZone",
                                  "type":"string",
                                  "value":"Pavilion"
                                 }],

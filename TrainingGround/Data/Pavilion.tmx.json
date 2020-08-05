@@ -162,11 +162,6 @@
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MazeRooms",
-                                 "type":"string",
-                                 "value":"\/Base\/HorizontalMazeNoLeft"
-                                }, 
-                                {
                                  "name":"MazeTargetPosition",
                                  "type":"string",
                                  "value":"2,2"
@@ -177,12 +172,22 @@
                                  "value":1
                                 }, 
                                 {
+                                 "name":"MazeZones",
+                                 "type":"string",
+                                 "value":"\/Base\/HorizontalMazeNoLeft"
+                                }, 
+                                {
                                  "name":"Snap",
                                  "type":"bool",
                                  "value":true
                                 }, 
                                 {
                                  "name":"TargetRoom",
+                                 "type":"string",
+                                 "value":""
+                                }, 
+                                {
+                                 "name":"TargetZone",
                                  "type":"string",
                                  "value":"ElevatorMaze"
                                 }],

@@ -187,6 +187,11 @@
                                 {
                                  "name":"TargetRoom",
                                  "type":"string",
+                                 "value":""
+                                }, 
+                                {
+                                 "name":"TargetZone",
+                                 "type":"string",
                                  "value":"[exit]"
                                 }],
                          "rotation":90,

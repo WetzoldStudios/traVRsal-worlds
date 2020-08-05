@@ -77,10 +77,10 @@
   <objectgroup id="4" name="Transitions">
    <object id="8" gid="8" x="50" y="100" width="50" height="50" rotation="-90">
     <properties>
-     <property name="MazeRooms" value="/Base/HorizontalMazeNoLeft"/>
+     <property name="MazeZones" value="/Base/HorizontalMazeNoLeft"/>
      <property name="MazeTargetPosition" value="2,2"/>
      <property name="MazeTransitions" type="int" value="1"/>
-     <property name="TargetRoom" value="ElevatorMaze"/>
+     <property name="TargetZone" value="ElevatorMaze"/>
     </properties>
    </object>
   </objectgroup>

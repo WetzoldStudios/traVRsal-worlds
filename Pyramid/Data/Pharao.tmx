@@ -75,7 +75,7 @@
   <objectgroup id="4" name="Transitions">
    <object id="8" gid="8" x="100" y="100" width="50" height="50" rotation="90">
     <properties>
-     <property name="TargetRoom" value="[exit]"/>
+     <property name="TargetZone" value="[exit]"/>
     </properties>
    </object>
   </objectgroup>

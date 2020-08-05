@@ -17,14 +17,14 @@
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MazeRooms",
-                                 "type":"string",
-                                 "value":"\/Base\/HorizontalMaze"
-                                }, 
-                                {
                                  "name":"MazeTransitions",
                                  "type":"int",
                                  "value":4
+                                }, 
+                                {
+                                 "name":"MazeZones",
+                                 "type":"string",
+                                 "value":"\/Base\/HorizontalMaze"
                                 }, 
                                 {
                                  "name":"Music",
@@ -38,6 +38,11 @@
                                 }, 
                                 {
                                  "name":"TargetRoom",
+                                 "type":"string",
+                                 "value":""
+                                }, 
+                                {
+                                 "name":"TargetZone",
                                  "type":"string",
                                  "value":"MiniBoss"
                                 }],

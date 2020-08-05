@@ -26,12 +26,12 @@
 	],
 	"speech": [
 		{
-			"event": "ENTER_ROOM",
+			"event": "ENTER_ZONE",
 			"key": "ShootingRange",
 			"text": "Grab your gear and head on!"
 		},
 		{
-			"event": "ENTER_ROOM",
+			"event": "ENTER_ZONE",
 			"key": "MiniBoss",
 			"text": "A laser grid activated, blocking the way. Try to find the power source!"
 		},
@@ -145,7 +145,7 @@
 			"validSockets": [
 				"ENEMY_TOP"
 			],
-			"validRooms": [
+			"validZones": [
 				"ShootingRange"
 			]
 		},
@@ -159,7 +159,7 @@
 			"validSockets": [
 				"ENEMY_BOTTOM"
 			],
-			"validRooms": [
+			"validZones": [
 				"ShootingRange"
 			]
 		},
@@ -174,7 +174,7 @@
 			"validSockets": [
 				"ENEMY_TOP"
 			],
-			"validRooms": [
+			"validZones": [
 				"Pavilion"
 			]
 		},
@@ -188,7 +188,7 @@
 			"validSockets": [
 				"ENEMY_SIDE"
 			],
-			"validRooms": [
+			"validZones": [
 				"Pavilion"
 			]
 		},
@@ -202,7 +202,7 @@
 			"validSockets": [
 				"ENEMY_BOTTOM"
 			],
-			"validRooms": [
+			"validZones": [
 				"Pavilion"
 			]
 		}
