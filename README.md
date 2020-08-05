@@ -8,11 +8,11 @@
 
 # Introduction
 
-traVRsal contains an ever growing number of levels to experience. Using the [traVRsal SDK](https://github.com/WetzoldStudios/traVRsal-sdk) everyone can create these. This repository acts as an inventory of levels and additional examples for everyone to study and reuse.
+traVRsal contains an ever growing number of worlds to explore. Using the [traVRsal SDK](https://github.com/WetzoldStudios/traVRsal-sdk) everyone can create these. This repository acts as an inventory of worlds and additional examples for everyone to study and reuse.
 
-# Levels
+# Worlds
 
-* [Base (reusable assets)](https://wetzoldstudios.github.io/traVRsal-levels/Base)
-* [A.I. Take-Over](https://wetzoldstudios.github.io/traVRsal-levels/TrainingGround)
-* [Human Pac-Man](https://wetzoldstudios.github.io/traVRsal-levels/PacMan)
-* [The Pyramid](https://wetzoldstudios.github.io/traVRsal-levels/Pyramid)
+* [Base (reusable assets)](https://wetzoldstudios.github.io/traVRsal-worlds/Base)
+* [A.I. Take-Over](https://wetzoldstudios.github.io/traVRsal-worlds/TrainingGround)
+* [Human Pac-Man](https://wetzoldstudios.github.io/traVRsal-worlds/PacMan)
+* [The Pyramid](https://wetzoldstudios.github.io/traVRsal-worlds/Pyramid)
