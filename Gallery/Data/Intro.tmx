@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="29" nextobjectid="69">
+ <properties>
+  <property name="BackgroundColor" value="#88C1F0"/>
+  <property name="NoAgents" type="bool" value="false"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="RandomMusic" value="Pack 01 - Ambiance - Forest 01 - City - v02N.mp3,Pack 01 - Ambiance - Forest 01 - Nature - v02N.mp3,Pack 01 - Ambiance - Forest 02 - Nature - v02N.mp3"/>
+  <property name="Skybox" value="Skybox"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <objectgroup id="4" name="Transitions">
+   <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="MoveForward" type="int" value="-8"/>
+     <property name="Scale" type="float" value="500"/>
+     <property name="ScaleY" type="float" value="150"/>
+     <property name="TargetZone" value="Room1"/>
+     <property name="Virtual" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="55" gid="20" x="100" y="50" width="50" height="50" rotation="90"/>
+  </objectgroup>
+  <objectgroup id="28" name="Stands">
+   <object id="68" type="Stand3" gid="35" x="50" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="0,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="27" name="Scenery" locked="1" opacity="0.47">
+   <object id="63" gid="34" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="SceneryName" value="Museum"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>

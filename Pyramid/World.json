@@ -1,154 +1,206 @@
 {
-	"name": "The Pyramid",
-	"shortDescription": "Find the ancient pyramid's treasure.",
-	"longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Find the ancient treasure and also your way out again.",
-	"coverImage": "Cover.png",
-	"initialItemRight": "/Base/Flashlight",
-	"initialVariables": [
-		{
-			"key": "lights",
-			"value": "0"
-		},
-		{
-			"key": "flashlight",
-			"value": "1"
-		},
-		{
-			"key": "combo-door",
-			"targetCount": 4,
-			"imageFolder": "Glyphs"
-		}
-	],
-	"spawnRules": [
-		{
-			"key": "DeadEnds",
-			"objectKeys": [
-				"DeadEndIvy2",
-				"DeadEndThorns",
-				"SpiderWeb"
-			],
-			"amountType": "PROBABILITY",
-			"amount": 70,
-			"flipOrientation": true,
-			"atCeiling": true,
-			"restrictions": [
-				"deadend"
-			]
-		},
-		{
-			"key": "CornerIvy",
-			"objectKeys": [
-				"CornerIvy",
-				"CornerIvy2"
-			],
-			"amountType": "PROBABILITY",
-			"amount": 50,
-			"atCeiling": true,
-			"restrictions": [
-				"corner"
-			]
-		},
-		{
-			"key": "Fungus",
-			"objectKeys": [
-				"Fungus",
-				"Fungus2"
-			],
-			"amountType": "PROBABILITY",
-			"amount": 6,
-			"minDistance": 1
-		}
-	],
-	"replacements": [
-		{
-			"key": "[walls]",
-			"type": "MATERIAL",
-			"materials": "/Base/FlatPlates"
-		},
-		{
-			"key": "[ground]",
-			"type": "MATERIAL",
-			"materials": ""
-		},
-		{
-			"key": "/Base/Ceiling",
-			"type": "OBJECT",
-			"objectKey": "/Base/Sandstone",
-			"materials": ""
-		},
-		{
-			"key": "/Base/Ground",
-			"type": "OBJECT",
-			"objectKey": "/Base/Sandstone",
-			"materials": ""
-		}
-	],
-	"credits": [
-		{
-			"activity": "Music: Egyptian theme",
-			"author": "Holger Breiner",
-			"originalSource": "FREE MUSIC TV",
-			"url": "https://www.youtube.com/watch?v=rPK_QQuwKDI"
-		}
-	],
-	"objectSpecs": [
-		{
-			"objectKey": "Anubis",
-			"position": {
-				"x": 0,
-				"y": -0.3,
-				"z": 0
-			},
-			"height": 4,
-			"pivotType": "CENTER"
-		},
-		{
-			"objectKey": "Fungus",
-			"scale": {
-				"x": 0.2,
-				"y": 0.2,
-				"z": 0.2
-			},
-			"pivotType": "BOTTOM_CENTER"
-		},
-		{
-			"objectKey": "Fungus2",
-			"scale": {
-				"x": 0.2,
-				"y": 0.2,
-				"z": 0.2
-			},
-			"pivotType": "BOTTOM_CENTER"
-		},
-		{
-			"objectKey": "Horus",
-			"position": {
-				"x": 0,
-				"y": -0.3,
-				"z": 0
-			},
-			"height": 4,
-			"pivotType": "CENTER"
-		},
-		{
-			"objectKey": "SpiderWeb",
-			"rotation": {
-				"x": 0,
-				"y": 45,
-				"z": 0
-			},
-			"scale": {
-				"x": 0.33,
-				"y": 0.33,
-				"z": 0.33
-			},
-			"atCeiling": true,
-			"pivotType": "CENTER"
-		},
-		{
-			"objectKey": "StoneGate",
-			"height": 4,
-			"pivotType": "BOTTOM_FRONT_CENTER"
-		}
-	]
+    "name": "The Pyramid",
+    "shortDescription": "Find the ancient pyramid's treasure.",
+    "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Find the ancient treasure and also your way out again.",
+    "coverImage": "Cover.png",
+    "initialItemRight": "/Base/Flashlight",
+    "journeys": [
+        {
+            "segments": [
+                {
+                    "length": 12,
+                    "components": [
+                        {
+                            "key": "Breach",
+                            "max": 1
+                        },
+                        {
+                            "key": "Combination",
+                            "max": 1
+                        },
+                        {
+                            "key": "Pathway"
+                        },
+                        {
+                            "key": "Pharao",
+                            "max": 1
+                        },
+                        {
+                            "type": "Segment",
+                            "key": "/Base/Mazes"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "initialVariables": [
+        {
+            "key": "lights",
+            "value": "0"
+        },
+        {
+            "key": "flashlight",
+            "value": "1"
+        },
+        {
+            "key": "combo-door",
+            "value": "0",
+            "imageFolder": "Glyphs",
+            "targetCount": 4
+        }
+    ],
+    "replacements": [
+        {
+            "key": "[walls]",
+            "type": "Material",
+            "materials": "/Base/FlatPlates"
+        },
+        {
+            "key": "[ground]",
+            "type": "Material",
+            "materials": ""
+        },
+        {
+            "key": "/Base/Ceiling",
+            "materials": "",
+            "randomObjects": [
+                "/Base/Sandstone",
+                "/Base/Sandstone2"
+            ],
+            "orientation": "Random_Side"
+        },
+        {
+            "key": "/Base/Ground",
+            "materials": "",
+            "randomObjects": [
+                "/Base/Sandstone",
+                "/Base/Sandstone2"
+            ],
+            "orientation": "Random_Side"
+        }
+    ],
+    "spawnRules": [
+        {
+            "key": "DeadEnds",
+            "objectKeys": [
+                "DeadEndIvy2",
+                "DeadEndThorns",
+                "SpiderWeb"
+            ],
+            "amountType": "Probability",
+            "amount": 70,
+            "flipOrientation": true,
+            "restrictions": [
+                "deadend"
+            ],
+            "atCeiling": true
+        },
+        {
+            "key": "CornerIvy",
+            "objectKeys": [
+                "CornerIvy",
+                "CornerIvy2"
+            ],
+            "amountType": "Probability",
+            "amount": 50,
+            "restrictions": [
+                "corner"
+            ],
+            "atCeiling": true
+        },
+        {
+            "key": "Fungus",
+            "objectKeys": [
+                "Fungus",
+                "Fungus2"
+            ],
+            "amountType": "Probability",
+            "amount": 6,
+            "minDistance": 1
+        }
+    ],
+    "credits": [
+        {
+            "activity": "Music: Egyptian theme",
+            "author": "Holger Breiner",
+            "originalSource": "FREE MUSIC TV",
+            "url": "https://www.youtube.com/watch?v=rPK_QQuwKDI"
+        }
+    ],
+    "objectSpecs": [
+        {
+            "objectKey": "Anubis",
+            "position": {
+                "x": 0.0,
+                "y": -0.3,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4,
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Fungus",
+            "scale": {
+                "x": 0.2,
+                "y": 0.2,
+                "z": 0.2
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Fungus2",
+            "scale": {
+                "x": 0.2,
+                "y": 0.2,
+                "z": 0.2
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Horus",
+            "position": {
+                "x": 0.0,
+                "y": -0.3,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4,
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "SpiderWeb",
+            "rotation": {
+                "x": 0.0,
+                "y": 45.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.33,
+                "y": 0.33,
+                "z": 0.33
+            },
+            "atCeiling": true,
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "StoneGate",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4,
+            "pivotType": "Bottom_Front_Center"
+        }
+    ]
 }

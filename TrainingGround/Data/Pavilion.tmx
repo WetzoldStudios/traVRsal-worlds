@@ -1,57 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="67">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="32" nextobjectid="76">
  <properties>
   <property name="NoSpawning-Targets" type="bool" value="true"/>
   <property name="NoSpawning-Targets2" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
- <group id="20" name="Underground" visible="0" locked="1">
+ <group id="20" name="Underground">
   <properties>
    <property name="Height" type="float" value="8"/>
    <property name="NoSpawning" type="bool" value="true"/>
    <property name="Underground" type="bool" value="true"/>
   </properties>
-  <layer id="28" name="Walls" width="3" height="3">
+  <objectgroup id="31" name="Walls">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="StretchToCeiling" type="bool" value="true"/>
    </properties>
-   <data encoding="csv">
-0,0,0,
-0,5,0,
-0,0,0
-</data>
-  </layer>
-  <layer id="27" name="Walls" width="3" height="3">
-   <properties>
-    <property name="ConnectToCeiling" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-0,0,0,
-0,2684354565,0,
-0,0,0
-</data>
-  </layer>
-  <layer id="26" name="Walls" width="3" height="3">
-   <properties>
-    <property name="ConnectToCeiling" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-0,0,0,
-0,3221225477,0,
-0,0,0
-</data>
-  </layer>
-  <layer id="25" name="Walls" width="3" height="3">
-   <properties>
-    <property name="ConnectToCeiling" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-0,0,0,
-0,1610612741,0,
-0,0,0
-</data>
-  </layer>
+   <object id="72" gid="5" x="50" y="100" width="50" height="50"/>
+   <object id="73" gid="5" x="50" y="50" width="50" height="50" rotation="90"/>
+   <object id="74" gid="5" x="100" y="100" width="50" height="50" rotation="-90"/>
+   <object id="75" gid="5" x="100" y="50" width="50" height="50" rotation="-180"/>
+  </objectgroup>
   <objectgroup id="14" name="Scenery">
    <object id="64" gid="34" x="50" y="100" width="50" height="50">
     <properties>
@@ -60,7 +30,7 @@
    </object>
   </objectgroup>
  </group>
- <group id="5" name="Floor 0">
+ <group id="5" name="Floor 0" visible="0">
   <properties>
    <property name="Height" type="float" value="3"/>
   </properties>
@@ -75,16 +45,41 @@
 </data>
   </layer>
   <objectgroup id="4" name="Transitions">
-   <object id="8" gid="8" x="50" y="100" width="50" height="50" rotation="-90">
+   <object id="8" gid="8" x="50" y="50" width="50" height="50">
     <properties>
-     <property name="MazeZones" value="/Base/HorizontalMazeNoLeft"/>
+     <property name="Anchor" value="-1,-1"/>
+     <property name="HoleProbability" type="float" value="70"/>
      <property name="MazeTargetPosition" value="2,2"/>
      <property name="MazeTransitions" type="int" value="1"/>
+     <property name="MazeZones" value="/Base/HorizontalMazeNoLeft"/>
+     <property name="TargetZone" value="ElevatorMaze"/>
+     <property name="Virtual" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="67" gid="20" x="50" y="150" width="50" height="50" rotation="-90"/>
+   <object id="68" gid="8" x="50" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="HoleProbability" type="float" value="70"/>
+     <property name="MazeTargetPosition" value="2,2"/>
+     <property name="MazeTransitions" type="int" value="1"/>
+     <property name="MazeZones" value="/Base/HorizontalMazeNoLeft"/>
      <property name="TargetZone" value="ElevatorMaze"/>
     </properties>
    </object>
+   <object id="69" gid="20" x="50" y="50" width="50" height="50" rotation="-90"/>
+   <object id="70" gid="8" x="100" y="100" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="-1,1"/>
+     <property name="HoleProbability" type="float" value="70"/>
+     <property name="MazeTargetPosition" value="2,2"/>
+     <property name="MazeTransitions" type="int" value="1"/>
+     <property name="MazeZones" value="/Base/HorizontalMazeNoLeft"/>
+     <property name="TargetZone" value="ElevatorMaze"/>
+     <property name="Virtual" type="bool" value="true"/>
+    </properties>
+   </object>
   </objectgroup>
-  <layer id="16" name="Walls" width="3" height="3">
+  <layer id="16" name="Walls" width="3" height="3" locked="1">
    <properties>
     <property name="Anchor" value="-1,0"/>
     <property name="ConnectToCeiling" type="bool" value="true"/>
@@ -95,7 +90,7 @@
 0,0,0
 </data>
   </layer>
-  <layer id="23" name="Walls" width="3" height="3">
+  <layer id="23" name="Walls" width="3" height="3" locked="1">
    <properties>
     <property name="Anchor" value="-1,0"/>
     <property name="ConnectToCeiling" type="bool" value="true"/>
@@ -106,7 +101,7 @@
 0,0,0
 </data>
   </layer>
-  <layer id="24" name="Walls" width="3" height="3">
+  <layer id="24" name="Walls" width="3" height="3" locked="1">
    <properties>
     <property name="Anchor" value="-1,0"/>
     <property name="ConnectToCeiling" type="bool" value="true"/>
@@ -129,6 +124,12 @@
    <object id="66" gid="5" x="50" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="-1,0"/>
+     <property name="Virtual" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="71" gid="5" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,1"/>
      <property name="Virtual" type="bool" value="false"/>
     </properties>
    </object>

@@ -1,0 +1,195 @@
+{
+    "name": "Photo Gallery",
+    "shortDescription": "Walk through a gallery of beautiful Unsplash photos.",
+    "coverImage": "Cover.png",
+    "imageProviders": [
+        {
+            "key": "photos"
+        }
+    ],
+    "replacements": [
+        {
+            "key": "[walls]",
+            "type": "Material",
+            "materials": "PaintMatte"
+        },
+        {
+            "key": "[ceiling]",
+            "type": "Material",
+            "materials": "PaintMatte"
+        },
+        {
+            "key": "[ground]",
+            "type": "Material",
+            "materials": "FloorLinoleum"
+        }
+    ],
+    "spawnRules": [
+        {
+            "key": "Frames",
+            "objectKeys": [
+                "Frame_03",
+                "Frame_06",
+                "Frame_07"
+            ],
+            "validSockets": [
+                "Frame"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "companions": [
+                {
+                    "key": "FrameLights",
+                    "objectKeys": [
+                        "Lamp_03"
+                    ],
+                    "orientation": "Same",
+                    "y": 4.0,
+                    "snap": true,
+                    "dontCountAsObstacle": true
+                }
+            ]
+        },
+        {
+            "key": "MazeFrames",
+            "objectKeys": [
+                "Frame_03_Small",
+                "Frame_07_Small"
+            ],
+            "amountType": "Probability",
+            "amount": 50,
+            "orientation": "Free_Side",
+            "restrictions": [
+                "maze"
+            ],
+            "y": 3.0,
+            "snap": true,
+            "companions": [
+                {
+                    "key": "FrameLights",
+                    "objectKeys": [
+                        "Lamp_03"
+                    ],
+                    "orientation": "Same",
+                    "y": 4.0,
+                    "snap": true,
+                    "dontCountAsObstacle": true
+                }
+            ]
+        },
+        {
+            "key": "BigFrames",
+            "objectKeys": [
+                "Frame_03_Big"
+            ],
+            "validSockets": [
+                "BigFrame"
+            ],
+            "amountType": "Probability",
+            "amount": 100
+        },
+        {
+            "key": "DeadEnds",
+            "objectKeys": [
+                "Decor_Pot01"
+            ],
+            "amountType": "Probability",
+            "amount": 20,
+            "orientation": "Path_Back",
+            "restrictions": [
+                "deadend",
+                "maze"
+            ]
+        },
+        {
+            "key": "DeadEnds",
+            "objectKeys": [
+                "Decor_Hands02"
+            ],
+            "amountType": "Probability",
+            "amount": 20,
+            "orientation": "Opposite",
+            "occupy": "AllSides",
+            "restrictions": [
+                "deadend",
+                "maze"
+            ],
+            "y": 3.0
+        },
+        {
+            "key": "CornerLamps",
+            "objectKeys": [
+                "ceiling_lamp"
+            ],
+            "amountType": "Probability",
+            "amount": 40,
+            "restrictions": [
+                "corner",
+                "maze"
+            ],
+            "snap": true
+        },
+        {
+            "key": "Directions",
+            "objectKeys": [
+                "DirectionIndicator"
+            ],
+            "validSockets": [
+                "ShortestPath"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "dontCountAsObstacle": true
+        }
+    ],
+    "objectSpecs": [
+        {
+            "objectKey": "ceiling_lamp",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "atCeiling": true,
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Decor_Pot01",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Stand",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4,
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Stand2",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4,
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Stand3",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="13" nextobjectid="45">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="14" nextobjectid="57">
  <properties>
   <property name="Virtual" type="bool" value="true"/>
  </properties>
@@ -9,7 +9,7 @@
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
-  <layer id="1" name="Ground" width="3" height="3">
+  <layer id="1" name="Ground" width="3" height="3" locked="1">
    <properties>
     <property name="Materials" value="[ground]"/>
     <property name="Walkable" type="bool" value="true"/>
@@ -20,22 +20,26 @@
 4,4,4
 </data>
   </layer>
-  <layer id="3" name="Walls" width="3" height="3">
+  <objectgroup id="13" name="Walls">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
     <property name="Materials" value="[walls]"/>
    </properties>
-   <data encoding="csv">
-2684354566,0,3221225478,
-2684354565,0,1610612741,
-6,0,1610612742
-</data>
-  </layer>
-  <objectgroup id="12" name="Maze">
+   <object id="45" gid="5" x="0" y="150" width="50" height="50"/>
+   <object id="47" gid="5" x="100" y="150" width="50" height="50"/>
+   <object id="48" gid="5" x="50" y="0" width="50" height="50" rotation="180"/>
+   <object id="49" gid="5" x="0" y="100" width="50" height="50" rotation="90"/>
+   <object id="51" gid="5" x="150" y="0" width="50" height="50" rotation="180"/>
+   <object id="52" gid="5" x="0" y="50" width="50" height="50" rotation="90"/>
+   <object id="53" gid="5" x="0" y="0" width="50" height="50" rotation="90"/>
+   <object id="54" gid="5" x="150" y="100" width="50" height="50" rotation="-90"/>
+   <object id="55" gid="5" x="150" y="150" width="50" height="50" rotation="-90"/>
+   <object id="56" gid="5" x="150" y="50" width="50" height="50" rotation="-90"/>
+  </objectgroup>
+  <objectgroup id="12" name="Maze" locked="1">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
     <property name="GenerateMaze" type="bool" value="true"/>
-    <property name="HoleProbability" type="float" value="70"/>
     <property name="Materials" value="[walls]"/>
    </properties>
    <object id="43" gid="19" x="50" y="150" width="50" height="50">
@@ -49,7 +53,7 @@
     </properties>
    </object>
   </objectgroup>
-  <layer id="2" name="Ceiling" width="3" height="3" visible="0">
+  <layer id="2" name="Ceiling" width="3" height="3" visible="0" locked="1">
    <properties>
     <property name="Materials" value="[ceiling]"/>
    </properties>

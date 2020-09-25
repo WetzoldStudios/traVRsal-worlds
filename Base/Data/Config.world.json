@@ -8,6 +8,15 @@
 		},
 		{
 			"fileName": "HorizontalMazeNoRight.tmx"
+		},
+		{
+			"fileName": "Maze.tmx"
+		},
+		{
+			"fileName": "MazeLeftCorner.tmx"
+		},
+		{
+			"fileName": "MazeRightCorner.tmx"
 		}
 	],
 	"type": "world"

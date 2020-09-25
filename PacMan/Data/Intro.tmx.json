@@ -40,6 +40,16 @@
                          "name":"",
                          "properties":[
                                 {
+                                 "name":"HoleProbability",
+                                 "type":"float",
+                                 "value":70
+                                }, 
+                                {
+                                 "name":"InnerMaxY",
+                                 "type":"int",
+                                 "value":2
+                                }, 
+                                {
                                  "name":"MazeTransitions",
                                  "type":"int",
                                  "value":4
@@ -55,14 +65,14 @@
                                  "value":true
                                 }, 
                                 {
-                                 "name":"TargetRoom",
-                                 "type":"string",
-                                 "value":""
-                                }, 
-                                {
                                  "name":"TargetZone",
                                  "type":"string",
                                  "value":"[exit]"
+                                }, 
+                                {
+                                 "name":"ZoneExit",
+                                 "type":"bool",
+                                 "value":true
                                 }],
                          "rotation":-90,
                          "type":"\/Base\/Transition",
@@ -81,9 +91,14 @@
                                  "name":"Virtual",
                                  "type":"bool",
                                  "value":true
+                                }, 
+                                {
+                                 "name":"ZoneEntry",
+                                 "type":"bool",
+                                 "value":true
                                 }],
                          "rotation":-90,
-                         "type":"\/Base\/Start",
+                         "type":"\/Base\/Transition",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -119,12 +134,40 @@
                  "y":0
                 }, 
                 {
-                 "data":[0, 22, 22, 0, 22, 22, 0, 22, 22],
+                 "data":[0, 0, 22, 0, 0, 22, 0, 0, 22],
                  "height":3,
                  "id":25,
                  "name":"NoSpawn",
                  "opacity":1,
                  "properties":[
+                        {
+                         "name":"AutoFill",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"FillHoles",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "type":"tilelayer",
+                 "visible":true,
+                 "width":3,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "data":[0, 22, 0, 0, 22, 0, 0, 22, 0],
+                 "height":3,
+                 "id":27,
+                 "name":"NoSpawn",
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":"-1,0"
+                        }, 
                         {
                          "name":"AutoFill",
                          "type":"bool",
@@ -211,7 +254,7 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":27,
+ "nextlayerid":28,
  "nextobjectid":64,
  "orientation":"orthogonal",
  "properties":[
@@ -234,9 +277,14 @@
          "name":"NoSpawning",
          "type":"bool",
          "value":false
+        }, 
+        {
+         "name":"Skybox",
+         "type":"string",
+         "value":"Skybox_Sunny"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.4.1",
+ "tiledversion":"1.4.2",
  "tileheight":50,
  "tilesets":[
         {
@@ -351,9 +399,14 @@
                          "value":true
                         }, 
                         {
-                         "name":"TargetRoom",
+                         "name":"TargetZone",
                          "type":"string",
                          "value":""
+                        }, 
+                        {
+                         "name":"ZoneExit",
+                         "type":"bool",
+                         "value":true
                         }],
                  "type":"\/Base\/Transition"
                 }, 
@@ -485,8 +538,13 @@
                          "name":"Virtual",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"ZoneEntry",
+                         "type":"bool",
+                         "value":true
                         }],
-                 "type":"\/Base\/Start"
+                 "type":"\/Base\/Transition"
                 }, 
                 {
                  "id":21,

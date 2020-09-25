@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="29" nextobjectid="70">
+ <properties>
+  <property name="BackgroundColor" value="#88C1F0"/>
+  <property name="NoAgents" type="bool" value="false"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Skybox" value="Skybox"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <objectgroup id="27" name="Scenery" opacity="0.47">
+   <object id="63" gid="34" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="SceneryName" value="Museum"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="28" name="Stands">
+   <object id="69" type="Column" gid="35" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="Transitions">
+   <object id="8" gid="8" x="100" y="0" width="50" height="50" rotation="90">
+    <properties>
+     <property name="MazeTransitions" type="int" value="2"/>
+     <property name="MazeZones" value="/Base/HorizontalMazeNoRight,/Base/HorizontalMaze"/>
+     <property name="OptimizationHints" value="LeaveOnlyScenery"/>
+     <property name="TargetZone" value="[exit]"/>
+     <property name="Virtual" type="bool" value="false"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>

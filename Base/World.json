@@ -1,4 +1,39 @@
 {
-	"name": "Shared Level Assets",
-	"shortDescription": "This level contains common reusable items."
+    "name": "Shared Level Assets",
+    "shortDescription": "Contains common reusable items.",
+    "isVirtual": true,
+    "journeys": [
+        {
+            "segments": [
+                {
+                    "key": "mazes",
+                    "components": [
+                        {
+                            "key": "Maze",
+                            "min": 0
+                        },
+                        {
+                            "key": "MazeLeftCorner",
+                            "min": 0
+                        },
+                        {
+                            "key": "MazeRightCorner",
+                            "min": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "objectSpecs": [
+        {
+            "objectKey": "FeetIndicator",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        }
+    ]
 }

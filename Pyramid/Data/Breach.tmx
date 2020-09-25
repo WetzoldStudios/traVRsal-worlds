@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="25" nextobjectid="61">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="25" nextobjectid="61">
  <properties>
   <property name="AmbientColor" value="#241800"/>
   <property name="Music" value="FutureWorld_Darkness_Loop_02.ogg"/>
@@ -14,7 +14,7 @@
   </properties>
   <layer id="1" name="Ground" width="3" height="3">
    <properties>
-    <property name="Type" value="/Base/Sandstone"/>
+    <property name="Type" value="/Base/Ground"/>
     <property name="Walkable" type="bool" value="true"/>
    </properties>
    <data encoding="csv">
@@ -26,8 +26,9 @@
   <objectgroup id="4" name="Transitions">
    <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
     <properties>
-     <property name="MazeZones" value="/Base/HorizontalMaze"/>
+     <property name="HoleProbability" type="float" value="70"/>
      <property name="MazeTransitions" type="int" value="2"/>
+     <property name="MazeZones" value="/Base/HorizontalMaze"/>
      <property name="TargetZone" value="Combination"/>
     </properties>
    </object>

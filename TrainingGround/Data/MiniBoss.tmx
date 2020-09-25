@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="25" nextobjectid="57">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="30" nextobjectid="86">
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
- <group id="5" name="Floor 0">
+ <group id="5" name="Floor 0" visible="0" locked="1">
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
-  <layer id="1" name="Ground" width="3" height="3">
+  <layer id="1" name="Ground" width="3" height="3" locked="1">
    <properties>
     <property name="Materials" value="[ground]"/>
    </properties>
@@ -16,65 +16,50 @@
 4,4,4
 </data>
   </layer>
-  <layer id="3" name="Walls" width="3" height="3">
+  <objectgroup id="25" name="Walls" locked="1">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
-    <property name="Materials" value="[walls]"/>
    </properties>
-   <data encoding="csv">
-2684354566,3221225477,3221225478,
-2684354565,0,1610612741,
-6,5,1610612742
-</data>
-  </layer>
-  <layer id="19" name="Walls2" width="3" height="3">
-   <properties>
-    <property name="Anchor" value="1,0"/>
-    <property name="ConnectToCeiling" type="bool" value="true"/>
-    <property name="Materials" value="[walls]"/>
-   </properties>
-   <data encoding="csv">
-0,1610612741,0,
-0,0,0,
-0,0,0
-</data>
-  </layer>
-  <layer id="23" name="Walls2" width="3" height="3">
-   <properties>
-    <property name="Anchor" value="1,-1"/>
-    <property name="ConnectToCeiling" type="bool" value="true"/>
-    <property name="Materials" value="[walls]"/>
-   </properties>
-   <data encoding="csv">
-0,1610612741,0,
-0,1610612741,0,
-0,0,0
-</data>
-  </layer>
-  <layer id="21" name="Walls3" width="3" height="3">
+   <object id="58" gid="5" x="0" y="150" width="50" height="50"/>
+   <object id="59" gid="5" x="50" y="150" width="50" height="50"/>
+   <object id="60" gid="5" x="100" y="150" width="50" height="50"/>
+   <object id="61" gid="5" x="150" y="100" width="50" height="50" rotation="-90"/>
+   <object id="62" gid="5" x="150" y="150" width="50" height="50" rotation="-90"/>
+   <object id="63" gid="5" x="150" y="50" width="50" height="50" rotation="-90"/>
+   <object id="64" gid="5" x="150" y="0" width="50" height="50" rotation="-180"/>
+   <object id="65" gid="5" x="100" y="0" width="50" height="50" rotation="-180"/>
+   <object id="66" gid="5" x="50" y="0" width="50" height="50" rotation="-180"/>
+   <object id="67" gid="5" x="0" y="50" width="50" height="50" rotation="90"/>
+   <object id="68" gid="5" x="0" y="0" width="50" height="50" rotation="90"/>
+   <object id="69" gid="5" x="0" y="100" width="50" height="50" rotation="90"/>
+  </objectgroup>
+  <objectgroup id="27" name="WallsRight" locked="1">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
-    <property name="Materials" value="[walls]"/>
    </properties>
-   <data encoding="csv">
-1610612741,0,0,
-0,0,0,
-0,0,0
-</data>
-  </layer>
-  <layer id="22" name="Walls3" width="3" height="3">
+   <object id="70" gid="5" x="100" y="50" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+   <object id="71" gid="5" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="28" name="WallsLeft">
    <properties>
-    <property name="Anchor" value="0,-1"/>
     <property name="ConnectToCeiling" type="bool" value="true"/>
-    <property name="Materials" value="[walls]"/>
    </properties>
-   <data encoding="csv">
-1610612741,0,0,
-1610612741,0,0,
-0,0,0
-</data>
-  </layer>
-  <layer id="2" name="Ceiling" width="3" height="3" visible="0">
+   <object id="72" gid="5" x="50" y="50" width="50" height="50" rotation="-90"/>
+   <object id="73" gid="5" x="50" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="0,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <layer id="2" name="Ceiling" width="3" height="3" visible="0" locked="1">
    <properties>
     <property name="Materials" value="[ceiling]"/>
    </properties>
@@ -84,7 +69,7 @@
 3,3,3
 </data>
   </layer>
-  <objectgroup id="13" name="Objects">
+  <objectgroup id="13" name="Objects" locked="1">
    <object id="45" gid="9" x="100" y="0" width="50" height="50" rotation="180">
     <properties>
      <property name="Variable" value="[auto]"/>
@@ -106,18 +91,20 @@
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="20" name="Transitions">
+  <objectgroup id="20" name="Transitions" locked="1">
    <object id="50" gid="8" x="100" y="0" width="50" height="50" rotation="90">
     <properties>
-     <property name="MazeZones" value="/Base/HorizontalMaze"/>
+     <property name="HoleProbability" type="float" value="70"/>
      <property name="MazeTargetPosition" value="0,0"/>
      <property name="MazeTransitions" type="int" value="3"/>
+     <property name="MazeZones" value="/Base/HorizontalMaze"/>
      <property name="TargetZone" value="Pavilion"/>
     </properties>
    </object>
+   <object id="57" gid="20" x="50" y="150" width="50" height="50" rotation="-90"/>
   </objectgroup>
  </group>
- <group id="14" name="Floor 1" visible="0">
+ <group id="14" name="Floor 1">
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
@@ -132,17 +119,23 @@
 4,4,4
 </data>
   </layer>
-  <layer id="16" name="Walls" width="3" height="3">
+  <objectgroup id="29" name="Walls">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
-    <property name="Materials" value="[walls]"/>
    </properties>
-   <data encoding="csv">
-2684354566,3221225477,3221225478,
-2684354565,0,1610612741,
-6,5,1610612742
-</data>
-  </layer>
+   <object id="74" gid="5" x="0" y="150" width="50" height="50"/>
+   <object id="75" gid="5" x="50" y="150" width="50" height="50"/>
+   <object id="76" gid="5" x="100" y="150" width="50" height="50"/>
+   <object id="77" gid="5" x="150" y="100" width="50" height="50" rotation="-90"/>
+   <object id="78" gid="5" x="150" y="150" width="50" height="50" rotation="-90"/>
+   <object id="79" gid="5" x="150" y="50" width="50" height="50" rotation="-90"/>
+   <object id="80" gid="5" x="150" y="0" width="50" height="50" rotation="-180"/>
+   <object id="81" gid="5" x="100" y="0" width="50" height="50" rotation="-180"/>
+   <object id="82" gid="5" x="50" y="0" width="50" height="50" rotation="-180"/>
+   <object id="83" gid="5" x="0" y="50" width="50" height="50" rotation="90"/>
+   <object id="84" gid="5" x="0" y="0" width="50" height="50" rotation="90"/>
+   <object id="85" gid="5" x="0" y="100" width="50" height="50" rotation="90"/>
+  </objectgroup>
   <objectgroup id="24" name="Walls2">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
@@ -175,10 +168,10 @@
 </data>
   </layer>
   <objectgroup id="18" name="Objects">
-   <object id="48" type="SwitchBox" gid="35" x="0" y="100" width="50" height="50" rotation="90">
+   <object id="48" type="SwitchBox" gid="35" x="0" y="50" width="50" height="50" rotation="90">
     <properties>
+     <property name="Anchor" value="0,-1"/>
      <property name="Variable" value="laser1"/>
-     <property name="ZOffset" type="float" value="0.25"/>
     </properties>
    </object>
   </objectgroup>

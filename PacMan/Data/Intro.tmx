@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="27" nextobjectid="64">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="28" nextobjectid="64">
  <properties>
   <property name="AmbientColor" value="#0b25af"/>
   <property name="Music" value="Street Gang (Action 80s).mp3"/>
   <property name="NoAgents" type="bool" value="true"/>
   <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Skybox" value="Skybox_Sunny"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
@@ -26,8 +27,10 @@
   <objectgroup id="4" name="Transitions">
    <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
     <properties>
-     <property name="MazeZones" value="/Base/HorizontalMaze"/>
+     <property name="HoleProbability" type="float" value="70"/>
+     <property name="InnerMaxY" type="int" value="2"/>
      <property name="MazeTransitions" type="int" value="4"/>
+     <property name="MazeZones" value="/Base/HorizontalMaze"/>
      <property name="TargetZone" value="[exit]"/>
     </properties>
    </object>
@@ -44,15 +47,27 @@
 6,5,1610612742
 </data>
   </layer>
-  <layer id="25" name="NoSpawn" width="3" height="3" locked="1">
+  <layer id="25" name="NoSpawn" width="3" height="3">
    <properties>
     <property name="AutoFill" type="bool" value="true"/>
     <property name="FillHoles" type="bool" value="true"/>
    </properties>
    <data encoding="csv">
-0,22,22,
-0,22,22,
-0,22,22
+0,0,22,
+0,0,22,
+0,0,22
+</data>
+  </layer>
+  <layer id="27" name="NoSpawn" width="3" height="3">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="AutoFill" type="bool" value="true"/>
+    <property name="FillHoles" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,22,0,
+0,22,0,
+0,22,0
 </data>
   </layer>
   <layer id="12" name="Walls2" width="3" height="3" locked="1">

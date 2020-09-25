@@ -15,7 +15,7 @@
                         {
                          "name":"Type",
                          "type":"string",
-                         "value":"\/Base\/Sandstone"
+                         "value":"\/Base\/Ground"
                         }, 
                         {
                          "name":"Walkable",
@@ -40,6 +40,11 @@
                          "name":"",
                          "properties":[
                                 {
+                                 "name":"HoleProbability",
+                                 "type":"float",
+                                 "value":70
+                                }, 
+                                {
                                  "name":"MazeTransitions",
                                  "type":"int",
                                  "value":2
@@ -55,14 +60,14 @@
                                  "value":true
                                 }, 
                                 {
-                                 "name":"TargetRoom",
-                                 "type":"string",
-                                 "value":""
-                                }, 
-                                {
                                  "name":"TargetZone",
                                  "type":"string",
                                  "value":"Combination"
+                                }, 
+                                {
+                                 "name":"ZoneExit",
+                                 "type":"bool",
+                                 "value":true
                                 }],
                          "rotation":-90,
                          "type":"\/Base\/Transition",
@@ -81,9 +86,14 @@
                                  "name":"Virtual",
                                  "type":"bool",
                                  "value":true
+                                }, 
+                                {
+                                 "name":"ZoneEntry",
+                                 "type":"bool",
+                                 "value":true
                                 }],
                          "rotation":-90,
-                         "type":"\/Base\/Start",
+                         "type":"\/Base\/Transition",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -320,7 +330,7 @@
          "value":false
         }],
  "renderorder":"left-up",
- "tiledversion":"1.4.1",
+ "tiledversion":"1.4.2",
  "tileheight":50,
  "tilesets":[
         {
@@ -435,9 +445,14 @@
                          "value":true
                         }, 
                         {
-                         "name":"TargetRoom",
+                         "name":"TargetZone",
                          "type":"string",
                          "value":""
+                        }, 
+                        {
+                         "name":"ZoneExit",
+                         "type":"bool",
+                         "value":true
                         }],
                  "type":"\/Base\/Transition"
                 }, 
@@ -447,6 +462,16 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"FloorEntry",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FloorExit",
+                         "type":"bool",
+                         "value":false
+                        }, 
                         {
                          "name":"Variable",
                          "type":"string",
@@ -569,8 +594,13 @@
                          "name":"Virtual",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"ZoneEntry",
+                         "type":"bool",
+                         "value":true
                         }],
-                 "type":"\/Base\/Start"
+                 "type":"\/Base\/Transition"
                 }, 
                 {
                  "id":21,

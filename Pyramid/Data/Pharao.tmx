@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="19" nextobjectid="61">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="19" nextobjectid="62">
  <properties>
   <property name="NoSpawning" type="bool" value="true"/>
  </properties>
@@ -78,6 +78,7 @@
      <property name="TargetZone" value="[exit]"/>
     </properties>
    </object>
+   <object id="61" gid="20" x="100" y="100" width="50" height="50" rotation="90"/>
   </objectgroup>
  </group>
 </map>
