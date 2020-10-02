@@ -58,19 +58,30 @@
     ],
     "replacements": [
         {
-            "key": "[walls]",
             "type": "Material",
+            "key": "[walls]",
             "materials": "Wall-Bottom,Wall-Middle,*,Wall-Top"
         },
         {
-            "key": "[ceiling]",
             "type": "Material",
+            "key": "[ceiling]",
             "materials": "Wall-Middle"
         },
         {
-            "key": "[ground]",
             "type": "Material",
+            "key": "[ground]",
             "materials": "Wall-Middle"
+        },
+        {
+            "type": "Property",
+            "key": "GenerateMaze",
+            "properties": [
+                {
+                    "name": "InnerMaxY",
+                    "type": "int",
+                    "value": "2"
+                }
+            ]
         }
     ],
     "spawnRules": [

@@ -94,18 +94,18 @@
     ],
     "replacements": [
         {
-            "key": "[walls]",
             "type": "Material",
+            "key": "[walls]",
             "materials": "WoodenWall"
         },
         {
-            "key": "[ceiling]",
             "type": "Material",
+            "key": "[ceiling]",
             "materials": "/Base/Stone"
         },
         {
-            "key": "[ground]",
             "type": "Material",
+            "key": "[ground]",
             "materials": "/Base/Concrete"
         },
         {

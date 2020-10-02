@@ -2,6 +2,15 @@
 	"maps": [
 		{
 			"fileName": "Intro.tmx"
+		},
+		{
+			"fileName": "Room1.tmx"
+		},
+		{
+			"fileName": "Room2.tmx"
+		},
+		{
+			"fileName": "Room3.tmx"
 		}
 	],
 	"type": "world"

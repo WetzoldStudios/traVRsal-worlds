@@ -1,6 +1,6 @@
 {
     "name": "Photo Gallery",
-    "shortDescription": "Walk through a gallery of beautiful Unsplash photos.",
+    "shortDescription": "Walk through a gallery of the most recent beautiful Unsplash photos.",
     "coverImage": "Cover.png",
     "imageProviders": [
         {
@@ -9,18 +9,33 @@
     ],
     "replacements": [
         {
+            "type": "Material",
             "key": "[walls]",
-            "type": "Material",
-            "materials": "PaintMatte"
+            "materials": "[Random],PaintMatte,*,Ceiling_Red",
+            "randomMaterials": [
+                "Ceiling_Red",
+                "Ceiling_Green",
+                "Ceiling_Blue",
+                "Ceiling_Orange",
+                "Ceiling_Purple",
+                "Ceiling_White"
+            ]
         },
         {
+            "type": "Material",
             "key": "[ceiling]",
-            "type": "Material",
-            "materials": "PaintMatte"
+            "randomMaterials": [
+                "Ceiling_Red",
+                "Ceiling_Green",
+                "Ceiling_Blue",
+                "Ceiling_Orange",
+                "Ceiling_Purple",
+                "Ceiling_White"
+            ]
         },
         {
-            "key": "[ground]",
             "type": "Material",
+            "key": "[ground]",
             "materials": "FloorLinoleum"
         }
     ],
@@ -28,8 +43,9 @@
         {
             "key": "Frames",
             "objectKeys": [
+                "Frame_01",
+                "Frame_02",
                 "Frame_03",
-                "Frame_06",
                 "Frame_07"
             ],
             "validSockets": [
@@ -37,6 +53,8 @@
             ],
             "amountType": "Probability",
             "amount": 100,
+            "scale": 120.0,
+            "maxScale": 1.5,
             "companions": [
                 {
                     "key": "FrameLights",
@@ -45,6 +63,7 @@
                     ],
                     "orientation": "Same",
                     "y": 4.0,
+                    "maxScale": 1.5,
                     "snap": true,
                     "dontCountAsObstacle": true
                 }
@@ -53,16 +72,19 @@
         {
             "key": "MazeFrames",
             "objectKeys": [
-                "Frame_03_Small",
-                "Frame_07_Small"
+                "Frame_01",
+                "Frame_02",
+                "Frame_03",
+                "Frame_07"
             ],
             "amountType": "Probability",
-            "amount": 50,
+            "amount": 30,
             "orientation": "Free_Side",
             "restrictions": [
                 "maze"
             ],
             "y": 3.0,
+            "maxScale": 1.5,
             "snap": true,
             "companions": [
                 {
@@ -72,6 +94,7 @@
                     ],
                     "orientation": "Same",
                     "y": 4.0,
+                    "maxScale": 1.5,
                     "snap": true,
                     "dontCountAsObstacle": true
                 }
@@ -80,13 +103,18 @@
         {
             "key": "BigFrames",
             "objectKeys": [
-                "Frame_03_Big"
+                "Frame_01",
+                "Frame_02",
+                "Frame_03",
+                "Frame_07"
             ],
             "validSockets": [
                 "BigFrame"
             ],
             "amountType": "Probability",
-            "amount": 100
+            "amount": 100,
+            "scale": 190.0,
+            "maxScale": 1.5
         },
         {
             "key": "DeadEnds",
@@ -99,7 +127,8 @@
             "restrictions": [
                 "deadend",
                 "maze"
-            ]
+            ],
+            "maxScale": 1.5
         },
         {
             "key": "DeadEnds",
@@ -114,7 +143,8 @@
                 "deadend",
                 "maze"
             ],
-            "y": 3.0
+            "y": 3.0,
+            "maxScale": 1.5
         },
         {
             "key": "CornerLamps",
@@ -161,6 +191,56 @@
                 "z": 1.0
             },
             "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Frame_01",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pinToSide": true,
+            "pivotType": "Bottom_Front_Center"
+        },
+        {
+            "objectKey": "Frame_02",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pinToSide": true,
+            "pivotType": "Bottom_Front_Center"
+        },
+        {
+            "objectKey": "Frame_03",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pinToSide": true,
+            "pivotType": "Bottom_Front_Center"
+        },
+        {
+            "objectKey": "Frame_06",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pinToSide": true,
+            "pivotType": "Bottom_Front_Center"
+        },
+        {
+            "objectKey": "Frame_07",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pinToSide": true,
+            "pivotType": "Bottom_Front_Center"
         },
         {
             "objectKey": "Stand",

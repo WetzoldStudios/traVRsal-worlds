@@ -23,6 +23,7 @@
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
     <property name="GenerateMaze" type="bool" value="true"/>
+    <property name="HoleProbability" type="float" value="50"/>
     <property name="Materials" value="[walls]"/>
    </properties>
    <object id="43" gid="19" x="50" y="150" width="50" height="50">

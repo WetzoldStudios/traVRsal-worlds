@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="32" nextobjectid="76">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="32" nextobjectid="78">
  <properties>
   <property name="NoSpawning-Targets" type="bool" value="true"/>
   <property name="NoSpawning-Targets2" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
- <group id="20" name="Underground">
+ <group id="20" name="Underground" visible="0">
   <properties>
    <property name="Height" type="float" value="8"/>
    <property name="NoSpawning" type="bool" value="true"/>
@@ -30,7 +30,7 @@
    </object>
   </objectgroup>
  </group>
- <group id="5" name="Floor 0" visible="0">
+ <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="3"/>
   </properties>

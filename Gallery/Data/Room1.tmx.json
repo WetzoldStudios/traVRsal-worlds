@@ -7,6 +7,40 @@
          "layers":[
                 {
                  "draworder":"topdown",
+                 "id":30,
+                 "name":"Bounds",
+                 "objects":[
+                        {
+                         "gid":35,
+                         "height":50,
+                         "id":76,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"MoveForward",
+                                 "type":"int",
+                                 "value":-2
+                                }, 
+                                {
+                                 "name":"MoveRight",
+                                 "type":"int",
+                                 "value":-2
+                                }],
+                         "rotation":-90,
+                         "type":"Guard",
+                         "visible":true,
+                         "width":50,
+                         "x":150,
+                         "y":150
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
                  "id":27,
                  "name":"Scenery",
                  "objects":[
@@ -29,6 +63,41 @@
                          "y":50
                         }],
                  "opacity":0.47,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "id":29,
+                 "name":"Outer Stands",
+                 "objects":[
+                        {
+                         "gid":35,
+                         "height":50,
+                         "id":73,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"RotateY",
+                                 "type":"float",
+                                 "value":-45
+                                }],
+                         "rotation":0,
+                         "type":"Stand2",
+                         "visible":true,
+                         "width":50,
+                         "x":100,
+                         "y":150
+                        }],
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"MoveForward",
+                         "type":"int",
+                         "value":-3
+                        }],
                  "type":"objectgroup",
                  "visible":true,
                  "x":0,
@@ -93,14 +162,14 @@
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MoveForward",
+                                 "name":"MoveRight",
                                  "type":"int",
-                                 "value":8
+                                 "value":-2
                                 }, 
                                 {
                                  "name":"Scale",
                                  "type":"float",
-                                 "value":500
+                                 "value":200
                                 }, 
                                 {
                                  "name":"ScaleY",
@@ -153,8 +222,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":29,
- "nextobjectid":71,
+ "nextlayerid":31,
+ "nextobjectid":77,
  "orientation":"orthogonal",
  "properties":[
         {

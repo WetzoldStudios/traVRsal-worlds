@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="29" nextobjectid="71">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="77">
  <properties>
   <property name="BackgroundColor" value="#88C1F0"/>
   <property name="NoAgents" type="bool" value="false"/>
@@ -12,14 +12,32 @@
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
-  <objectgroup id="27" name="Scenery" opacity="0.47">
+  <objectgroup id="30" name="Bounds">
+   <object id="76" type="Guard" gid="35" x="150" y="150" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="MoveForward" type="int" value="-2"/>
+     <property name="MoveRight" type="int" value="-2"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="27" name="Scenery" locked="1" opacity="0.47">
    <object id="63" gid="34" x="50" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="SceneryName" value="Museum"/>
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="28" name="Stands">
+  <objectgroup id="29" name="Outer Stands" locked="1">
+   <properties>
+    <property name="MoveForward" type="int" value="-3"/>
+   </properties>
+   <object id="73" type="Stand2" gid="35" x="100" y="150" width="50" height="50">
+    <properties>
+     <property name="RotateY" type="float" value="-45"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="28" name="Stands" locked="1">
    <object id="69" type="Stand3" gid="35" x="100" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="0,1"/>
@@ -31,11 +49,11 @@
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="4" name="Transitions">
+  <objectgroup id="4" name="Transitions" locked="1">
    <object id="8" gid="8" x="100" y="0" width="50" height="50" rotation="90">
     <properties>
-     <property name="MoveForward" type="int" value="8"/>
-     <property name="Scale" type="float" value="500"/>
+     <property name="MoveRight" type="int" value="-2"/>
+     <property name="Scale" type="float" value="200"/>
      <property name="ScaleY" type="float" value="150"/>
      <property name="TargetZone" value="Room2"/>
      <property name="Virtual" type="bool" value="false"/>

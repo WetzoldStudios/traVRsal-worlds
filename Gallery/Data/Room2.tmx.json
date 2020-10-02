@@ -97,7 +97,7 @@
                                 {
                                  "name":"TargetZone",
                                  "type":"string",
-                                 "value":"[exit]"
+                                 "value":"Room3"
                                 }, 
                                 {
                                  "name":"Virtual",
@@ -121,6 +121,69 @@
                  "visible":true,
                  "x":0,
                  "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "id":29,
+                 "name":"Outer Stands",
+                 "objects":[
+                        {
+                         "gid":35,
+                         "height":50,
+                         "id":70,
+                         "name":"",
+                         "rotation":90,
+                         "type":"Stand",
+                         "visible":true,
+                         "width":50,
+                         "x":0,
+                         "y":50
+                        }],
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"MoveForward",
+                         "type":"int",
+                         "value":-3
+                        }],
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "id":30,
+                 "name":"Bounds",
+                 "objects":[
+                        {
+                         "gid":35,
+                         "height":50,
+                         "id":71,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"MoveForward",
+                                 "type":"int",
+                                 "value":-2
+                                }, 
+                                {
+                                 "name":"MoveRight",
+                                 "type":"int",
+                                 "value":-2
+                                }],
+                         "rotation":-90,
+                         "type":"CornerGuard",
+                         "visible":true,
+                         "width":50,
+                         "x":150,
+                         "y":150
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
                 }],
          "name":"Floor 0",
          "opacity":1,
@@ -135,8 +198,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":29,
- "nextobjectid":70,
+ "nextlayerid":31,
+ "nextobjectid":72,
  "orientation":"orthogonal",
  "properties":[
         {

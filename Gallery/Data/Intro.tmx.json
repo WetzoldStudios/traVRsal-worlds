@@ -7,6 +7,40 @@
          "layers":[
                 {
                  "draworder":"topdown",
+                 "id":29,
+                 "name":"Bounds",
+                 "objects":[
+                        {
+                         "gid":35,
+                         "height":50,
+                         "id":69,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"MoveForward",
+                                 "type":"int",
+                                 "value":-2
+                                }, 
+                                {
+                                 "name":"MoveRight",
+                                 "type":"int",
+                                 "value":-2
+                                }],
+                         "rotation":90,
+                         "type":"CornerGuard",
+                         "visible":true,
+                         "width":50,
+                         "x":0,
+                         "y":0
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
                  "id":4,
                  "name":"Transitions",
                  "objects":[
@@ -17,7 +51,7 @@
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MoveForward",
+                                 "name":"MoveRight",
                                  "type":"int",
                                  "value":-8
                                 }, 
@@ -158,8 +192,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":29,
- "nextobjectid":69,
+ "nextlayerid":30,
+ "nextobjectid":70,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -176,6 +210,11 @@
          "name":"NoSpawning",
          "type":"bool",
          "value":false
+        }, 
+        {
+         "name":"RandomAmbience",
+         "type":"string",
+         "value":"AMBIENCE_Parking_Garage_Car_Boot_Sale_01_loop_stereo.wav,AMBIENCE_Parking_Garage_Car_Boot_Sale_02_loop_stereo.wav,AMBIENCE_Parking_Garage_Car_Boot_Sale_03_loop_stereo.wav"
         }, 
         {
          "name":"RandomMusic",

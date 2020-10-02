@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="29" nextobjectid="69">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="30" nextobjectid="70">
  <properties>
   <property name="BackgroundColor" value="#88C1F0"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
+  <property name="RandomAmbience" value="AMBIENCE_Parking_Garage_Car_Boot_Sale_01_loop_stereo.wav,AMBIENCE_Parking_Garage_Car_Boot_Sale_02_loop_stereo.wav,AMBIENCE_Parking_Garage_Car_Boot_Sale_03_loop_stereo.wav"/>
   <property name="RandomMusic" value="Pack 01 - Ambiance - Forest 01 - City - v02N.mp3,Pack 01 - Ambiance - Forest 01 - Nature - v02N.mp3,Pack 01 - Ambiance - Forest 02 - Nature - v02N.mp3"/>
   <property name="Skybox" value="Skybox"/>
  </properties>
@@ -13,10 +14,18 @@
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
-  <objectgroup id="4" name="Transitions">
+  <objectgroup id="29" name="Bounds">
+   <object id="69" type="CornerGuard" gid="35" x="0" y="0" width="50" height="50" rotation="90">
+    <properties>
+     <property name="MoveForward" type="int" value="-2"/>
+     <property name="MoveRight" type="int" value="-2"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="Transitions" locked="1">
    <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
     <properties>
-     <property name="MoveForward" type="int" value="-8"/>
+     <property name="MoveRight" type="int" value="-8"/>
      <property name="Scale" type="float" value="500"/>
      <property name="ScaleY" type="float" value="150"/>
      <property name="TargetZone" value="Room1"/>
@@ -25,7 +34,7 @@
    </object>
    <object id="55" gid="20" x="100" y="50" width="50" height="50" rotation="90"/>
   </objectgroup>
-  <objectgroup id="28" name="Stands">
+  <objectgroup id="28" name="Stands" locked="1">
    <object id="68" type="Stand3" gid="35" x="50" y="100" width="50" height="50" rotation="-90">
     <properties>
      <property name="Anchor" value="0,-1"/>

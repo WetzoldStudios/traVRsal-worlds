@@ -546,6 +546,11 @@
  "orientation":"orthogonal",
  "properties":[
         {
+         "name":"BackgroundColor",
+         "type":"string",
+         "value":"#AAD7FE"
+        }, 
+        {
          "name":"InvisibleGround",
          "type":"bool",
          "value":true

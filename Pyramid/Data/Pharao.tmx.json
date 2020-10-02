@@ -29,10 +29,76 @@
                  "y":0
                 }, 
                 {
-                 "data":[0, 0, 0, 0, 0, 0, 0, 0, 1610612762],
-                 "height":3,
-                 "id":3,
+                 "draworder":"topdown",
+                 "id":19,
                  "name":"Walls",
+                 "objects":[
+                        {
+                         "gid":25,
+                         "height":50,
+                         "id":62,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"AutoFill",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"CheckOccupiedNeighbor",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"FillHoles",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"SkipOccupied",
+                                 "type":"string",
+                                 "value":"\/Base\/Door"
+                                }],
+                         "rotation":0,
+                         "type":"\/Base\/StoneWall",
+                         "visible":true,
+                         "width":50,
+                         "x":100,
+                         "y":150
+                        }, 
+                        {
+                         "gid":25,
+                         "height":50,
+                         "id":63,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"AutoFill",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"CheckOccupiedNeighbor",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"FillHoles",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"SkipOccupied",
+                                 "type":"string",
+                                 "value":"\/Base\/Door"
+                                }],
+                         "rotation":-90,
+                         "type":"\/Base\/StoneWall",
+                         "visible":true,
+                         "width":50,
+                         "x":150,
+                         "y":150
+                        }],
                  "opacity":1,
                  "properties":[
                         {
@@ -40,9 +106,8 @@
                          "type":"bool",
                          "value":true
                         }],
-                 "type":"tilelayer",
+                 "type":"objectgroup",
                  "visible":true,
-                 "width":3,
                  "x":0,
                  "y":0
                 }, 
@@ -243,8 +308,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":19,
- "nextobjectid":62,
+ "nextlayerid":20,
+ "nextobjectid":64,
  "orientation":"orthogonal",
  "properties":[
         {

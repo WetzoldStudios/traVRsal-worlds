@@ -453,6 +453,11 @@
                          "value":true
                         }, 
                         {
+                         "name":"HoleProbability",
+                         "type":"float",
+                         "value":50
+                        }, 
+                        {
                          "name":"Materials",
                          "type":"string",
                          "value":"[walls]"

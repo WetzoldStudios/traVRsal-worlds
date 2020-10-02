@@ -34,6 +34,13 @@
             ]
         }
     ],
+    "settings": [
+        {
+            "key": "traps",
+            "name": "Deadly Traps",
+            "description": "Be careful on your adventures"
+        }
+    ],
     "initialVariables": [
         {
             "key": "lights",
@@ -52,13 +59,13 @@
     ],
     "replacements": [
         {
-            "key": "[walls]",
             "type": "Material",
+            "key": "[walls]",
             "materials": "/Base/FlatPlates"
         },
         {
-            "key": "[ground]",
             "type": "Material",
+            "key": "[ground]",
             "materials": ""
         },
         {
@@ -78,6 +85,14 @@
                 "/Base/Sandstone2"
             ],
             "orientation": "Random_Side"
+        },
+        {
+            "key": "/Base/Wall",
+            "materials": "",
+            "randomObjects": [
+                "/Base/StoneWall",
+                "/Base/StoneWall2"
+            ]
         }
     ],
     "spawnRules": [
@@ -89,7 +104,7 @@
                 "SpiderWeb"
             ],
             "amountType": "Probability",
-            "amount": 70,
+            "amount": 80,
             "flipOrientation": true,
             "restrictions": [
                 "deadend"
@@ -103,11 +118,39 @@
                 "CornerIvy2"
             ],
             "amountType": "Probability",
-            "amount": 50,
+            "amount": 60,
             "restrictions": [
                 "corner"
             ],
-            "atCeiling": true
+            "atCeiling": true,
+            "dontCountAsObstacle": true
+        },
+        {
+            "key": "CeilingTraps",
+            "layer": "traps",
+            "objectKeys": [
+                "FallingSpikeGrate"
+            ],
+            "amountType": "Probability",
+            "amount": 20,
+            "minDistance": 1,
+            "enabledFormula": "$traps"
+        },
+        {
+            "key": "SideTraps",
+            "layer": "traps",
+            "objectKeys": [
+                "Wallblades"
+            ],
+            "amountType": "Probability",
+            "amount": 20,
+            "orientation": "Free_Side",
+            "restrictions": [
+                "FacingOuterBorder"
+            ],
+            "y": 2.0,
+            "minDistance": 1,
+            "enabledFormula": "$traps"
         },
         {
             "key": "Fungus",
@@ -143,6 +186,16 @@
             },
             "height": 4,
             "pivotType": "Center"
+        },
+        {
+            "objectKey": "FallingSpikeGrate",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "atCeiling": true,
+            "pivotType": "Bottom_Center"
         },
         {
             "objectKey": "Fungus",
