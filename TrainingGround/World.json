@@ -3,9 +3,7 @@
     "shortDescription": "Fight your way through a dangerous maze.",
     "longDescription": "A hostile A.I. has taken over an elite-forces training ground. Fight your way through and clear out all enemies.",
     "coverImage": "Cover.png",
-    "enablePost": true,
-    "kpis": "0,1,2,4",
-    "detailKPIs": "0,1,2,3,4",
+    "kpis": "0,1,2,3,4",
     "defaultScenery": "Generic",
     "journeys": [
         {
@@ -153,7 +151,7 @@
                 "Barrel2"
             ],
             "amountType": "Probability",
-            "amount": 95,
+            "amount": 90,
             "orientation": "Path_Back",
             "restrictions": [
                 "deadend"
@@ -176,7 +174,7 @@
                 "Lamp3"
             ],
             "amountType": "Probability",
-            "amount": 30,
+            "amount": 20,
             "orientation": "Free_Side",
             "y": 4.0,
             "minDistance": 1
@@ -186,7 +184,7 @@
             "objectKeys": [
                 "TargetTurret"
             ],
-            "amount": 30,
+            "amount": 25,
             "orientation": "Path_Back",
             "snap": true
         },

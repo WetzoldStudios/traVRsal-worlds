@@ -2,6 +2,7 @@
     "name": "Photo Gallery",
     "shortDescription": "Walk through a gallery of the most recent beautiful Unsplash photos.",
     "coverImage": "Cover.png",
+    "enableChallenges": false,
     "imageProviders": [
         {
             "key": "photos"
@@ -122,7 +123,7 @@
                 "Decor_Pot01"
             ],
             "amountType": "Probability",
-            "amount": 20,
+            "amount": 30,
             "orientation": "Path_Back",
             "restrictions": [
                 "deadend",

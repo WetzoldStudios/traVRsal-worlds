@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="20" nextobjectid="71">
  <properties>
+  <property name="AmbientColor" value="#3b352f"/>
   <property name="BackgroundColor" value="#AAD7FE"/>
   <property name="InvisibleGround" type="bool" value="true"/>
   <property name="IsIntro" type="bool" value="true"/>

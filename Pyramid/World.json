@@ -1,8 +1,10 @@
 {
     "name": "The Pyramid",
-    "shortDescription": "Find the ancient pyramid's treasure.",
-    "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Find the ancient treasure and also your way out again.",
+    "shortDescription": "Survive the ancient pyramid's traps.",
+    "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Survive and find your way out again.",
     "coverImage": "Cover.png",
+    "deathSound": "voice_male_grunt_pain_death_07.wav",
+    "kpis": "0,3,4",
     "initialItemRight": "/Base/Flashlight",
     "journeys": [
         {
@@ -133,6 +135,9 @@
             ],
             "amountType": "Probability",
             "amount": 20,
+            "restrictions": [
+                "!NextToTransition"
+            ],
             "minDistance": 1,
             "enabledFormula": "$traps"
         },
@@ -146,7 +151,8 @@
             "amount": 20,
             "orientation": "Free_Side",
             "restrictions": [
-                "FacingOuterBorder"
+                "FacingOuterBorder",
+                "!NextToTransition"
             ],
             "y": 2.0,
             "minDistance": 1,

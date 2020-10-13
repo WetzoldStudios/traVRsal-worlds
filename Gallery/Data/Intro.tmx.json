@@ -19,12 +19,12 @@
                                 {
                                  "name":"MoveForward",
                                  "type":"int",
-                                 "value":-2
+                                 "value":-1
                                 }, 
                                 {
                                  "name":"MoveRight",
                                  "type":"int",
-                                 "value":-2
+                                 "value":-1
                                 }],
                          "rotation":90,
                          "type":"CornerGuard",
@@ -200,6 +200,11 @@
          "name":"BackgroundColor",
          "type":"string",
          "value":"#88C1F0"
+        }, 
+        {
+         "name":"MusicVolume",
+         "type":"float",
+         "value":15
         }, 
         {
          "name":"NoAgents",

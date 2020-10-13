@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="18" nextobjectid="71">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="20" nextobjectid="80">
  <properties>
   <property name="Virtual" type="bool" value="true"/>
  </properties>
@@ -20,21 +20,20 @@
 4,4,4
 </data>
   </layer>
-  <objectgroup id="16" name="Walls">
+  <objectgroup id="16" name="Walls" locked="1">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
     <property name="Materials" value="[walls]"/>
    </properties>
-   <object id="57" gid="5" x="0" y="150" width="50" height="50"/>
    <object id="62" gid="5" x="150" y="50" width="50" height="50" rotation="-90"/>
    <object id="63" gid="5" x="150" y="0" width="50" height="50" rotation="-180"/>
-   <object id="64" gid="5" x="100" y="0" width="50" height="50" rotation="-180"/>
-   <object id="66" gid="5" x="50" y="0" width="50" height="50" rotation="180"/>
-   <object id="67" gid="5" x="0" y="0" width="50" height="50" rotation="90"/>
-   <object id="68" gid="5" x="0" y="50" width="50" height="50" rotation="90"/>
-   <object id="69" gid="5" x="0" y="100" width="50" height="50" rotation="90"/>
+   <object id="64" gid="5" x="100" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
   </objectgroup>
-  <objectgroup id="17" name="Walls2">
+  <objectgroup id="17" name="Walls2" locked="1">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
     <property name="Materials" value="[walls]"/>
@@ -59,16 +58,25 @@
     </properties>
    </object>
   </objectgroup>
-  <layer id="2" name="Ceiling" width="3" height="3" visible="0" locked="1">
+  <layer id="2" name="Ceiling" width="3" height="3" locked="1">
    <properties>
     <property name="Materials" value="[ceiling]"/>
    </properties>
    <data encoding="csv">
-3,3,3,
-3,3,3,
-3,3,3
+0,0,3,
+0,0,3,
+0,0,3
 </data>
   </layer>
+  <objectgroup id="19" name="Ceiling">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="Materials" value="[ceiling]"/>
+   </properties>
+   <object id="77" gid="3" x="50" y="50" width="50" height="50"/>
+   <object id="78" gid="3" x="50" y="100" width="50" height="50"/>
+   <object id="79" gid="3" x="50" y="150" width="50" height="50"/>
+  </objectgroup>
   <objectgroup id="14" name="Exit Transitions" locked="1">
    <properties>
     <property name="AutoFill" type="bool" value="true"/>

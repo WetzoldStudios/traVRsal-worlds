@@ -46,8 +46,8 @@
   <objectgroup id="30" name="Bounds">
    <object id="71" type="CornerGuard" gid="35" x="150" y="150" width="50" height="50" rotation="-90">
     <properties>
-     <property name="MoveForward" type="int" value="-2"/>
-     <property name="MoveRight" type="int" value="-2"/>
+     <property name="MoveForward" type="int" value="-1"/>
+     <property name="MoveRight" type="int" value="-1"/>
     </properties>
    </object>
   </objectgroup>

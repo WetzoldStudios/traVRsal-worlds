@@ -546,6 +546,11 @@
  "orientation":"orthogonal",
  "properties":[
         {
+         "name":"AmbientColor",
+         "type":"string",
+         "value":"#3b352f"
+        }, 
+        {
          "name":"BackgroundColor",
          "type":"string",
          "value":"#AAD7FE"

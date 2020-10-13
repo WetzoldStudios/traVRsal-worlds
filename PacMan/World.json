@@ -3,10 +3,8 @@
     "shortDescription": "YOU are Pac-Man. Eat your way through the labyrinth!",
     "longDescription": "YOU are Pac-Man. Collect as many points as possible without getting caught! Eat your way through the labyrinth and beat your highscore.",
     "coverImage": "Cover.png",
-    "enablePost": true,
     "deathSound": "Event 9.mp3",
-    "kpis": "0,2,4,5",
-    "detailKPIs": "0,3,4,5,6",
+    "kpis": "0,2,3,4,5",
     "journeys": [
         {
             "segments": [

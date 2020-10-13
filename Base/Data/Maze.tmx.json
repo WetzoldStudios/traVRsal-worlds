@@ -36,39 +36,6 @@
                         {
                          "gid":5,
                          "height":50,
-                         "id":57,
-                         "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
-                         "rotation":0,
-                         "type":"\/Base\/Wall",
-                         "visible":true,
-                         "width":50,
-                         "x":0,
-                         "y":150
-                        }, 
-                        {
-                         "gid":5,
-                         "height":50,
                          "id":58,
                          "name":"",
                          "properties":[
@@ -201,105 +168,6 @@
                         {
                          "gid":5,
                          "height":50,
-                         "id":62,
-                         "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
-                         "rotation":90,
-                         "type":"\/Base\/Wall",
-                         "visible":true,
-                         "width":50,
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "gid":5,
-                         "height":50,
-                         "id":63,
-                         "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
-                         "rotation":90,
-                         "type":"\/Base\/Wall",
-                         "visible":true,
-                         "width":50,
-                         "x":0,
-                         "y":50
-                        }, 
-                        {
-                         "gid":5,
-                         "height":50,
-                         "id":64,
-                         "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
-                         "rotation":90,
-                         "type":"\/Base\/Wall",
-                         "visible":true,
-                         "width":50,
-                         "x":0,
-                         "y":100
-                        }, 
-                        {
-                         "gid":5,
-                         "height":50,
                          "id":65,
                          "name":"",
                          "properties":[
@@ -328,39 +196,6 @@
                          "visible":true,
                          "width":50,
                          "x":150,
-                         "y":0
-                        }, 
-                        {
-                         "gid":5,
-                         "height":50,
-                         "id":66,
-                         "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
-                         "rotation":180,
-                         "type":"\/Base\/Wall",
-                         "visible":true,
-                         "width":50,
-                         "x":50,
                          "y":0
                         }],
                  "opacity":1,
@@ -479,7 +314,7 @@
                  "y":0
                 }, 
                 {
-                 "data":[3, 3, 3, 3, 3, 3, 3, 3, 3],
+                 "data":[0, 0, 3, 0, 0, 3, 0, 0, 3],
                  "height":3,
                  "id":2,
                  "name":"Ceiling",
@@ -493,6 +328,82 @@
                  "type":"tilelayer",
                  "visible":false,
                  "width":3,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "id":17,
+                 "name":"Ceiling",
+                 "objects":[
+                        {
+                         "gid":3,
+                         "height":50,
+                         "id":73,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"AutoFill",
+                                 "type":"bool",
+                                 "value":true
+                                }],
+                         "rotation":0,
+                         "type":"\/Base\/Ceiling",
+                         "visible":true,
+                         "width":50,
+                         "x":50,
+                         "y":50
+                        }, 
+                        {
+                         "gid":3,
+                         "height":50,
+                         "id":74,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"AutoFill",
+                                 "type":"bool",
+                                 "value":true
+                                }],
+                         "rotation":0,
+                         "type":"\/Base\/Ceiling",
+                         "visible":true,
+                         "width":50,
+                         "x":50,
+                         "y":100
+                        }, 
+                        {
+                         "gid":3,
+                         "height":50,
+                         "id":75,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"AutoFill",
+                                 "type":"bool",
+                                 "value":true
+                                }],
+                         "rotation":0,
+                         "type":"\/Base\/Ceiling",
+                         "visible":true,
+                         "width":50,
+                         "x":50,
+                         "y":150
+                        }],
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":"-1,0"
+                        }, 
+                        {
+                         "name":"Materials",
+                         "type":"string",
+                         "value":"[ceiling]"
+                        }],
+                 "type":"objectgroup",
+                 "visible":true,
                  "x":0,
                  "y":0
                 }, 
@@ -701,8 +612,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":16,
- "nextobjectid":67,
+ "nextlayerid":18,
+ "nextobjectid":76,
  "orientation":"orthogonal",
  "properties":[
         {

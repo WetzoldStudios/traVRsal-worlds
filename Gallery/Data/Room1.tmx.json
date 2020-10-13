@@ -19,12 +19,12 @@
                                 {
                                  "name":"MoveForward",
                                  "type":"int",
-                                 "value":-2
+                                 "value":-1
                                 }, 
                                 {
                                  "name":"MoveRight",
                                  "type":"int",
-                                 "value":-2
+                                 "value":-1
                                 }],
                          "rotation":-90,
                          "type":"Guard",
@@ -164,12 +164,12 @@
                                 {
                                  "name":"MoveRight",
                                  "type":"int",
-                                 "value":-2
+                                 "value":-4
                                 }, 
                                 {
                                  "name":"Scale",
                                  "type":"float",
-                                 "value":200
+                                 "value":300
                                 }, 
                                 {
                                  "name":"ScaleY",

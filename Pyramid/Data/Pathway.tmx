@@ -57,9 +57,9 @@
     <property name="Type" value="/Base/Ground"/>
    </properties>
    <data encoding="csv">
-4,0,0,
-4,0,0,
-4,0,0
+0,0,0,
+0,0,0,
+0,0,0
 </data>
   </layer>
   <layer id="19" name="GroundRight" width="3" height="3">
@@ -109,20 +109,23 @@
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
    </properties>
-   <object id="36" gid="25" x="0" y="150" width="50" height="50"/>
-   <object id="37" gid="25" x="50" y="150" width="50" height="50"/>
+   <object id="37" gid="25" x="50" y="150" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
    <object id="38" gid="25" x="100" y="150" width="50" height="50"/>
    <object id="39" gid="25" x="150" y="150" width="50" height="50" rotation="-90"/>
    <object id="40" gid="25" x="150" y="100" width="50" height="50" rotation="-90"/>
    <object id="41" gid="25" x="150" y="50" width="50" height="50" rotation="-90"/>
    <object id="42" gid="25" x="150" y="0" width="50" height="50" rotation="-180"/>
-   <object id="43" gid="25" x="100" y="0" width="50" height="50" rotation="-180"/>
-   <object id="44" gid="25" x="50" y="0" width="50" height="50" rotation="-180"/>
-   <object id="45" gid="25" x="0" y="0" width="50" height="50" rotation="90"/>
-   <object id="46" gid="25" x="0" y="50" width="50" height="50" rotation="90"/>
-   <object id="47" gid="25" x="0" y="100" width="50" height="50" rotation="90"/>
+   <object id="43" gid="25" x="100" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
   </objectgroup>
-  <objectgroup id="18" name="PathMaze">
+  <objectgroup id="18" name="PathMaze" locked="1">
    <properties>
     <property name="GenerateMaze" type="bool" value="true"/>
     <property name="MazeType" value="Path"/>
