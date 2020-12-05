@@ -1,11 +1,28 @@
 {
     "name": "Photo Gallery",
-    "shortDescription": "Walk through a gallery of the most recent beautiful Unsplash photos.",
+    "shortDescription": "Walk through a stunning virtual gallery full of beautiful pictures.",
+    "longDescription": "Walk through a stunning virtual gallery composed of either the most recent amazing photos from Unsplash.com or use your own images you stored on your device before (see wiki).",
     "coverImage": "Cover.png",
+    "showHandHud": false,
     "enableChallenges": false,
+    "outroMusic": "",
+    "settings": [
+        {
+            "key": "fancyFrames",
+            "name": "Fancy Frames",
+            "description": "Consisting of multiple parts"
+        },
+        {
+            "key": "imageProvider",
+            "name": "Image Source",
+            "type": "ImageProvider"
+        }
+    ],
     "imageProviders": [
         {
-            "key": "photos"
+            "key": "photos",
+            "repeatWhenDepleted": true,
+            "providerFormula": "$imageProvider"
         }
     ],
     "replacements": [
@@ -45,9 +62,16 @@
             "key": "Frames",
             "objectKeys": [
                 "Frame_01",
-                "Frame_02",
-                "Frame_03",
-                "Frame_07"
+                "Frame_02"
+            ],
+            "objectKeysIf": [
+                {
+                    "condition": "$fancyFrames",
+                    "values": [
+                        "Frame_03",
+                        "Frame_07"
+                    ]
+                }
             ],
             "validSockets": [
                 "Frame"
@@ -74,9 +98,16 @@
             "key": "MazeFrames",
             "objectKeys": [
                 "Frame_01",
-                "Frame_02",
-                "Frame_03",
-                "Frame_07"
+                "Frame_02"
+            ],
+            "objectKeysIf": [
+                {
+                    "condition": "$fancyFrames",
+                    "values": [
+                        "Frame_03",
+                        "Frame_07"
+                    ]
+                }
             ],
             "amountType": "Probability",
             "amount": 30,
@@ -105,9 +136,16 @@
             "key": "BigFrames",
             "objectKeys": [
                 "Frame_01",
-                "Frame_02",
-                "Frame_03",
-                "Frame_07"
+                "Frame_02"
+            ],
+            "objectKeysIf": [
+                {
+                    "condition": "$fancyFrames",
+                    "values": [
+                        "Frame_03",
+                        "Frame_07"
+                    ]
+                }
             ],
             "validSockets": [
                 "BigFrame"

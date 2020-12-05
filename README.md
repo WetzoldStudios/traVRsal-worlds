@@ -14,6 +14,7 @@ traVRsal contains an ever growing number of worlds to explore. Using the [traVRs
 
 * [Base (reusable assets)](https://wetzoldstudios.github.io/traVRsal-worlds/Base)
 * [A.I. Take-Over](https://wetzoldstudios.github.io/traVRsal-worlds/TrainingGround)
+* [traVRsal Demo](https://wetzoldstudios.github.io/traVRsal-worlds/Demo)
 * [Human Pac-Man](https://wetzoldstudios.github.io/traVRsal-worlds/PacMan)
 * [The Pyramid](https://wetzoldstudios.github.io/traVRsal-worlds/Pyramid)
 * [VR Gallery](https://wetzoldstudios.github.io/traVRsal-worlds/Gallery)

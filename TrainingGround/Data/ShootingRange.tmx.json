@@ -379,7 +379,7 @@
                          "y":50
                         }, 
                         {
-                         "gid":35,
+                         "gid":38,
                          "height":50,
                          "id":65,
                          "name":"",
@@ -505,7 +505,7 @@
                  "name":"Scenery",
                  "objects":[
                         {
-                         "gid":34,
+                         "gid":37,
                          "height":50,
                          "id":56,
                          "name":"",
@@ -591,7 +591,7 @@
          "value":"WasteLandSky"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.4.2",
+ "tiledversion":"1.4.3",
  "tileheight":50,
  "tilesets":[
         {
@@ -606,7 +606,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":22,
+         "tilecount":25,
          "tileheight":50,
          "tiles":[
                 {
@@ -723,16 +723,6 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
-                        {
-                         "name":"FloorEntry",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"FloorExit",
-                         "type":"bool",
-                         "value":false
-                        }, 
                         {
                          "name":"Variable",
                          "type":"string",
@@ -976,12 +966,45 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "type":"\/Base\/StoneCorridorEnd"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/..\/_Tiled\/Master Images\/redirection.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"TargetLocation",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Redirection"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/..\/_Tiled\/Master Images\/location.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"LocationId",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Location"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/..\/_Tiled\/Master Images\/trigger.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "type":"\/Base\/Trigger"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":29,
+         "firstgid":32,
          "grid":
             {
              "height":1,

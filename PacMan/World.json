@@ -1,5 +1,5 @@
 {
-    "name": "You, Pac-Man",
+    "name": "Pac-Man",
     "shortDescription": "YOU are Pac-Man. Eat your way through the labyrinth!",
     "longDescription": "YOU are Pac-Man. Collect as many points as possible without getting caught! Eat your way through the labyrinth and beat your highscore.",
     "coverImage": "Cover.png",
@@ -88,12 +88,7 @@
             "objectKeys": [
                 "Inky"
             ],
-            "validZones": [
-                "2",
-                "3",
-                "4"
-            ],
-            "amount": 2,
+            "amount": 4,
             "dontCountAsObstacle": true,
             "enabledFormula": "$ghosts"
         },
@@ -269,6 +264,24 @@
         },
         {
             "objectKey": "Pretzel",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Pumpkin",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "SkullCandle",
             "scale": {
                 "x": 1.0,
                 "y": 1.0,

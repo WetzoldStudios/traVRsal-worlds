@@ -1,0 +1,17 @@
+{
+    "type": "world",
+    "maps": [
+        {
+            "fileName": "Intro.tmx"
+        },
+        {
+            "fileName": "Locomotion.tmx"
+        },
+        {
+            "fileName": "Sound.tmx"
+        },
+        {
+            "fileName": "Labyrinths.tmx"
+        }
+    ]
+}

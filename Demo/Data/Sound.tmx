@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="66">
+ <properties>
+  <property name="NoAgents" type="bool" value="false"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Offset" value="0,0,10"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="LeftGround" width="3" height="3">
+   <properties>
+    <property name="Materials" value="[ground]"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+4,0,0,
+4,0,0,
+4,0,0
+</data>
+  </layer>
+  <layer id="30" name="RightGround" width="3" height="3">
+   <properties>
+    <property name="Anchor" value="1,0"/>
+    <property name="Materials" value="[ground]"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+4,4,0,
+4,4,0,
+4,4,0
+</data>
+  </layer>
+  <objectgroup id="27" name="Objects"/>
+  <objectgroup id="29" name="Transitions">
+   <object id="65" gid="30" x="100" y="50" width="50" height="50"/>
+  </objectgroup>
+ </group>
+</map>

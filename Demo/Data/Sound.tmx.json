@@ -6,16 +6,44 @@
          "id":5,
          "layers":[
                 {
-                 "data":[4, 4, 4, 4, 4, 4, 4, 4, 4],
+                 "data":[4, 0, 0, 4, 0, 0, 4, 0, 0],
                  "height":3,
                  "id":1,
-                 "name":"Ground",
+                 "name":"LeftGround",
                  "opacity":1,
                  "properties":[
                         {
-                         "name":"Type",
+                         "name":"Materials",
                          "type":"string",
-                         "value":"\/Base\/Sandstone"
+                         "value":"[ground]"
+                        }, 
+                        {
+                         "name":"Walkable",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "type":"tilelayer",
+                 "visible":true,
+                 "width":3,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "data":[4, 4, 0, 4, 4, 0, 4, 4, 0],
+                 "height":3,
+                 "id":30,
+                 "name":"RightGround",
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":"1,0"
+                        }, 
+                        {
+                         "name":"Materials",
+                         "type":"string",
+                         "value":"[ground]"
                         }, 
                         {
                          "name":"Walkable",
@@ -30,32 +58,9 @@
                 }, 
                 {
                  "draworder":"topdown",
-                 "id":4,
-                 "name":"Transitions",
-                 "objects":[
-                        {
-                         "gid":20,
-                         "height":50,
-                         "id":55,
-                         "name":"",
-                         "properties":[
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"ZoneEntry",
-                                 "type":"bool",
-                                 "value":true
-                                }],
-                         "rotation":90,
-                         "type":"\/Base\/Transition",
-                         "visible":true,
-                         "width":50,
-                         "x":100,
-                         "y":50
-                        }],
+                 "id":27,
+                 "name":"Objects",
+                 "objects":[],
                  "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
@@ -64,25 +69,25 @@
                 }, 
                 {
                  "draworder":"topdown",
-                 "id":22,
-                 "name":"Scenery",
+                 "id":29,
+                 "name":"Transitions",
                  "objects":[
                         {
-                         "gid":34,
+                         "gid":30,
                          "height":50,
-                         "id":59,
+                         "id":65,
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"SceneryName",
+                                 "name":"LocationId",
                                  "type":"string",
-                                 "value":"Dunes"
+                                 "value":""
                                 }],
-                         "rotation":90,
-                         "type":"\/Base\/Scenery",
+                         "rotation":0,
+                         "type":"\/Base\/Location",
                          "visible":true,
                          "width":50,
-                         "x":50,
+                         "x":100,
                          "y":50
                         }],
                  "opacity":1,
@@ -104,14 +109,14 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":25,
- "nextobjectid":61,
+ "nextlayerid":31,
+ "nextobjectid":66,
  "orientation":"orthogonal",
  "properties":[
         {
          "name":"NoAgents",
          "type":"bool",
-         "value":true
+         "value":false
         }, 
         {
          "name":"NoSpawning",
@@ -119,12 +124,12 @@
          "value":false
         }, 
         {
-         "name":"Skybox",
+         "name":"Offset",
          "type":"string",
-         "value":"Sky_Sand_01"
+         "value":"0,0,10"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.4.2",
+ "tiledversion":"1.4.3",
  "tileheight":50,
  "tilesets":[
         {
@@ -139,7 +144,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":22,
+         "tilecount":25,
          "tileheight":50,
          "tiles":[
                 {
@@ -256,16 +261,6 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
-                        {
-                         "name":"FloorEntry",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"FloorExit",
-                         "type":"bool",
-                         "value":false
-                        }, 
                         {
                          "name":"Variable",
                          "type":"string",
@@ -509,12 +504,45 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "type":"\/Base\/StoneCorridorEnd"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/..\/_Tiled\/Master Images\/redirection.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"TargetLocation",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Redirection"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/..\/_Tiled\/Master Images\/location.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"LocationId",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Location"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/..\/_Tiled\/Master Images\/trigger.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "type":"\/Base\/Trigger"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":29,
+         "firstgid":32,
          "grid":
             {
              "height":1,

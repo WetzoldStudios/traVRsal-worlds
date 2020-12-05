@@ -437,7 +437,7 @@
                  "y":0
                 }, 
                 {
-                 "data":[35, 35, 35, 35, 35, 35, 35, 35, 35],
+                 "data":[38, 38, 38, 38, 38, 38, 38, 38, 38],
                  "height":3,
                  "id":20,
                  "name":"Spikes",
@@ -1220,7 +1220,7 @@
  "nextobjectid":52,
  "orientation":"orthogonal",
  "renderorder":"left-up",
- "tiledversion":"1.4.2",
+ "tiledversion":"1.4.3",
  "tileheight":50,
  "tilesets":[
         {
@@ -1235,7 +1235,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":22,
+         "tilecount":25,
          "tileheight":50,
          "tiles":[
                 {
@@ -1352,16 +1352,6 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
-                        {
-                         "name":"FloorEntry",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"FloorExit",
-                         "type":"bool",
-                         "value":false
-                        }, 
                         {
                          "name":"Variable",
                          "type":"string",
@@ -1605,12 +1595,45 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "type":"\/Base\/StoneCorridorEnd"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/..\/_Tiled\/Master Images\/redirection.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"TargetLocation",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Redirection"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/..\/_Tiled\/Master Images\/location.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"LocationId",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Location"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/..\/_Tiled\/Master Images\/trigger.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "type":"\/Base\/Trigger"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":29,
+         "firstgid":32,
          "grid":
             {
              "height":1,

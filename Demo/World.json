@@ -1,0 +1,24 @@
+{
+    "key": "Demo",
+    "name": "traVRsal Demo",
+    "shortDescription": "Show-casing many of the available world-building features.",
+    "longDescription": "This is an example for world creators to show-case what is possible with traVRsal for inspiration and as a copy/paste source. The accompanying Unity project including all assets can be downloaded from github. It will constantly be expanded.",
+    "enableChallenges": false,
+    "replacements": [
+        {
+            "type": "Material",
+            "key": "[walls]",
+            "materials": "/Base/Proto/Blue"
+        },
+        {
+            "type": "Material",
+            "key": "[ceiling]",
+            "materials": "/Base/Proto/White"
+        },
+        {
+            "type": "Material",
+            "key": "[ground]",
+            "materials": "/Base/Proto/Green"
+        }
+    ]
+}

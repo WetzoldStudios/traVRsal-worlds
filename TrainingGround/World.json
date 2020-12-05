@@ -40,7 +40,7 @@
         {
             "key": "spiderbots",
             "name": "Spider Bots",
-            "description": "Walk around and can be a bit scary"
+            "description": "Scary crawling robots"
         }
     ],
     "initialVariables": [

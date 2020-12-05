@@ -204,7 +204,7 @@
         {
          "name":"MusicVolume",
          "type":"float",
-         "value":15
+         "value":10
         }, 
         {
          "name":"NoAgents",
@@ -232,7 +232,7 @@
          "value":"Skybox"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.4.2",
+ "tiledversion":"1.4.3",
  "tileheight":50,
  "tilesets":[
         {
