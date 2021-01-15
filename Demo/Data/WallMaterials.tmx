@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="35" nextobjectid="83">
+ <properties>
+  <property name="AudioEffect" value="guide-custommaterials.mp3"/>
+  <property name="NoAgents" type="bool" value="false"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Offset" value="15;0;0"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Materials" value="[ground]"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,4,4,
+4,4,4
+</data>
+  </layer>
+  <layer id="28" name="Ceiling" width="3" height="3" visible="0">
+   <properties>
+    <property name="AtCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[random]"/>
+    <property name="RandomMaterials" value="/Base/Proto/Green,/Base/Proto/Red,/Base/Proto/Blue,/Base/Proto/White"/>
+   </properties>
+   <data encoding="csv">
+0,3,3,
+0,3,3,
+0,3,3
+</data>
+  </layer>
+  <objectgroup id="31" name="Walls">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="68" gid="5" x="50" y="150" width="50" height="50">
+    <properties>
+     <property name="Materials" value="/Base/Proto/Red,[random],*,/Base/Proto/Green"/>
+     <property name="RandomMaterials" value="/Base/Proto/Green,/Base/Proto/Red,/Base/Proto/Blue,/Base/Proto/White"/>
+    </properties>
+   </object>
+   <object id="69" gid="5" x="100" y="150" width="50" height="50">
+    <properties>
+     <property name="Materials" value="/Base/Proto/Red,[random],*,/Base/Proto/Green"/>
+     <property name="RandomMaterials" value="/Base/Proto/Green,/Base/Proto/Red,/Base/Proto/Blue,/Base/Proto/White"/>
+    </properties>
+   </object>
+   <object id="73" gid="5" x="150" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="0,1"/>
+     <property name="Materials" value="/Base/Proto/Red,/Base/Proto/Blue,*,/Base/Proto/Green"/>
+    </properties>
+   </object>
+   <object id="74" gid="5" x="150" y="150" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Materials" value="/Base/Proto/Red,/Base/Proto/Blue,*,/Base/Proto/Green"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="34" name="Walls2">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="78" gid="5" x="100" y="0" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Materials" value="/Base/Bricks"/>
+    </properties>
+   </object>
+   <object id="79" gid="5" x="150" y="0" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Materials" value="/Base/Bricks"/>
+    </properties>
+   </object>
+   <object id="80" gid="5" x="150" y="50" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Materials" value="/Base/Bricks"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="32" name="InnerWalls" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="/Base/Proto/Red,/Base/Proto/Blue,*,/Base/Proto/Green"/>
+   </properties>
+   <object id="75" gid="5" x="150" y="50" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Anchor" value="0,1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="Transitions" locked="1">
+   <object id="65" gid="8" x="100" y="50" width="50" height="50">
+    <properties>
+     <property name="TargetZone" value="CustomObjects"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="30" name="Signs" visible="0">
+   <object id="66" type="SignRight" gid="38" x="100" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+     <property name="Snap" type="bool" value="true"/>
+     <property name="Text" value="Custom Objects"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="27" name="Objects"/>
+ </group>
+</map>

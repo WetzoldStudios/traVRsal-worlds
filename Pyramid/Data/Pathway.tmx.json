@@ -33,29 +33,8 @@
                          "height":50,
                          "id":24,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":0,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":0,
@@ -66,29 +45,8 @@
                          "height":50,
                          "id":25,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":0,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -99,29 +57,8 @@
                          "height":50,
                          "id":26,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":0,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -132,29 +69,8 @@
                          "height":50,
                          "id":27,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -165,29 +81,8 @@
                          "height":50,
                          "id":28,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -198,29 +93,8 @@
                          "height":50,
                          "id":29,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -231,29 +105,8 @@
                          "height":50,
                          "id":30,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-180,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -264,29 +117,8 @@
                          "height":50,
                          "id":31,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-180,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -297,29 +129,8 @@
                          "height":50,
                          "id":32,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-180,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -330,29 +141,8 @@
                          "height":50,
                          "id":33,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":0,
@@ -363,29 +153,8 @@
                          "height":50,
                          "id":34,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":0,
@@ -396,29 +165,8 @@
                          "height":50,
                          "id":35,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":0,
@@ -553,22 +301,12 @@
                                  "value":"\/Base\/HorizontalMaze"
                                 }, 
                                 {
-                                 "name":"Snap",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
                                  "name":"TargetZone",
                                  "type":"string",
                                  "value":"Pharao"
-                                }, 
-                                {
-                                 "name":"ZoneExit",
-                                 "type":"bool",
-                                 "value":true
                                 }],
                          "rotation":-270,
-                         "type":"\/Base\/Transition",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -579,19 +317,8 @@
                          "height":50,
                          "id":23,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"ZoneEntry",
-                                 "type":"bool",
-                                 "value":true
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/Transition",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -618,29 +345,9 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"0,1"
-                                }, 
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
                                 }],
                          "rotation":90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -651,29 +358,8 @@
                          "height":50,
                          "id":49,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -706,29 +392,9 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"0,-1"
-                                }, 
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
                                 }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -739,29 +405,8 @@
                          "height":50,
                          "id":51,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -794,29 +439,9 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"-1,0"
-                                }, 
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
                                 }],
                          "rotation":0,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -827,29 +452,8 @@
                          "height":50,
                          "id":38,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":0,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -860,29 +464,8 @@
                          "height":50,
                          "id":39,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -893,29 +476,8 @@
                          "height":50,
                          "id":40,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -926,29 +488,8 @@
                          "height":50,
                          "id":41,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-90,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -959,29 +500,8 @@
                          "height":50,
                          "id":42,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
-                                }],
                          "rotation":-180,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":150,
@@ -997,29 +517,9 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"-1,0"
-                                }, 
-                                {
-                                 "name":"AutoFill",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"CheckOccupiedNeighbor",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"FillHoles",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"SkipOccupied",
-                                 "type":"string",
-                                 "value":"\/Base\/Door"
                                 }],
                          "rotation":-180,
-                         "type":"\/Base\/StoneWall",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -1052,14 +552,9 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"1,0"
-                                }, 
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
                                 }],
                          "rotation":-90,
-                         "type":"\/Base\/maze-exit",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -1075,14 +570,9 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"-1,0"
-                                }, 
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
                                 }],
                          "rotation":90,
-                         "type":"\/Base\/maze-exit",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -1125,14 +615,8 @@
                          "height":50,
                          "id":20,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
-                                }],
                          "rotation":90,
-                         "type":"\/Base\/no-spawn",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":0,
@@ -1143,14 +627,8 @@
                          "height":50,
                          "id":21,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
-                                }],
                          "rotation":0,
-                         "type":"\/Base\/no-spawn",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":0,
@@ -1161,14 +639,8 @@
                          "height":50,
                          "id":22,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
-                                }],
                          "rotation":0,
-                         "type":"\/Base\/no-spawn",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":0,
@@ -1245,9 +717,24 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"AutoFill",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"DontPropagate-Virtual",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Virtual",
+                         "type":"bool",
+                         "value":false
                         }],
                  "type":"\/Base\/Ceiling"
                 }, 
@@ -1258,9 +745,24 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"AutoFill",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"DontPropagate-Virtual",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Virtual",
+                         "type":"bool",
+                         "value":false
                         }],
                  "type":"\/Base\/Ground"
                 }, 
@@ -1270,6 +772,11 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
                         {
                          "name":"AutoFill",
                          "type":"bool",
@@ -1330,9 +837,39 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"MazeTransitions",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"Music",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"OneWay",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"RandomMusic",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Snap",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"Speak",
+                         "type":"string",
+                         "value":""
                         }, 
                         {
                          "name":"TargetZone",
@@ -1352,6 +889,11 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
                         {
                          "name":"Variable",
                          "type":"string",
@@ -1373,6 +915,11 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Variable",
                          "type":"string",
                          "value":""
@@ -1391,6 +938,11 @@
                          "value":""
                         }, 
                         {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
                          "name":"Variable",
                          "type":"string",
                          "value":""
@@ -1403,6 +955,11 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
                         {
                          "name":"Y",
                          "type":"int",
@@ -1419,7 +976,7 @@
                         {
                          "name":"Anchor",
                          "type":"string",
-                         "value":"0,0"
+                         "value":""
                         }, 
                         {
                          "name":"Virtual",
@@ -1471,6 +1028,11 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Virtual",
                          "type":"bool",
                          "value":true
@@ -1505,6 +1067,11 @@
                          "name":"Socket",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"ValidSockets",
+                         "type":"string",
+                         "value":""
                         }]
                 }, 
                 {
@@ -1536,6 +1103,11 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
                         {
                          "name":"AutoFill",
                          "type":"bool",
@@ -1603,6 +1175,11 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"TargetLocation",
                          "type":"string",
                          "value":""
@@ -1616,6 +1193,11 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"LocationId",
                          "type":"string",
                          "value":""
@@ -1627,6 +1209,27 @@
                  "image":"..\/..\/_Tiled\/Master Images\/trigger.png",
                  "imageheight":50,
                  "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"AudioEffect",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Speak",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Variable",
+                         "type":"string",
+                         "value":""
+                        }],
                  "type":"\/Base\/Trigger"
                 }],
          "tilewidth":50
@@ -1653,7 +1256,7 @@
                  "imagewidth":50,
                  "properties":[
                         {
-                         "name":"Images",
+                         "name":"ImagePool",
                          "type":"string",
                          "value":""
                         }, 
@@ -1719,7 +1322,43 @@
                  "id":6,
                  "image":"..\/..\/_Tiled\/Master Images\/object.png",
                  "imageheight":50,
-                 "imagewidth":50
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
                 }],
          "tilewidth":50
         }],

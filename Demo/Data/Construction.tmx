@@ -3,7 +3,7 @@
  <properties>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Offset" value="10,0,0"/>
+  <property name="Offset" value="15;0;0"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>

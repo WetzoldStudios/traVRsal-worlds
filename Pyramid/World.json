@@ -3,9 +3,10 @@
     "shortDescription": "Survive the ancient pyramid's traps.",
     "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Survive and find your way out again.",
     "coverImage": "Cover.png",
+    "minVersion": "0.5",
     "deathSound": "voice_male_grunt_pain_death_07.wav",
     "kpis": "0,3,4",
-    "initialItemRight": "/Base/Flashlight",
+    "initialItemMain": "/Base/Flashlight",
     "journeys": [
         {
             "segments": [
@@ -121,6 +122,7 @@
             ],
             "amountType": "Probability",
             "amount": 60,
+            "orientation": "Corner",
             "restrictions": [
                 "corner"
             ],

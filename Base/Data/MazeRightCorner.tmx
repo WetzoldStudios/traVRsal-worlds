@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="20" nextobjectid="79">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="20" nextobjectid="79">
  <properties>
   <property name="Virtual" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -33,12 +33,16 @@
    <object id="59" gid="5" x="100" y="150" width="50" height="50"/>
    <object id="63" gid="5" x="150" y="150" width="50" height="50" rotation="-90"/>
   </objectgroup>
-  <objectgroup id="17" name="Walls2" locked="1">
+  <objectgroup id="17" name="Walls2">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
     <property name="Materials" value="[walls]"/>
    </properties>
-   <object id="68" gid="5" x="50" y="150" width="50" height="50" rotation="-90"/>
+   <object id="68" gid="5" x="50" y="150" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="AutoFill" type="bool" value="false"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="12" name="Maze" locked="1">
    <properties>

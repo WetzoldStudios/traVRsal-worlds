@@ -11,20 +11,15 @@
                  "name":"Bounds",
                  "objects":[
                         {
-                         "gid":35,
+                         "gid":38,
                          "height":50,
                          "id":69,
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MoveForward",
-                                 "type":"int",
-                                 "value":-1
-                                }, 
-                                {
-                                 "name":"MoveRight",
-                                 "type":"int",
-                                 "value":-1
+                                 "name":"Move",
+                                 "type":"string",
+                                 "value":"-0.5;0;-0.5"
                                 }],
                          "rotation":90,
                          "type":"CornerGuard",
@@ -51,24 +46,14 @@
                          "name":"",
                          "properties":[
                                 {
-                                 "name":"MoveRight",
-                                 "type":"int",
-                                 "value":-8
+                                 "name":"Move",
+                                 "type":"string",
+                                 "value":"-2;0;0"
                                 }, 
                                 {
                                  "name":"Scale",
-                                 "type":"float",
-                                 "value":500
-                                }, 
-                                {
-                                 "name":"ScaleY",
-                                 "type":"float",
-                                 "value":150
-                                }, 
-                                {
-                                 "name":"Snap",
-                                 "type":"bool",
-                                 "value":true
+                                 "type":"string",
+                                 "value":"5;1.2;5"
                                 }, 
                                 {
                                  "name":"TargetZone",
@@ -79,14 +64,9 @@
                                  "name":"Virtual",
                                  "type":"bool",
                                  "value":false
-                                }, 
-                                {
-                                 "name":"ZoneExit",
-                                 "type":"bool",
-                                 "value":true
                                 }],
                          "rotation":-90,
-                         "type":"\/Base\/Transition",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -97,19 +77,8 @@
                          "height":50,
                          "id":55,
                          "name":"",
-                         "properties":[
-                                {
-                                 "name":"Virtual",
-                                 "type":"bool",
-                                 "value":true
-                                }, 
-                                {
-                                 "name":"ZoneEntry",
-                                 "type":"bool",
-                                 "value":true
-                                }],
                          "rotation":90,
-                         "type":"\/Base\/Transition",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":100,
@@ -127,7 +96,7 @@
                  "name":"Stands",
                  "objects":[
                         {
-                         "gid":35,
+                         "gid":38,
                          "height":50,
                          "id":68,
                          "name":"",
@@ -136,6 +105,16 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"0,-1"
+                                }, 
+                                {
+                                 "name":"ImageOrder-Back",
+                                 "type":"int",
+                                 "value":0
+                                }, 
+                                {
+                                 "name":"ImageOrder-Front",
+                                 "type":"int",
+                                 "value":1
                                 }],
                          "rotation":-90,
                          "type":"Stand3",
@@ -156,7 +135,7 @@
                  "name":"Scenery",
                  "objects":[
                         {
-                         "gid":34,
+                         "gid":37,
                          "height":50,
                          "id":63,
                          "name":"",
@@ -167,7 +146,7 @@
                                  "value":"Museum"
                                 }],
                          "rotation":90,
-                         "type":"\/Base\/Scenery",
+                         "type":"",
                          "visible":true,
                          "width":50,
                          "x":50,
@@ -247,7 +226,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":22,
+         "tilecount":25,
          "tileheight":50,
          "tiles":[
                 {
@@ -257,9 +236,24 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"AutoFill",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"DontPropagate-Virtual",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Virtual",
+                         "type":"bool",
+                         "value":false
                         }],
                  "type":"\/Base\/Ceiling"
                 }, 
@@ -270,9 +264,24 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"AutoFill",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"DontPropagate-Virtual",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Virtual",
+                         "type":"bool",
+                         "value":false
                         }],
                  "type":"\/Base\/Ground"
                 }, 
@@ -282,6 +291,11 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
                         {
                          "name":"AutoFill",
                          "type":"bool",
@@ -342,9 +356,39 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"MazeTransitions",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"Music",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"OneWay",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"RandomMusic",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Snap",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"Speak",
+                         "type":"string",
+                         "value":""
                         }, 
                         {
                          "name":"TargetZone",
@@ -365,14 +409,9 @@
                  "imagewidth":50,
                  "properties":[
                         {
-                         "name":"FloorEntry",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"FloorExit",
-                         "type":"bool",
-                         "value":false
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
                         }, 
                         {
                          "name":"Variable",
@@ -395,6 +434,11 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Variable",
                          "type":"string",
                          "value":""
@@ -413,6 +457,11 @@
                          "value":""
                         }, 
                         {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
                          "name":"Variable",
                          "type":"string",
                          "value":""
@@ -425,6 +474,11 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
                         {
                          "name":"Y",
                          "type":"int",
@@ -441,7 +495,7 @@
                         {
                          "name":"Anchor",
                          "type":"string",
-                         "value":"0,0"
+                         "value":""
                         }, 
                         {
                          "name":"Virtual",
@@ -493,6 +547,11 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Virtual",
                          "type":"bool",
                          "value":true
@@ -527,6 +586,11 @@
                          "name":"Socket",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"ValidSockets",
+                         "type":"string",
+                         "value":""
                         }]
                 }, 
                 {
@@ -558,6 +622,11 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
                         {
                          "name":"AutoFill",
                          "type":"bool",
@@ -617,12 +686,76 @@
                  "imageheight":50,
                  "imagewidth":50,
                  "type":"\/Base\/StoneCorridorEnd"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/..\/_Tiled\/Master Images\/redirection.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"TargetLocation",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Redirection"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/..\/_Tiled\/Master Images\/location.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"LocationId",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Location"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/..\/_Tiled\/Master Images\/trigger.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"AudioEffect",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Speak",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Variable",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Trigger"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":29,
+         "firstgid":32,
          "grid":
             {
              "height":1,
@@ -642,7 +775,7 @@
                  "imagewidth":50,
                  "properties":[
                         {
-                         "name":"Images",
+                         "name":"ImagePool",
                          "type":"string",
                          "value":""
                         }, 
@@ -708,7 +841,43 @@
                  "id":6,
                  "image":"..\/..\/_Tiled\/Master Images\/object.png",
                  "imageheight":50,
-                 "imagewidth":50
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
                 }],
          "tilewidth":50
         }],

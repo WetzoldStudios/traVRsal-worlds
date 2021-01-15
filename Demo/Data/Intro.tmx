@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="47" nextobjectid="102">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="30" nextobjectid="72">
  <properties>
+  <property name="AudioEffect" value="guide-intro.mp3"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Skybox" value="Skybox"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
- <group id="36" name="Underground" visible="0">
+ <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
-   <property name="Underground" type="bool" value="true"/>
   </properties>
-  <layer id="38" name="Ground" width="3" height="3">
+  <layer id="1" name="Ground" width="3" height="3">
    <properties>
-    <property name="Materials" value="[ground]"/>
+    <property name="Materials" value="DarkGrid"/>
     <property name="Walkable" type="bool" value="true"/>
    </properties>
    <data encoding="csv">
@@ -23,157 +22,40 @@
 4,4,4
 </data>
   </layer>
-  <layer id="41" name="Walls" width="3" height="3">
-   <properties>
-    <property name="ConnectToCeiling" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-2684354566,3221225477,3221225478,
-2684354565,0,1610612741,
-6,5,1610612742
-</data>
-  </layer>
-  <layer id="43" name="InnerWalls" width="3" height="3">
-   <properties>
-    <property name="ConnectToCeiling" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-0,0,0,
-1610612741,0,0,
-1610612741,0,0
-</data>
-  </layer>
-  <objectgroup id="42" name="Transitions">
-   <object id="92" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
+  <objectgroup id="4" name="Transitions">
+   <object id="65" gid="20" x="100" y="50" width="50" height="50" rotation="90"/>
+   <object id="68" gid="8" x="100" y="50" width="50" height="50" rotation="-180">
     <properties>
-     <property name="MazeTransitions" type="int" value="0"/>
-     <property name="TargetZone" value="[exit]"/>
+     <property name="Anchor" value="0,1"/>
+     <property name="Move-C" value="0;-5;0"/>
+     <property name="TargetZone" value="MovingPlatform"/>
+     <property name="Variable" value="IntroPortal"/>
+     <property name="VariableReaction-C" value="Move, 0;0.5;0, 3"/>
     </properties>
    </object>
   </objectgroup>
- </group>
- <group id="5" name="Floor 0">
-  <properties>
-   <property name="Height" type="float" value="2.5"/>
-  </properties>
-  <objectgroup id="31" name="Ground" visible="0">
-   <properties>
-    <property name="DontPropagate-Virtual" type="bool" value="true"/>
-    <property name="Virtual" type="bool" value="true"/>
-   </properties>
-   <object id="83" gid="4" x="100" y="150" width="50" height="50"/>
-   <object id="84" gid="4" x="0" y="150" width="50" height="50"/>
-   <object id="85" gid="4" x="0" y="50" width="50" height="50"/>
-   <object id="100" gid="4" x="100" y="50" width="50" height="50"/>
-  </objectgroup>
-  <layer id="1" name="Ground" width="3" height="3">
-   <properties>
-    <property name="Materials" value="[ground]"/>
-    <property name="Walkable" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-0,4,0,
-4,4,4,
-0,4,0
-</data>
-  </layer>
-  <objectgroup id="44" name="Signs">
-   <properties>
-    <property name="Y" type="int" value="2"/>
-   </properties>
-   <object id="93" type="SignLeft" gid="38" x="100" y="0" width="50" height="50" rotation="-180">
+  <objectgroup id="27" name="Objects" locked="1">
+   <object id="66" type="TileCube" gid="38" x="0" y="50" width="50" height="50">
     <properties>
-     <property name="Anchor" value="-1,0"/>
-     <property name="Text" value="Logic"/>
+     <property name="Variable" value="IntroCube"/>
+     <property name="Y" type="int" value="-1"/>
     </properties>
    </object>
-   <object id="94" type="SignLeft" gid="38" x="0" y="50" width="50" height="50" rotation="90">
+   <object id="67" type="/Base/FeetIndicatorSimple" gid="38" x="50" y="150" width="50" height="50"/>
+   <object id="71" type="TileCube" gid="38" x="100" y="50" width="50" height="50">
     <properties>
-     <property name="Anchor" value="0,-1"/>
-     <property name="Text" value="Locomotion"/>
-    </properties>
-   </object>
-   <object id="95" type="SignLeft" gid="38" x="50" y="150" width="50" height="50">
-    <properties>
-     <property name="Anchor" value="1,0"/>
-     <property name="Text" value="Exit"/>
+     <property name="Variable" value="IntroCube"/>
+     <property name="Y" type="int" value="-1"/>
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="32" name="Transitions">
-   <object id="96" gid="20" x="100" y="100" width="50" height="50" rotation="-90"/>
-  </objectgroup>
-  <objectgroup id="30" name="Elevators" locked="1">
-   <object id="86" type="/TrainingGround/Elevator" gid="9" x="0" y="0" width="50" height="50" rotation="90"/>
-   <object id="87" type="/TrainingGround/Elevator" gid="9" x="0" y="150" width="50" height="50">
+  <objectgroup id="29" name="Trigger">
+   <object id="69" gid="31" x="50" y="150" width="50" height="50">
     <properties>
-     <property name="TargetFloor" type="int" value="2"/>
-    </properties>
-   </object>
-   <object id="88" type="/TrainingGround/Elevator" gid="9" x="150" y="150" width="50" height="50" rotation="-90">
-    <properties>
-     <property name="TargetFloor" type="int" value="-1"/>
+     <property name="AudioEffect" value="guide-intro2.mp3"/>
+     <property name="Variable" value="IntroCube, IntroPortal"/>
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="46" name="Platform">
-   <object id="101" type="Platform" gid="29" x="100" y="50" width="50" height="50">
-    <properties>
-     <property name="TargetLocation" value="Sound"/>
-    </properties>
-   </object>
-  </objectgroup>
- </group>
- <group id="27" name="Floor 1" visible="0">
-  <properties>
-   <property name="Height" type="float" value="10"/>
-  </properties>
-  <objectgroup id="29" name="Ground" visible="0">
-   <properties>
-    <property name="DontPropagate-Virtual" type="bool" value="true"/>
-    <property name="Virtual" type="bool" value="true"/>
-   </properties>
-   <object id="89" gid="4" x="0" y="50" width="50" height="50"/>
-   <object id="90" gid="4" x="0" y="150" width="50" height="50"/>
-  </objectgroup>
-  <layer id="28" name="Ground" width="3" height="3" visible="0">
-   <properties>
-    <property name="Materials" value="[ground]"/>
-    <property name="Walkable" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-0,4,4,
-4,4,4,
-0,4,4
-</data>
-  </layer>
- </group>
- <group id="33" name="Floor 2" visible="0">
-  <objectgroup id="34" name="Ground" visible="0">
-   <properties>
-    <property name="DontPropagate-Virtual" type="bool" value="true"/>
-    <property name="Virtual" type="bool" value="true"/>
-   </properties>
-   <object id="91" gid="4" x="0" y="150" width="50" height="50"/>
-   <object id="97" gid="4" x="100" y="50" width="50" height="50"/>
-  </objectgroup>
-  <objectgroup id="45" name="Platform">
-   <object id="98" type="Platform" gid="29" x="100" y="50" width="50" height="50">
-    <properties>
-     <property name="TargetLocation" value="Locomotion"/>
-    </properties>
-   </object>
-  </objectgroup>
-  <layer id="35" name="Ground" width="3" height="3">
-   <properties>
-    <property name="Materials" value="[ground]"/>
-    <property name="Walkable" type="bool" value="true"/>
-   </properties>
-   <data encoding="csv">
-4,4,0,
-4,4,4,
-0,4,4
-</data>
-  </layer>
  </group>
 </map>

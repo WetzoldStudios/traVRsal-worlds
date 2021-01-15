@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="76">
+ <properties>
+  <property name="AudioEffect" value="guide-customobjects.mp3"/>
+  <property name="NoAgents" type="bool" value="false"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Materials" value="[ground]"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,4,4,
+4,4,4
+</data>
+  </layer>
+  <layer id="28" name="Ceiling" width="3" height="3" visible="0">
+   <properties>
+    <property name="AtCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[ceiling]"/>
+   </properties>
+   <data encoding="csv">
+3,3,3,
+3,3,3,
+3,3,3
+</data>
+  </layer>
+  <layer id="3" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <data encoding="csv">
+2684354566,3221225477,3221225478,
+2684354565,0,1610612741,
+0,0,0
+</data>
+  </layer>
+  <objectgroup id="4" name="Transitions">
+   <object id="65" gid="8" x="100" y="50" width="50" height="50">
+    <properties>
+     <property name="TargetZone" value="CustomWalls"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="27" name="Objects">
+   <object id="67" type="SampleObject" gid="38" x="0" y="50" width="50" height="50"/>
+   <object id="68" type="SampleObject" gid="38" x="0" y="0" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Y" type="int" value="1"/>
+    </properties>
+   </object>
+   <object id="69" type="SampleObject" gid="38" x="50" y="0" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="70" type="SampleObject" gid="38" x="50" y="50" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Y" type="int" value="3"/>
+    </properties>
+   </object>
+   <object id="71" type="SampleObject" gid="38" x="50" y="50" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Rotate" value="0;45;0"/>
+     <property name="Y" type="int" value="4"/>
+    </properties>
+   </object>
+   <object id="72" type="SampleObject" gid="38" x="100" y="100" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Move" value="0;0;1.5"/>
+     <property name="Scale" value="2"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="73" type="SampleObject" gid="38" x="50" y="100" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Move" value="1;0;1"/>
+     <property name="Rotate" value="0;45;0"/>
+     <property name="Scale" value="2"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="74" type="SampleObject" gid="38" x="150" y="100" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Move" value="-1;0;1"/>
+     <property name="Rotate" value="0;-45;0"/>
+     <property name="Scale" value="2"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="30" name="Signs">
+   <object id="66" type="SignRight" gid="38" x="100" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+     <property name="Snap" type="bool" value="true"/>
+     <property name="Text" value="Custom Walls (Manual Placement)"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>

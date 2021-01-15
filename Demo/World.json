@@ -3,7 +3,23 @@
     "name": "traVRsal Demo",
     "shortDescription": "Show-casing many of the available world-building features.",
     "longDescription": "This is an example for world creators to show-case what is possible with traVRsal for inspiration and as a copy/paste source. The accompanying Unity project including all assets can be downloaded from github. It will constantly be expanded.",
+    "coverImage": "Cover.png",
+    "minVersion": "0.5",
+    "deathSound": "death.mp3",
     "enableChallenges": false,
+    "imageProviders": [
+        {
+            "key": "unsplash",
+            "repeatWhenDepleted": true
+        }
+    ],
+    "initialVariables": [
+        {
+            "key": "IntroPortal",
+            "value": "0",
+            "behaviour": "Change_Higher"
+        }
+    ],
     "replacements": [
         {
             "type": "Material",
@@ -19,6 +35,170 @@
             "type": "Material",
             "key": "[ground]",
             "materials": "/Base/Proto/Green"
+        },
+        {
+            "key": "/Base/Ground",
+            "objectKey": "CustomGround",
+            "materials": "",
+            "validZones": [
+                "Sound"
+            ]
+        },
+        {
+            "key": "/Base/Wall",
+            "randomObjects": [
+                "Wall",
+                "Window",
+                "Window2X"
+            ],
+            "validZones": [
+                "CustomWallsByRule",
+                "Labyrinths"
+            ]
+        }
+    ],
+    "spawnRules": [
+        {
+            "key": "TransitionFrames",
+            "objectKeys": [
+                "PortalFrame"
+            ],
+            "validObjects": [
+                "/Base/Transition"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "distributionType": "Object",
+            "orientation": "Same",
+            "connectToCeiling": true
+        },
+        {
+            "key": "DeadEnds",
+            "objectKeys": [
+                "SampleObject"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "orientation": "Path_Back",
+            "restrictions": [
+                "deadend",
+                "maze"
+            ],
+            "scale": "1.5",
+            "maxScale": 1.5,
+            "y": 3.0
+        },
+        {
+            "key": "Corners",
+            "objectKeys": [
+                "SampleObject"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "orientation": "Path_Back",
+            "restrictions": [
+                "corner",
+                "maze"
+            ],
+            "scale": "0.5",
+            "maxScale": 1.5,
+            "y": 4.0
+        },
+        {
+            "key": "Directions",
+            "objectKeys": [
+                "Arrow"
+            ],
+            "validSockets": [
+                "ShortestPath"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "restrictions": [
+                "maze"
+            ],
+            "dontCountAsObstacle": true
+        },
+        {
+            "key": "Frames",
+            "objectKeys": [
+                "GalleryImage"
+            ],
+            "validZones": [
+                "Gallery"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "orientation": "Free_Side",
+            "maxScale": 1.5,
+            "y": 2.0,
+            "snap": true
+        }
+    ],
+    "objectSpecs": [
+        {
+            "objectKey": "Arrow",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "GalleryImage",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Poster",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "SampleObject",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "TileCube",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Window",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 5
+        },
+        {
+            "objectKey": "Window2X",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 2,
+            "height": 5
         }
     ]
 }

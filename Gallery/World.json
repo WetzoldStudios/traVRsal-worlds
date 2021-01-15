@@ -3,6 +3,7 @@
     "shortDescription": "Walk through a stunning virtual gallery full of beautiful pictures.",
     "longDescription": "Walk through a stunning virtual gallery composed of either the most recent amazing photos from Unsplash.com or use your own images you stored on your device before (see wiki).",
     "coverImage": "Cover.png",
+    "minVersion": "0.5",
     "showHandHud": false,
     "enableChallenges": false,
     "outroMusic": "",
@@ -78,7 +79,7 @@
             ],
             "amountType": "Probability",
             "amount": 100,
-            "scale": 120.0,
+            "scale": "1.2",
             "maxScale": 1.5,
             "companions": [
                 {
@@ -87,8 +88,8 @@
                         "Lamp_03"
                     ],
                     "orientation": "Same",
-                    "y": 4.0,
                     "maxScale": 1.5,
+                    "y": 4.0,
                     "snap": true,
                     "dontCountAsObstacle": true
                 }
@@ -115,8 +116,8 @@
             "restrictions": [
                 "maze"
             ],
-            "y": 3.0,
             "maxScale": 1.5,
+            "y": 3.0,
             "snap": true,
             "companions": [
                 {
@@ -125,8 +126,8 @@
                         "Lamp_03"
                     ],
                     "orientation": "Same",
-                    "y": 4.0,
                     "maxScale": 1.5,
+                    "y": 4.0,
                     "snap": true,
                     "dontCountAsObstacle": true
                 }
@@ -152,7 +153,7 @@
             ],
             "amountType": "Probability",
             "amount": 100,
-            "scale": 190.0,
+            "scale": "1.9",
             "maxScale": 1.5
         },
         {
@@ -182,8 +183,8 @@
                 "deadend",
                 "maze"
             ],
-            "y": 3.0,
-            "maxScale": 1.5
+            "maxScale": 1.5,
+            "y": 3.0
         },
         {
             "key": "CornerLamps",

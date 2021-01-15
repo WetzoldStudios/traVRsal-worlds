@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="15" nextobjectid="50">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="15" nextobjectid="50">
  <properties>
   <property name="Virtual" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -42,9 +42,17 @@
     <property name="ConnectToCeiling" type="bool" value="true"/>
     <property name="Materials" value="[walls]"/>
    </properties>
-   <object id="45" gid="5" x="0" y="150" width="50" height="50"/>
+   <object id="45" gid="5" x="0" y="150" width="50" height="50">
+    <properties>
+     <property name="AutoFill" type="bool" value="false"/>
+    </properties>
+   </object>
    <object id="46" gid="5" x="0" y="50" width="50" height="50" rotation="90"/>
-   <object id="47" gid="5" x="50" y="0" width="50" height="50" rotation="-180"/>
+   <object id="47" gid="5" x="50" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="AutoFill" type="bool" value="false"/>
+    </properties>
+   </object>
    <object id="48" gid="5" x="0" y="100" width="50" height="50" rotation="90"/>
    <object id="49" gid="5" x="0" y="0" width="50" height="50" rotation="90"/>
   </objectgroup>

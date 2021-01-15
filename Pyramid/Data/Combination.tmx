@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="17" nextobjectid="76">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="17" nextobjectid="76">
  <properties>
   <property name="Music" value="egyptian2.mp3"/>
   <property name="NoSpawning" type="bool" value="false"/>
   <property name="NoSpawning-traps" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -132,10 +132,10 @@
      <property name="Variable" value="combo-door"/>
     </properties>
    </object>
-   <object id="50" gid="32" x="50" y="0" width="50" height="50" rotation="90">
+   <object id="50" gid="35" x="50" y="0" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="-1,0"/>
-     <property name="Images" value="[variable]"/>
+     <property name="ImagePool" value="[variable]"/>
      <property name="Snap" type="bool" value="true"/>
      <property name="Variable" value="combo-door"/>
      <property name="Y" type="int" value="4"/>

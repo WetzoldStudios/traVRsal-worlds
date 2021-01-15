@@ -5,13 +5,46 @@
             "fileName": "Intro.tmx"
         },
         {
-            "fileName": "Locomotion.tmx"
+            "fileName": "MovingPlatform.tmx"
+        },
+        {
+            "fileName": "Elevators.tmx"
+        },
+        {
+            "fileName": "WallMaterials.tmx"
+        },
+        {
+            "fileName": "CustomObjects.tmx"
+        },
+        {
+            "fileName": "CustomWalls.tmx"
+        },
+        {
+            "fileName": "CustomWallsByRule.tmx"
+        },
+        {
+            "fileName": "PlayerDamage.tmx"
+        },
+        {
+            "fileName": "Crouching.tmx"
+        },
+        {
+            "fileName": "Gallery.tmx"
+        },
+        {
+            "fileName": "Hub.tmx"
+        },
+        {
+            "fileName": "Construction.tmx"
         },
         {
             "fileName": "Sound.tmx"
         },
         {
             "fileName": "Labyrinths.tmx"
+        },
+        {
+            "fileName": "SoundGarden.tmx"
         }
     ]
 }
