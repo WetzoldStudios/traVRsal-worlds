@@ -1,4 +1,5 @@
 {
+    "version": "0.0.3",
     "name": "The Pyramid",
     "shortDescription": "Survive the ancient pyramid's traps.",
     "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Survive and find your way out again.",
@@ -11,12 +12,16 @@
         {
             "segments": [
                 {
-                    "length": 12,
+                    "length": 1,
                     "components": [
                         {
-                            "key": "Breach",
-                            "max": 1
-                        },
+                            "key": "Breach"
+                        }
+                    ]
+                },
+                {
+                    "length": 12,
+                    "components": [
                         {
                             "key": "Combination",
                             "max": 1

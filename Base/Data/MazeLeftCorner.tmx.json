@@ -881,6 +881,11 @@
                          "value":""
                         }, 
                         {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
                          "name":"TargetLocation",
                          "type":"string",
                          "value":""

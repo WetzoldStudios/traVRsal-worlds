@@ -3,7 +3,7 @@
  <properties>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Skybox" value="Skybox"/>
+  <property name="Skybox" value="Skybox1"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
@@ -54,7 +54,7 @@
    </object>
   </objectgroup>
  </group>
- <group id="5" name="Floor 0" visible="0">
+ <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
@@ -105,7 +105,7 @@
   <objectgroup id="32" name="Transitions">
    <object id="96" gid="20" x="100" y="100" width="50" height="50" rotation="-90"/>
   </objectgroup>
-  <objectgroup id="30" name="Elevators" locked="1">
+  <objectgroup id="30" name="Elevators">
    <object id="86" type="/TrainingGround/Elevator" gid="9" x="0" y="0" width="50" height="50" rotation="90"/>
    <object id="87" type="/TrainingGround/Elevator" gid="9" x="0" y="150" width="50" height="50">
     <properties>
@@ -126,7 +126,7 @@
    </object>
   </objectgroup>
  </group>
- <group id="27" name="Floor 1">
+ <group id="27" name="Floor 1" visible="0">
   <properties>
    <property name="Height" type="float" value="10"/>
    <property name="NoSpawning-TransitionFrames" type="bool" value="true"/>

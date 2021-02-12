@@ -428,7 +428,7 @@
                  "value":2.5
                 }],
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -570,7 +570,7 @@
                  "value":true
                 }],
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -699,7 +699,7 @@
         {
          "name":"Skybox",
          "type":"string",
-         "value":"Skybox"
+         "value":"Skybox1"
         }],
  "renderorder":"left-up",
  "tiledversion":"1.4.3",
