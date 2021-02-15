@@ -13,6 +13,7 @@ traVRsal contains an ever growing number of worlds to explore. Using the [traVRs
 # Worlds
 
 * [Base (reusable assets)](https://wetzoldstudios.github.io/traVRsal-worlds/Base)
+* [Skybox (reusable assets)](https://wetzoldstudios.github.io/traVRsal-worlds/Skybox)
 * [A.I. Take-Over](https://wetzoldstudios.github.io/traVRsal-worlds/TrainingGround)
 * [traVRsal Demo](https://wetzoldstudios.github.io/traVRsal-worlds/Demo)
 * [Space Pirate](https://wetzoldstudios.github.io/traVRsal-worlds/SpacePirate)

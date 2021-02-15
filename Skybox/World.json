@@ -1,0 +1,6 @@
+{
+    "version": "0.0.14",
+    "name": "Reuse Skyboxes",
+    "shortDescription": "This world only contains skyboxes for reuse in other worlds.",
+    "isVirtual": true
+}

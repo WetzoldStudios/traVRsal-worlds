@@ -1,4 +1,5 @@
 {
+    "version": "0.0.3",
     "name": "Space Pirate",
     "shortDescription": "Hurry and loot the station without getting caught!",
     "longDescription": "Having just landed on an automated space station, try to collect as much scrap as possible without getting caught and beat your previous highscore!",
