@@ -1,13 +1,36 @@
 {
     "key": "Demo",
-    "version": "0.0.4",
-    "name": "traVRsal Demo",
-    "shortDescription": "Show-casing many of the available world-building features.",
-    "longDescription": "This is an example for world creators to show-case what is possible with traVRsal for inspiration and as a copy/paste source. The accompanying Unity project including all assets can be downloaded from github. It will constantly be expanded.",
+    "version": "0.0.104",
+    "versionCode": 12,
+    "name": "World-Building Demo",
+    "shortDescription": "Show-casing locomotion and available world-building features.",
+    "longDescription": "This is an example for world creators to show-case what is possible. Use this for inspiration and as a copy paste resource. The accompanying Unity project including all assets can be downloaded from github and is constantly expanded.",
     "coverImage": "Cover.png",
-    "minVersion": "0.5",
-    "deathSound": "death.mp3",
+    "loadAllChapters": true,
+    "defaultChapter": "explore",
+    "chapters": [
+        {
+            "key": "walkthrough",
+            "name": "Walk-through",
+            "description": "Learn about the different world-building options in a narrated walk-through, introducing elements one by one.",
+            "coverImage": "Walkthrough.jpg",
+            "unlockRule": "None"
+        },
+        {
+            "key": "explore",
+            "name": "Exploration",
+            "description": "Go and explore at your own pace, starting in the hub zone.",
+            "coverImage": "Explore.jpg"
+        }
+    ],
+    "minAppVersion": "1.1.124",
+    "availableTime": 600,
     "enableChallenges": false,
+    "measures": [
+        "Time",
+        "Distance"
+    ],
+    "deathSound": "death.mp3",
     "imageProviders": [
         {
             "key": "unsplash",
@@ -17,8 +40,9 @@
     "initialVariables": [
         {
             "key": "IntroPortal",
-            "value": "0",
-            "behaviour": "Change_Higher"
+            "value": false,
+            "behaviour": "Change_Higher",
+            "resetOnCheckpoint": false
         }
     ],
     "replacements": [
@@ -64,13 +88,13 @@
             "objectKeys": [
                 "PortalFrame"
             ],
-            "validObjects": [
-                "/Base/Transition"
-            ],
             "amountType": "Probability",
             "amount": 100,
             "distributionType": "Object",
             "orientation": "Same",
+            "validObjects": [
+                "/Base/Transition"
+            ],
             "connectToCeiling": true
         },
         {
@@ -110,11 +134,11 @@
             "objectKeys": [
                 "Arrow"
             ],
+            "amountType": "Probability",
+            "amount": 100,
             "validSockets": [
                 "ShortestPath"
             ],
-            "amountType": "Probability",
-            "amount": 100,
             "restrictions": [
                 "maze"
             ],
@@ -125,12 +149,12 @@
             "objectKeys": [
                 "GalleryImage"
             ],
-            "validZones": [
-                "Gallery"
-            ],
             "amountType": "Probability",
             "amount": 100,
             "orientation": "Free_Side",
+            "validZones": [
+                "Gallery"
+            ],
             "maxScale": 1.5,
             "y": 2.0,
             "snap": true
@@ -148,6 +172,15 @@
         },
         {
             "objectKey": "GalleryImage",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Grip",
             "scale": {
                 "x": 1.0,
                 "y": 1.0,

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="34" nextobjectid="84">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="34" nextobjectid="84">
  <properties>
-  <property name="AudioEffect" value="guide-customwalls.mp3"/>
+  <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Skybox" value="/Skybox/Cartoon_SunSetLightClouds"/>
+  <property name="Speak" value="Walls don't have to be all single tiles. You can also use segments spanning the whole height and also segments spanning multiple tiles in width."/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -87,7 +89,7 @@
   </objectgroup>
   <objectgroup id="27" name="Objects"/>
   <objectgroup id="31" name="Signs">
-   <object id="78" type="SignLeft" gid="38" x="0" y="0" width="50" height="50" rotation="90">
+   <object id="78" type="SignLeft" gid="39" x="0" y="0" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="0,-2"/>
      <property name="Snap" type="bool" value="true"/>

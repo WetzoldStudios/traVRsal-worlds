@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="38" nextobjectid="70">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="38" nextobjectid="70">
  <properties>
-  <property name="AudioEffect" value="guide-playerdamage.mp3"/>
+  <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Speak" value="You can also take damage. This zone contains a trap which you should avoid and a pit you should not fall down into. Try both. Upon death, custom audio can be played."/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="33" name="Underground" visible="0">
   <properties>
    <property name="Underground" type="bool" value="true"/>
@@ -24,9 +25,9 @@
     <property name="Type" value="Spike"/>
    </properties>
    <data encoding="csv">
-38,38,38,
-38,38,38,
-38,38,38
+39,39,39,
+39,39,39,
+39,39,39
 </data>
   </layer>
   <layer id="36" name="Walls" width="3" height="3">

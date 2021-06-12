@@ -1,6 +1,11 @@
 {
-    "version": "0.0.14",
+    "version": "0.0.21",
+    "versionCode": 2,
     "name": "Reuse Skyboxes",
     "shortDescription": "This world only contains skyboxes for reuse in other worlds.",
-    "isVirtual": true
+    "isVirtual": true,
+    "measures": [
+        "Time",
+        "Distance"
+    ]
 }

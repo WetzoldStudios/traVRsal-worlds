@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="76">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="80">
  <properties>
-  <property name="AudioEffect" value="guide-customobjects.mp3"/>
+  <property name="AvailableTime" type="int" value="30"/>
+  <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Skybox" value="/Skybox/Cartoon_Airbrush_Day_NoSun"/>
+  <property name="Speak" value="Here you see some objects that show basic placement and rotation options as well as data binding and timers in action."/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -52,36 +55,36 @@
    </object>
   </objectgroup>
   <objectgroup id="27" name="Objects">
-   <object id="67" type="SampleObject" gid="38" x="0" y="50" width="50" height="50"/>
-   <object id="68" type="SampleObject" gid="38" x="0" y="0" width="50" height="50" rotation="90">
+   <object id="67" type="SampleObject" gid="39" x="0" y="50" width="50" height="50"/>
+   <object id="68" type="SampleObject" gid="39" x="0" y="0" width="50" height="50" rotation="90">
     <properties>
      <property name="Y" type="int" value="1"/>
     </properties>
    </object>
-   <object id="69" type="SampleObject" gid="38" x="50" y="0" width="50" height="50" rotation="180">
+   <object id="69" type="SampleObject" gid="39" x="50" y="0" width="50" height="50" rotation="180">
     <properties>
      <property name="Y" type="int" value="2"/>
     </properties>
    </object>
-   <object id="70" type="SampleObject" gid="38" x="50" y="50" width="50" height="50" rotation="-90">
+   <object id="70" type="SampleObject" gid="39" x="50" y="50" width="50" height="50" rotation="-90">
     <properties>
      <property name="Y" type="int" value="3"/>
     </properties>
    </object>
-   <object id="71" type="SampleObject" gid="38" x="50" y="50" width="50" height="50" rotation="-90">
+   <object id="71" type="SampleObject" gid="39" x="50" y="50" width="50" height="50" rotation="-90">
     <properties>
      <property name="Rotate" value="0;45;0"/>
      <property name="Y" type="int" value="4"/>
     </properties>
    </object>
-   <object id="72" type="SampleObject" gid="38" x="100" y="100" width="50" height="50" rotation="180">
+   <object id="72" type="SampleObject" gid="39" x="100" y="100" width="50" height="50" rotation="180">
     <properties>
      <property name="Move" value="0;0;1.5"/>
      <property name="Scale" value="2"/>
      <property name="Y" type="int" value="2"/>
     </properties>
    </object>
-   <object id="73" type="SampleObject" gid="38" x="50" y="100" width="50" height="50" rotation="-180">
+   <object id="73" type="SampleObject" gid="39" x="50" y="100" width="50" height="50" rotation="-180">
     <properties>
      <property name="Move" value="1;0;1"/>
      <property name="Rotate" value="0;45;0"/>
@@ -89,7 +92,7 @@
      <property name="Y" type="int" value="2"/>
     </properties>
    </object>
-   <object id="74" type="SampleObject" gid="38" x="150" y="100" width="50" height="50" rotation="180">
+   <object id="74" type="SampleObject" gid="39" x="150" y="100" width="50" height="50" rotation="180">
     <properties>
      <property name="Move" value="-1;0;1"/>
      <property name="Rotate" value="0;-45;0"/>
@@ -97,9 +100,39 @@
      <property name="Y" type="int" value="2"/>
     </properties>
    </object>
+   <object id="76" type="Timer" gid="42" x="0" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="DataBinding" value="ZoneTimer"/>
+     <property name="Snap" type="bool" value="true"/>
+     <property name="Text" value="Zone Timer"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="77" type="WorldTimer" gid="42" x="0" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Snap" type="bool" value="true"/>
+     <property name="Y" type="int" value="3"/>
+    </properties>
+   </object>
+   <object id="78" type="Timer" gid="42" x="0" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="DataBinding" value="TimeElapsed"/>
+     <property name="Snap" type="bool" value="true"/>
+     <property name="Text" value="Time Elapsed"/>
+     <property name="Y" type="int" value="4"/>
+    </properties>
+   </object>
+   <object id="79" type="Timer" gid="42" x="0" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="DataBinding" value="ZoneTime"/>
+     <property name="Snap" type="bool" value="true"/>
+     <property name="Text" value="Zone Time"/>
+     <property name="Y" type="int" value="1"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="30" name="Signs">
-   <object id="66" type="SignRight" gid="38" x="100" y="0" width="50" height="50" rotation="-180">
+   <object id="66" type="SignRight" gid="39" x="100" y="0" width="50" height="50" rotation="-180">
     <properties>
      <property name="Anchor" value="-1,0"/>
      <property name="Snap" type="bool" value="true"/>

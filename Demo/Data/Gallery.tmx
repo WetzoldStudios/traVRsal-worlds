@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="42" nextobjectid="78">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="42" nextobjectid="78">
  <properties>
-  <property name="AudioEffect" value="guide-galleryexit.mp3"/>
+  <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Speak">You can load images at runtime, either from the world or device or from any URL, Unsplash or GIPHY.
+
+This concludes the guided tour and you can continue to explore on your own. I might be the Robot Overloard, but please do support Robert who is developing this project as a solo dev by spreading the word and leaving a review. He will be very happy. And I will get my electricity. Take care and bye bye.</property>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -55,14 +58,14 @@
   </layer>
   <objectgroup id="27" name="Objects"/>
   <objectgroup id="40" name="Images">
-   <object id="74" type="Poster" gid="38" x="50" y="150" width="50" height="50">
+   <object id="74" type="Poster" gid="39" x="50" y="150" width="50" height="50">
     <properties>
      <property name="Image" value="https://travrsal.com/img/OutOrDead_EngineDescription.jpg"/>
      <property name="Snap" type="bool" value="true"/>
      <property name="Y" type="int" value="2"/>
     </properties>
    </object>
-   <object id="76" type="Poster" gid="38" x="7" y="93" width="50" height="50" rotation="90">
+   <object id="76" type="Poster" gid="39" x="7" y="93" width="50" height="50" rotation="90">
     <properties>
      <property name="Snap" type="bool" value="true"/>
      <property name="Y" type="int" value="2"/>
@@ -70,7 +73,7 @@
    </object>
   </objectgroup>
   <objectgroup id="41" name="Signs">
-   <object id="75" type="SignLeft" gid="38" x="0" y="50" width="50" height="50" rotation="90">
+   <object id="75" type="SignLeft" gid="39" x="0" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="0,-1"/>
      <property name="Snap" type="bool" value="true"/>
@@ -78,7 +81,7 @@
      <property name="Y" type="int" value="2"/>
     </properties>
    </object>
-   <object id="77" type="SignLeft" gid="38" x="0" y="150" width="50" height="50">
+   <object id="77" type="SignLeft" gid="39" x="0" y="150" width="50" height="50">
     <properties>
      <property name="Anchor" value="1,0"/>
      <property name="Snap" type="bool" value="true"/>

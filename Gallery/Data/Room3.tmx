@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="73">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="74">
  <properties>
   <property name="BackgroundColor" value="#88C1F0"/>
   <property name="NoAgents" type="bool" value="false"/>
@@ -7,20 +7,20 @@
   <property name="Skybox" value="Skybox"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
   <objectgroup id="27" name="Scenery" locked="1" opacity="0.47">
-   <object id="63" gid="37" x="50" y="50" width="50" height="50" rotation="90">
+   <object id="63" gid="38" x="50" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="SceneryName" value="Museum2"/>
     </properties>
    </object>
   </objectgroup>
   <objectgroup id="28" name="Stands">
-   <object id="69" type="Column" gid="38" x="100" y="100" width="50" height="50" rotation="-90">
+   <object id="69" type="Column" gid="39" x="100" y="100" width="50" height="50" rotation="-90">
     <properties>
      <property name="Anchor" value="1,1"/>
      <property name="ImageOrder-East" type="int" value="0"/>
@@ -40,12 +40,13 @@
      <property name="Virtual" type="bool" value="false"/>
     </properties>
    </object>
+   <object id="73" gid="20" x="100" y="0" width="50" height="50" rotation="90"/>
   </objectgroup>
   <objectgroup id="29" name="Outer Stands">
    <properties>
     <property name="MoveForward" type="int" value="-3"/>
    </properties>
-   <object id="70" type="Stand2" gid="38" x="0" y="100" width="50" height="50" rotation="90">
+   <object id="70" type="Stand2" gid="39" x="0" y="100" width="50" height="50" rotation="90">
     <properties>
      <property name="Move" value="1;0;0"/>
      <property name="Rotate" value="0;-45;0"/>
@@ -53,12 +54,12 @@
    </object>
   </objectgroup>
   <objectgroup id="30" name="Bounds">
-   <object id="71" type="Guard" gid="38" x="150" y="150" width="50" height="50" rotation="-90">
+   <object id="71" type="Guard" gid="39" x="150" y="150" width="50" height="50" rotation="-90">
     <properties>
      <property name="Move" value="-0.5;0;-0.5"/>
     </properties>
    </object>
-   <object id="72" type="CornerGuard" gid="38" x="0" y="0" width="50" height="50" rotation="90">
+   <object id="72" type="CornerGuard" gid="39" x="0" y="0" width="50" height="50" rotation="90">
     <properties>
      <property name="Move" value="-0.5;0;-0.5"/>
     </properties>

@@ -1,12 +1,44 @@
 {
-    "version": "0.0.21",
+    "version": "0.0.270",
+    "versionCode": 42,
     "name": "A.I. Take-Over",
     "shortDescription": "Fight your way through a dangerous maze.",
     "longDescription": "A hostile A.I. has taken over an elite-forces training ground. Fight your way through and clear out all enemies.",
     "coverImage": "Cover.png",
-    "minVersion": "0.5",
+    "minAppVersion": "1.1.124",
+    "measures": [
+        "Time",
+        "Distance",
+        "Accuracy",
+        "Targets",
+        "Deaths"
+    ],
+    "customHandHuds": [
+        {
+            "text": "Health",
+            "subText": "Health"
+        },
+        {
+            "text": "RemainingTargets",
+            "textWhenZero": "None",
+            "subText": "Detected Objectives"
+        }
+    ],
+    "defaultHandHudSecondary": "RemainingTargets",
+    "inventoryItems": [
+        "/Base/Flashlight",
+        "/Base/TimeGrenade"
+    ],
+    "initialItemMain": "Pistol",
     "deathSound": "voice_male_grunt_pain_death_07.wav",
-    "kpis": "0,1,2,3,4",
+    "defaultRandomSkybox": [
+        "/Skybox/AllSky_FantasySky_Mid",
+        "/Skybox/Cold Sunset",
+        "/Skybox/Cotton Clouds SunSet 1",
+        "/Skybox/Deep Storm Sunset"
+    ],
+    "firstSkyboxInIntro": true,
+    "lastSkyboxInOutro": true,
     "defaultScenery": "Generic",
     "journeys": [
         {
@@ -20,7 +52,7 @@
                     ]
                 },
                 {
-                    "length": 10,
+                    "length": 12,
                     "components": [
                         {
                             "key": "MiniBoss",
@@ -28,11 +60,11 @@
                         },
                         {
                             "key": "Pavilion",
-                            "min": 2
+                            "max": 2
                         },
                         {
                             "key": "ElevatorMaze",
-                            "max": 2
+                            "max": 1
                         },
                         {
                             "type": "Segment",
@@ -53,23 +85,25 @@
     "initialVariables": [
         {
             "key": "lights",
-            "value": "1"
+            "value": true,
+            "resetOnCheckpoint": false
         },
         {
             "key": "flashlight",
-            "value": "1"
+            "value": true,
+            "resetOnCheckpoint": false
         }
     ],
     "speech": [
         {
             "event": "Enter_Zone",
             "key": "ShootingRange",
-            "text": "Grab your gear and head on!"
+            "text": "Test your gear and head on!"
         },
         {
             "event": "Enter_Zone",
             "key": "MiniBoss",
-            "text": "A laser grid activated, blocking the way. Try to find the power source!"
+            "text": "A laser grid activated, blocking the way. Destroy the power source!"
         },
         {
             "event": "Variable_On",
@@ -115,7 +149,6 @@
         },
         {
             "key": "/Base/Wall",
-            "materials": "",
             "randomObjects": [
                 "WoodenWallBig",
                 "WoodenWallBig2x",
@@ -128,7 +161,8 @@
                 "WoodenWallWindowBig2x",
                 "WoodenWallWindowBig3x",
                 "WoodenWallWindowBig4x"
-            ]
+            ],
+            "materials": ""
         }
     ],
     "spawnRules": [
@@ -137,8 +171,9 @@
             "objectKeys": [
                 "SpiderBot"
             ],
-            "amount": 20,
+            "amount": 17,
             "orientation": "Random_Side",
+            "progressionStart": 0.15,
             "enabledFormula": "$spiderbots"
         },
         {
@@ -150,6 +185,52 @@
             "amount": 20,
             "y": 3.0,
             "dontCountAsObstacle": true
+        },
+        {
+            "key": "HorizontalLasers",
+            "objectKeys": [
+                "HorizontalLaserBeam"
+            ],
+            "amountType": "Probability",
+            "amount": 40,
+            "orientation": "Free_Side",
+            "progressionStart": 0.2,
+            "restrictions": [
+                "corridor",
+                "!nextToTransition"
+            ],
+            "y": 2.0,
+            "moveRandomly": "0.8;0.8;0"
+        },
+        {
+            "key": "VerticalLasers",
+            "objectKeys": [
+                "VerticalLaserBeam"
+            ],
+            "amountType": "Probability",
+            "amount": 40,
+            "progressionStart": 0.4,
+            "restrictions": [
+                "corridor",
+                "!nextToTransition"
+            ],
+            "moveRandomly": "0;0;0"
+        },
+        {
+            "key": "InvincibleHorizontalLasers",
+            "objectKeys": [
+                "InvincibleHorizontalLaserBeam"
+            ],
+            "amountType": "Probability",
+            "amount": 40,
+            "orientation": "Free_Side",
+            "progressionStart": 0.6,
+            "restrictions": [
+                "corridor",
+                "!nextToTransition"
+            ],
+            "y": 2.0,
+            "moveRandomly": "0.8;0.8;0"
         },
         {
             "key": "DeadEnds",
@@ -208,13 +289,13 @@
             "objectKeys": [
                 "TargetDisc"
             ],
+            "amount": 3,
             "validZones": [
                 "ShootingRange"
             ],
             "validSockets": [
                 "TopEnemy"
             ],
-            "amount": 3,
             "dontCountAsTarget": true
         },
         {
@@ -222,13 +303,13 @@
             "objectKeys": [
                 "TargetDummy"
             ],
+            "amount": 2,
             "validZones": [
                 "ShootingRange"
             ],
             "validSockets": [
                 "BottomEnemy"
             ],
-            "amount": 2,
             "dontCountAsTarget": true
         },
         {
@@ -236,13 +317,13 @@
             "objectKeys": [
                 "TargetTurret"
             ],
+            "amount": 2,
             "validZones": [
                 "Pavilion"
             ],
             "validSockets": [
                 "TopEnemy"
             ],
-            "amount": 2,
             "health": 5,
             "scale": "4"
         },
@@ -251,14 +332,14 @@
             "objectKeys": [
                 "HeavyMissileTurret"
             ],
+            "amountType": "Probability",
+            "amount": 100,
             "validZones": [
                 "Pavilion"
             ],
             "validSockets": [
                 "SideEnemy"
             ],
-            "amountType": "Probability",
-            "amount": 100,
             "health": 100
         },
         {
@@ -266,13 +347,13 @@
             "objectKeys": [
                 "TargetDummy"
             ],
+            "amount": 3,
             "validZones": [
                 "Pavilion"
             ],
             "validSockets": [
                 "BottomEnemy"
             ],
-            "amount": 3,
             "health": 1
         }
     ],
@@ -366,16 +447,6 @@
             "pivotType": "Center"
         },
         {
-            "objectKey": "RotatingLaser",
-            "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-            },
-            "atCeiling": true,
-            "pivotType": "Bottom_Front_Center"
-        },
-        {
             "objectKey": "Sandbag",
             "scale": {
                 "x": 1.0,
@@ -387,27 +458,27 @@
         {
             "objectKey": "Sign-HighVoltage",
             "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.3,
+                "y": 0.3,
+                "z": 0.3
             },
             "pivotType": "Center"
         },
         {
             "objectKey": "Sign-NoDrinking",
             "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.3,
+                "y": 0.3,
+                "z": 0.3
             },
             "pivotType": "Center"
         },
         {
             "objectKey": "Sign-Trespassing",
             "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
+                "x": 0.4,
+                "y": 0.4,
+                "z": 0.4
             },
             "pivotType": "Center"
         },
@@ -467,6 +538,15 @@
                 "z": 1.0
             },
             "pivotType": "Center"
+        },
+        {
+            "objectKey": "VerticalLaserBeam",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "atCeiling": true
         },
         {
             "objectKey": "Wheel",

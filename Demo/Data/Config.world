@@ -29,10 +29,19 @@
             "fileName": "Crouching.tmx"
         },
         {
+            "fileName": "Climbing.tmx"
+        },
+        {
+            "fileName": "Gravity.tmx"
+        },
+        {
             "fileName": "Gallery.tmx"
         },
         {
             "fileName": "Hub.tmx"
+        },
+        {
+            "fileName": "Parcour.tmx"
         },
         {
             "fileName": "Construction.tmx"

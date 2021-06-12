@@ -11,7 +11,7 @@
                  "name":"Scenery",
                  "objects":[
                         {
-                         "gid":37,
+                         "gid":38,
                          "height":50,
                          "id":63,
                          "name":"",
@@ -40,7 +40,7 @@
                  "name":"Stands",
                  "objects":[
                         {
-                         "gid":38,
+                         "gid":39,
                          "height":50,
                          "id":69,
                          "name":"",
@@ -125,6 +125,18 @@
                          "width":50,
                          "x":100,
                          "y":0
+                        }, 
+                        {
+                         "gid":20,
+                         "height":50,
+                         "id":72,
+                         "name":"",
+                         "rotation":90,
+                         "type":"",
+                         "visible":true,
+                         "width":50,
+                         "x":100,
+                         "y":0
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -138,7 +150,7 @@
                  "name":"Outer Stands",
                  "objects":[
                         {
-                         "gid":38,
+                         "gid":39,
                          "height":50,
                          "id":70,
                          "name":"",
@@ -173,7 +185,7 @@
                  "name":"Bounds",
                  "objects":[
                         {
-                         "gid":38,
+                         "gid":39,
                          "height":50,
                          "id":71,
                          "name":"",
@@ -210,7 +222,7 @@
          "y":0
         }],
  "nextlayerid":31,
- "nextobjectid":72,
+ "nextobjectid":73,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -234,7 +246,7 @@
          "value":"Skybox"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.4.3",
+ "tiledversion":"1.7.0",
  "tileheight":50,
  "tilesets":[
         {
@@ -249,7 +261,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":25,
+         "tilecount":26,
          "tileheight":50,
          "tiles":[
                 {
@@ -722,6 +734,11 @@
                          "value":""
                         }, 
                         {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
                          "name":"TargetLocation",
                          "type":"string",
                          "value":""
@@ -773,12 +790,25 @@
                          "value":""
                         }],
                  "type":"\/Base\/Trigger"
+                }, 
+                {
+                 "id":31,
+                 "image":"..\/..\/_Tiled\/Master Images\/explicit-spawn.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Virtual",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "type":"\/Base\/Explicit-Spawn"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":32,
+         "firstgid":33,
          "grid":
             {
              "height":1,
@@ -788,7 +818,7 @@
          "margin":0,
          "name":"Deco",
          "spacing":0,
-         "tilecount":4,
+         "tilecount":7,
          "tileheight":50,
          "tiles":[
                 {
@@ -867,6 +897,152 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/..\/_Tiled\/Master Images\/object2.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/..\/_Tiled\/Master Images\/object3.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/..\/_Tiled\/Master Images\/object4.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Move",
                          "type":"string",
                          "value":""
@@ -906,6 +1082,6 @@
         }],
  "tilewidth":50,
  "type":"map",
- "version":1.4,
+ "version":"1.6",
  "width":3
 }

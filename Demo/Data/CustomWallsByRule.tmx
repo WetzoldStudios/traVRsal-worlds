@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="33" nextobjectid="81">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="33" nextobjectid="81">
  <properties>
-  <property name="AudioEffect" value="guide-customwalls2.mp3"/>
+  <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Skybox" value="Skybox2"/>
+  <property name="Skybox" value="/Skybox/DSRWP"/>
+  <property name="Speak" value="A powerful concept is to automatically replace the blockout walls with custom ones through automated rules. This means, the zone will look different each time you visit it as the engine will randomly fulfill the rules."/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -71,15 +72,15 @@
   <objectgroup id="4" name="Transitions">
    <object id="77" gid="8" x="50" y="50" width="50" height="50" rotation="-90">
     <properties>
-     <property name="AudioEffect" value="guide-maze.mp3"/>
-     <property name="MazeTransitions" type="int" value="4"/>
+     <property name="MazeTransitions" type="int" value="2"/>
+     <property name="Speak" value="Now that we have tackled walls and the outside, let's focus on what can be done inside. A very interesting way to connect zones is to create small labyrinths. The arrows on the floor will guide you. Inside the labyrinth objects can be placed through rules. These can include constraints like targeting only corners, dead-ends or to set limits to the amount, minimum distance and more."/>
      <property name="TargetZone" value="PlayerDamage"/>
     </properties>
    </object>
   </objectgroup>
   <objectgroup id="27" name="Objects"/>
   <objectgroup id="31" name="Signs">
-   <object id="78" type="SignRight" gid="38" x="0" y="50" width="50" height="50" rotation="90">
+   <object id="78" type="SignRight" gid="39" x="0" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="0,1"/>
      <property name="Snap" type="bool" value="true"/>

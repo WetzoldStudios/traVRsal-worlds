@@ -1,8 +1,13 @@
 {
-    "version": "0.0.22",
+    "version": "0.0.265",
+    "versionCode": 42,
     "name": "Shared Level Assets",
     "shortDescription": "Contains common reusable items.",
     "isVirtual": true,
+    "measures": [
+        "Time",
+        "Distance"
+    ],
     "journeys": [
         {
             "segments": [
@@ -28,6 +33,34 @@
     ],
     "objectSpecs": [
         {
+            "objectKey": "DirectionIndicator",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pinToSide": true,
+            "snapSideways": true
+        },
+        {
+            "objectKey": "Door",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4
+        },
+        {
+            "objectKey": "EntryPortal",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Front_Center"
+        },
+        {
             "objectKey": "FeetIndicator",
             "scale": {
                 "x": 1.0,
@@ -44,6 +77,25 @@
                 "z": 1.0
             },
             "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Flashlight",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "HeadLight",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "adjustMaterials": false,
+            "pivotType": "Center"
         },
         {
             "objectKey": "Maze/MazeCorner",
@@ -183,13 +235,31 @@
             "pivotType": "Center"
         },
         {
-            "objectKey": "TimeGranade",
+            "objectKey": "Texture",
             "scale": {
                 "x": 1.0,
                 "y": 1.0,
                 "z": 1.0
             },
             "pivotType": "Center"
+        },
+        {
+            "objectKey": "TimeGrenade",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Transition",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Front_Center"
         }
     ]
 }

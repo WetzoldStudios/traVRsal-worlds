@@ -1,12 +1,59 @@
 {
-    "name": "Photo Gallery",
-    "shortDescription": "Walk through a stunning virtual gallery full of beautiful pictures.",
-    "longDescription": "Walk through a stunning virtual gallery composed of either the most recent amazing photos from Unsplash.com or use your own images you stored on your device before (see wiki).",
+    "key": "Gallery",
+    "version": "0.0.54",
+    "versionCode": 8,
+    "name": "The Gallery",
+    "shortDescription": "A stunning virtual gallery full of amazing images.",
+    "longDescription": "Walk through a stunning virtual gallery composed of either the most recent amazing photos from Unsplash.com, GIPHY or use your own images you stored on your device before (see wiki).",
     "coverImage": "Cover.png",
-    "minVersion": "0.5",
-    "showHandHud": false,
+    "minAppVersion": "1.1.131",
     "enableChallenges": false,
+    "measures": [
+        "Distance",
+        "Time"
+    ],
+    "showHandHud": false,
+    "firstSkyboxInIntro": true,
     "outroMusic": "",
+    "disableJourneys": true,
+    "journeys": [
+        {
+            "segments": [
+                {
+                    "length": 1,
+                    "components": [
+                        {
+                            "key": "Intro"
+                        }
+                    ]
+                },
+                {
+                    "length": 12,
+                    "components": [
+                        {
+                            "key": "Room1"
+                        },
+                        {
+                            "key": "Room2"
+                        },
+                        {
+                            "key": "Room3"
+                        },
+                        {
+                            "key": "LeftCorner"
+                        },
+                        {
+                            "key": "RightCorner"
+                        },
+                        {
+                            "type": "Segment",
+                            "key": "/Base/Mazes"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "settings": [
         {
             "key": "fancyFrames",
@@ -15,8 +62,14 @@
         },
         {
             "key": "imageProvider",
+            "defaultValue": "Giphy",
             "name": "Image Source",
             "type": "ImageProvider"
+        },
+        {
+            "key": "https://github.com/WetzoldStudios/traVRsal/wiki/Custom-Images",
+            "name": "How to use your own images",
+            "type": "Link"
         }
     ],
     "imageProviders": [
@@ -74,11 +127,11 @@
                     ]
                 }
             ],
+            "amountType": "Probability",
+            "amount": 100,
             "validSockets": [
                 "Frame"
             ],
-            "amountType": "Probability",
-            "amount": 100,
             "scale": "1.2",
             "maxScale": 1.5,
             "companions": [
@@ -148,11 +201,11 @@
                     ]
                 }
             ],
+            "amountType": "Probability",
+            "amount": 100,
             "validSockets": [
                 "BigFrame"
             ],
-            "amountType": "Probability",
-            "amount": 100,
             "scale": "1.9",
             "maxScale": 1.5
         },
@@ -204,15 +257,25 @@
             "objectKeys": [
                 "DirectionIndicator"
             ],
+            "amountType": "Probability",
+            "amount": 100,
             "validSockets": [
                 "ShortestPath"
             ],
-            "amountType": "Probability",
-            "amount": 100,
             "dontCountAsObstacle": true
         }
     ],
     "objectSpecs": [
+        {
+            "objectKey": "Bench",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "standaloneAllSides": true,
+            "pivotType": "Bottom_Center"
+        },
         {
             "objectKey": "ceiling_lamp",
             "scale": {
@@ -304,6 +367,15 @@
         },
         {
             "objectKey": "Stand3",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 4
+        },
+        {
+            "objectKey": "Stand3Single",
             "scale": {
                 "x": 1.0,
                 "y": 1.0,

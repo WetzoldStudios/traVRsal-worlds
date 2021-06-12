@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="48" nextobjectid="105">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="49" nextobjectid="106">
  <properties>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Skybox" value="Skybox1"/>
+  <property name="Skybox">/Skybox/Space_Nebula_NuminousGlow
+</property>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="36" name="Underground" visible="0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -83,21 +84,18 @@
    <properties>
     <property name="Y" type="int" value="2"/>
    </properties>
-   <object id="93" type="SignLeft" gid="38" x="100" y="0" width="50" height="50" rotation="-180">
+   <object id="93" type="SignLeft" gid="39" x="50" y="0" width="50" height="50" rotation="-180">
     <properties>
-     <property name="Anchor" value="-1,0"/>
      <property name="Text" value="Audio Guide"/>
     </properties>
    </object>
-   <object id="94" type="SignLeft" gid="38" x="0" y="50" width="50" height="50" rotation="90">
+   <object id="94" type="SignLeft" gid="39" x="0" y="100" width="50" height="50" rotation="90">
     <properties>
-     <property name="Anchor" value="0,-1"/>
      <property name="Text" value="Locomotion"/>
     </properties>
    </object>
-   <object id="95" type="SignLeft" gid="38" x="50" y="150" width="50" height="50">
+   <object id="95" type="SignLeft" gid="39" x="100" y="150" width="50" height="50">
     <properties>
-     <property name="Anchor" value="1,0"/>
      <property name="Text" value="Exit"/>
     </properties>
    </object>
@@ -105,7 +103,7 @@
   <objectgroup id="32" name="Transitions">
    <object id="96" gid="20" x="100" y="100" width="50" height="50" rotation="-90"/>
   </objectgroup>
-  <objectgroup id="30" name="Elevators">
+  <objectgroup id="30" name="Elevators" visible="0">
    <object id="86" type="/TrainingGround/Elevator" gid="9" x="0" y="0" width="50" height="50" rotation="90"/>
    <object id="87" type="/TrainingGround/Elevator" gid="9" x="0" y="150" width="50" height="50">
     <properties>
@@ -118,9 +116,18 @@
     </properties>
    </object>
   </objectgroup>
+  <objectgroup id="48" name="Climbing" visible="0">
+   <object id="105" type="Beam" gid="42" x="50" y="100" width="50" height="50" rotation="180">
+    <properties>
+     <property name="TargetLocation" value="Parcour"/>
+     <property name="Y" type="int" value="4"/>
+    </properties>
+   </object>
+  </objectgroup>
   <objectgroup id="46" name="Platform">
    <object id="101" type="Platform" gid="29" x="100" y="50" width="50" height="50">
     <properties>
+     <property name="Materials" value="DarkGrid"/>
      <property name="TargetLocation" value="Sound"/>
     </properties>
    </object>
@@ -175,6 +182,8 @@
   <objectgroup id="45" name="Platform">
    <object id="98" type="Platform" gid="29" x="100" y="50" width="50" height="50">
     <properties>
+     <property name="Duration" type="float" value="5"/>
+     <property name="Materials" value="DarkGrid"/>
      <property name="TargetLocation" value="Construction"/>
     </properties>
    </object>

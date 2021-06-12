@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="30" nextobjectid="86">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="87">
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="29" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -78,16 +78,25 @@
    <object id="51" gid="13" x="100" y="150" width="50" height="50" rotation="-90">
     <properties>
      <property name="Anchor" value="1,0"/>
-     <property name="Death" type="bool" value="true"/>
+     <property name="Deadly" type="bool" value="true"/>
      <property name="Materials" value="RedLaser"/>
      <property name="Variable" value="laser1"/>
     </properties>
    </object>
-   <object id="53" type="RotatingLaser" gid="35" x="50" y="100" width="50" height="50">
+   <object id="53" type="RotatingLaser" gid="39" x="50" y="100" width="50" height="50">
     <properties>
      <property name="AutoWidth" type="bool" value="true"/>
      <property name="Variable" value="laser1"/>
      <property name="Virtual" type="bool" value="true"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="30" name="Deco">
+   <object id="86" type="Sign-HighVoltage" gid="41" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="0,-1"/>
+     <property name="Snap" type="bool" value="true"/>
+     <property name="Y" type="int" value="4"/>
     </properties>
    </object>
   </objectgroup>
@@ -99,6 +108,7 @@
      <property name="MazeTransitions" type="int" value="3"/>
      <property name="MazeZones" value="/Base/HorizontalMaze"/>
      <property name="TargetZone" value="Pavilion"/>
+     <property name="Variable" value="laser1"/>
     </properties>
    </object>
    <object id="57" gid="20" x="50" y="150" width="50" height="50" rotation="-90"/>
@@ -168,7 +178,7 @@
 </data>
   </layer>
   <objectgroup id="18" name="Objects">
-   <object id="48" type="SwitchBox" gid="35" x="0" y="50" width="50" height="50" rotation="90">
+   <object id="48" type="SwitchBox" gid="39" x="0" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="0,-1"/>
      <property name="Variable" value="laser1"/>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="23" nextobjectid="93">
+ <properties>
+  <property name="NoSpawning" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <objectgroup id="21" name="Ground">
+   <properties>
+    <property name="AutoFillIgnoreDirection" type="bool" value="true"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <object id="84" gid="4" x="150" y="100" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Type" value="WoodPlatform"/>
+    </properties>
+   </object>
+   <object id="85" gid="4" x="100" y="100" width="50" height="50" rotation="180">
+    <properties>
+     <property name="RandomType" value="WoodPlatform,WoodPlatformRotating"/>
+    </properties>
+   </object>
+   <object id="86" gid="4" x="100" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="RandomType" value="WoodPlatform,WoodPlatformRotating"/>
+    </properties>
+   </object>
+   <object id="87" gid="4" x="50" y="50" width="50" height="50">
+    <properties>
+     <property name="RandomType" value="WoodPlatform,WoodPlatformRotating"/>
+    </properties>
+   </object>
+   <object id="88" gid="4" x="0" y="50" width="50" height="50">
+    <properties>
+     <property name="Type" value="WoodPlatform"/>
+    </properties>
+   </object>
+   <object id="89" gid="4" x="50" y="100" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Type" value="WoodPlatform"/>
+    </properties>
+   </object>
+   <object id="90" gid="4" x="50" y="100" width="50" height="50" rotation="270">
+    <properties>
+     <property name="RandomType" value="WoodPlatform,WoodPlatformRotating"/>
+    </properties>
+   </object>
+   <object id="91" gid="4" x="100" y="50" width="50" height="50">
+    <properties>
+     <property name="Type" value="WoodPlatform"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="19" name="Walls" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="62" gid="25" x="50" y="100" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="1,-1"/>
+    </properties>
+   </object>
+   <object id="64" gid="25" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,1"/>
+    </properties>
+   </object>
+   <object id="65" gid="25" x="50" y="100" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="-1,-1"/>
+    </properties>
+   </object>
+   <object id="66" gid="25" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,-1"/>
+    </properties>
+   </object>
+   <object id="67" gid="25" x="100" y="50" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Anchor" value="-1,1"/>
+    </properties>
+   </object>
+   <object id="68" gid="25" x="100" y="50" width="50" height="50" rotation="180">
+    <properties>
+     <property name="Anchor" value="1,1"/>
+    </properties>
+   </object>
+   <object id="71" gid="25" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,1"/>
+    </properties>
+   </object>
+   <object id="72" gid="25" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="16" name="Scenery" visible="0" locked="1">
+   <properties>
+    <property name="Move" value="0;-5;0"/>
+   </properties>
+   <object id="60" gid="38" x="0" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="SceneryName" value="SnakePit"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="Transitions" locked="1">
+   <object id="8" gid="8" x="50" y="50" width="50" height="50">
+    <properties>
+     <property name="TargetZone" value="[exit]"/>
+    </properties>
+   </object>
+   <object id="61" gid="20" x="100" y="100" width="50" height="50" rotation="90"/>
+   <object id="69" gid="20" x="100" y="0" width="50" height="50" rotation="90"/>
+  </objectgroup>
+ </group>
+</map>

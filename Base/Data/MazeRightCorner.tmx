@@ -58,7 +58,7 @@
    </object>
    <object id="44" gid="19" x="100" y="50" width="50" height="50"/>
   </objectgroup>
-  <layer id="2" name="Ceiling" width="3" height="3" locked="1">
+  <layer id="2" name="Ceiling" width="3" height="3" visible="0" locked="1">
    <properties>
     <property name="Materials" value="[ceiling]"/>
    </properties>
@@ -68,7 +68,7 @@
 0,0,3
 </data>
   </layer>
-  <objectgroup id="18" name="Ceiling">
+  <objectgroup id="18" name="Ceiling" visible="0">
    <properties>
     <property name="Anchor" value="-1,0"/>
     <property name="Materials" value="[ceiling]"/>

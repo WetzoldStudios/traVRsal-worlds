@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="37" nextobjectid="84">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="37" nextobjectid="84">
  <properties>
-  <property name="AudioEffect" value="guide-elevators.mp3"/>
+  <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
   <property name="Offset" value="0;0;-15"/>
+  <property name="Speak" value="Each zone can have multiple floors which all can have varying heights. Elevators are special versions of moving platforms that connect floors inside a zone. Go up and continue from there!"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -23,7 +24,7 @@
 4,0,4
 </data>
   </layer>
-  <objectgroup id="29" name="Ground">
+  <objectgroup id="29" name="Ground" visible="0">
    <object id="65" gid="4" x="50" y="50" width="50" height="50">
     <properties>
      <property name="Anchor" value="-1,0"/>
@@ -85,15 +86,16 @@
    </properties>
   </objectgroup>
   <objectgroup id="4" name="Transitions"/>
-  <objectgroup id="27" name="Objects" locked="1">
+  <objectgroup id="27" name="Objects">
    <object id="69" type="Platform" gid="29" x="0" y="50" width="50" height="50">
     <properties>
+     <property name="Materials" value="DarkGrid"/>
      <property name="TargetFloor" type="int" value="1"/>
     </properties>
    </object>
   </objectgroup>
   <objectgroup id="35" name="Signs">
-   <object id="75" type="SignRight" gid="38" x="0" y="50" width="50" height="50" rotation="90">
+   <object id="75" type="SignRight" gid="39" x="0" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Snap" type="bool" value="true"/>
      <property name="Text" value="Continue"/>
@@ -102,7 +104,7 @@
    </object>
   </objectgroup>
  </group>
- <group id="30" name="Floor 1" visible="0">
+ <group id="30" name="Floor 1">
   <layer id="31" name="Ground" width="3" height="3">
    <data encoding="csv">
 0,4,4,
@@ -125,6 +127,7 @@
   <objectgroup id="34" name="Transitions">
    <object id="74" type="Platform" gid="29" x="100" y="150" width="50" height="50">
     <properties>
+     <property name="Materials" value="DarkGrid"/>
      <property name="TargetLocation" value="WallMaterials"/>
     </properties>
    </object>

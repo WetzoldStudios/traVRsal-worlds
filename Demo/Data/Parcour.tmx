@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="37" nextobjectid="78">
+ <properties>
+  <property name="NoAgents" type="bool" value="false"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Offset" value="0;0;-15"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="31" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Materials" value="[ground]"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,4,4,
+4,4,4
+</data>
+  </layer>
+  <objectgroup id="35" name="Walls">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="76" gid="5" x="50" y="150" width="50" height="50"/>
+  </objectgroup>
+  <objectgroup id="36" name="Grips">
+   <properties>
+    <property name="MoveRandomly" value="0.5;0.5;0"/>
+    <property name="RotateRandomly" value="20;0;40"/>
+    <property name="ScaleRandomly" value="1;0.5;0.5"/>
+    <property name="Snap" type="bool" value="true"/>
+    <property name="Y" value="*"/>
+   </properties>
+   <object id="77" type="Grip" gid="41" x="50" y="150" width="50" height="50"/>
+  </objectgroup>
+ </group>
+</map>

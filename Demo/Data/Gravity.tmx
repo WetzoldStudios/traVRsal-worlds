@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="52" nextobjectid="83">
+ <properties>
+  <property name="Chapter" value="walkthrough"/>
+  <property name="NoAgents" type="bool" value="false"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Speak" value="What does go up, must come down. And gravity will do the job for you. Falling can be a great form of locomotion in itself. And also your demise."/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Materials" value="[ground]"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,4,4,
+4,4,4
+</data>
+  </layer>
+  <layer id="3" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <data encoding="csv">
+2684354566,3221225477,3221225478,
+2684354565,0,1610612741,
+6,5,1610612742
+</data>
+  </layer>
+  <objectgroup id="32" name="InnerWalls" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="73" gid="5" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,-1"/>
+    </properties>
+   </object>
+   <object id="75" gid="5" x="100" y="150" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="Transitions">
+   <object id="69" gid="8" x="100" y="100" width="50" height="50" rotation="90">
+    <properties>
+     <property name="TargetZone" value="Gallery"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="48" name="Steps">
+   <properties>
+    <property name="Materials" value="DarkGrid"/>
+    <property name="Scale" value="0.8;1;0.8"/>
+    <property name="Type" value="/Base/Ground"/>
+   </properties>
+   <object id="77" gid="42" x="0" y="150" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="2,0"/>
+     <property name="Y" type="int" value="3"/>
+    </properties>
+   </object>
+   <object id="78" gid="42" x="0" y="100" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="2,-1"/>
+     <property name="Y" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="80" gid="42" x="50" y="150" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+     <property name="Scale" value="1;1;1"/>
+     <property name="Y" type="int" value="5"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="51" name="Grips">
+   <properties>
+    <property name="MoveRandomly" value="0.5;0.5;0"/>
+    <property name="RotateRandomly" value="20;0;40"/>
+    <property name="ScaleRandomly" value="1;0.5;0.5"/>
+    <property name="Snap" type="bool" value="true"/>
+    <property name="Y" value="*"/>
+   </properties>
+   <object id="82" type="Grip" gid="41" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+ <group id="44" name="Floor 1" visible="0">
+  <layer id="45" name="Walls" width="3" height="3">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <data encoding="csv">
+2684354566,3221225477,3221225478,
+2684354565,0,1610612741,
+6,5,1610612742
+</data>
+  </layer>
+  <layer id="46" name="Ceiling" width="3" height="3" visible="0">
+   <data encoding="csv">
+3,3,3,
+3,3,3,
+3,3,3
+</data>
+  </layer>
+  <objectgroup id="47" name="InnerWalls2">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="76" gid="5" x="100" y="100" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="0,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="49" name="InnerWalls">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="79" gid="5" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="50" name="Grips" locked="1">
+   <properties>
+    <property name="MoveRandomly" value="0.5;0.5;0"/>
+    <property name="RotateRandomly" value="20;0;40"/>
+    <property name="ScaleRandomly" value="1;0.5;0.5"/>
+    <property name="Snap" type="bool" value="true"/>
+    <property name="Y" value="*"/>
+   </properties>
+   <object id="81" type="Grip" gid="41" x="100" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>

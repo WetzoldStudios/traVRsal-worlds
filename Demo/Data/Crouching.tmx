@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="30" nextobjectid="68">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="69">
  <properties>
-  <property name="AudioEffect" value="guide-floorheight.mp3"/>
+  <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
+  <property name="Speak" value="This zone features a much lower ceiling so duck to get through!"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="1.5"/>
@@ -51,7 +52,7 @@
    </properties>
    <object id="65" gid="5" x="100" y="100" width="50" height="50" rotation="-90">
     <properties>
-     <property name="Anchor" value="1,0"/>
+     <property name="Anchor" value="1,-1"/>
     </properties>
    </object>
    <object id="66" gid="5" x="100" y="150" width="50" height="50" rotation="-90">
@@ -60,10 +61,21 @@
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="4" name="Transitions" locked="1">
+  <objectgroup id="30" name="InnerWalls2">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <object id="68" gid="5" x="50" y="100" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="4" name="Transitions">
    <object id="67" gid="8" x="100" y="100" width="50" height="50" rotation="90">
     <properties>
-     <property name="TargetZone" value="Gallery"/>
+     <property name="TargetZone" value="Climbing"/>
     </properties>
    </object>
   </objectgroup>

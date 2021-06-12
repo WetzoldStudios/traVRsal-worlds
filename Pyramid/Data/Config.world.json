@@ -10,7 +10,16 @@
 			"fileName": "Pathway.tmx"
 		},
 		{
-			"fileName": "Pharao.tmx"
+			"fileName": "Bridge.tmx"
+		},
+		{
+			"fileName": "BridgeTarget.tmx"
+		},
+		{
+			"fileName": "Pit.tmx"
+		},
+		{
+			"fileName": "SnakePit.tmx"
 		}
 	],
 	"type": "world"

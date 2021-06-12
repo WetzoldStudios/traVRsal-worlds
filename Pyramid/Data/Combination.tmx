@@ -22,7 +22,7 @@
 4,4,4
 </data>
   </layer>
-  <objectgroup id="16" name="Walls" visible="0" locked="1">
+  <objectgroup id="16" name="Walls" locked="1">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
    </properties>
@@ -39,7 +39,7 @@
    <object id="71" gid="25" x="0" y="50" width="50" height="50" rotation="90"/>
    <object id="72" gid="25" x="0" y="100" width="50" height="50" rotation="90"/>
   </objectgroup>
-  <objectgroup id="15" name="Walls2" visible="0" locked="1">
+  <objectgroup id="15" name="Walls2" locked="1">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
    </properties>
@@ -65,61 +65,52 @@
 3,3,3
 </data>
   </layer>
-  <objectgroup id="10" name="Buttons" visible="0">
-   <object id="44" type="ImageLever" gid="14" x="100" y="150" width="50" height="50">
+  <objectgroup id="10" name="Buttons" locked="1">
+   <properties>
+    <property name="Images" value="[variable]"/>
+    <property name="Materials" value="/Base/Stone"/>
+    <property name="Variable" value="combo-door-?"/>
+   </properties>
+   <object id="44" type="ImageLever" gid="14" x="100.5" y="150" width="50" height="50">
     <properties>
-     <property name="Images" value="[variable]"/>
-     <property name="Materials" value="/Base/Stone"/>
      <property name="Snap" type="bool" value="false"/>
-     <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="1,2"/>
     </properties>
    </object>
    <object id="45" type="ImageLever" gid="14" x="150" y="100" width="50" height="50" rotation="-90">
     <properties>
-     <property name="Images" value="[variable]"/>
-     <property name="Materials" value="/Base/Stone"/>
      <property name="Snap" type="bool" value="false"/>
-     <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="1,2"/>
     </properties>
    </object>
    <object id="46" type="ImageLever" gid="14" x="50" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="-1,0"/>
-     <property name="Images" value="[variable]"/>
-     <property name="Materials" value="/Base/Stone"/>
      <property name="Snap" type="bool" value="false"/>
-     <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="1,2"/>
     </properties>
    </object>
    <object id="47" type="ImageLever" gid="14" x="150" y="0" width="50" height="50" rotation="-180">
     <properties>
-     <property name="Images" value="[variable]"/>
-     <property name="Materials" value="/Base/Stone"/>
      <property name="Snap" type="bool" value="false"/>
-     <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="1,2"/>
     </properties>
    </object>
    <object id="56" type="ImageLever" gid="14" x="100" y="0" width="50" height="50" rotation="-180">
     <properties>
-     <property name="Images" value="[variable]"/>
-     <property name="Materials" value="/Base/Stone"/>
      <property name="Snap" type="bool" value="false"/>
-     <property name="Variable" value="combo-door-?"/>
      <property name="Y" value="1,2"/>
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="4" name="Transitions" visible="0" locked="1">
+  <objectgroup id="4" name="Transitions">
    <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
     <properties>
      <property name="HoleProbability" type="float" value="70"/>
      <property name="MazeTransitions" type="int" value="2"/>
      <property name="MazeZones" value="/Base/HorizontalMaze"/>
      <property name="TargetZone" value="Pathway"/>
+     <property name="Variable" value="combo-door"/>
     </properties>
    </object>
    <object id="60" gid="20" x="50" y="150" width="50" height="50" rotation="-90"/>

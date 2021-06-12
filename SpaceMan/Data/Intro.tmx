@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="34" nextobjectid="71">
+ <properties>
+  <property name="AmbientColor" value="#B6BEE7"/>
+  <property name="Music" value="Space Station LOOP.wav"/>
+  <property name="NoAgents" type="bool" value="true"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="NoSpawning-Drones" type="bool" value="true"/>
+  <property name="Skybox" value="/Base/Skyboxes/Stars"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="Ground" width="3" height="3" locked="1">
+   <properties>
+    <property name="Materials" value="[ground]"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+4,0,0,
+4,0,0,
+4,0,0
+</data>
+  </layer>
+  <objectgroup id="4" name="Transitions" locked="1">
+   <object id="8" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="HoleProbability" type="float" value="70"/>
+     <property name="InnerMaxY" type="int" value="2"/>
+     <property name="MazeTransitions" type="int" value="4"/>
+     <property name="MazeZones" value="/Base/HorizontalMaze"/>
+     <property name="TargetZone" value="[exit]"/>
+    </properties>
+   </object>
+   <object id="55" gid="20" x="100" y="0" width="50" height="50" rotation="90"/>
+  </objectgroup>
+  <layer id="3" name="Walls" width="3" height="3" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <data encoding="csv">
+2684354566,0,0,
+2684354565,0,0,
+6,0,0
+</data>
+  </layer>
+  <layer id="25" name="NoSpawn" width="3" height="3" locked="1">
+   <properties>
+    <property name="AutoFill" type="bool" value="true"/>
+    <property name="FillHoles" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,0,22,
+0,0,22,
+0,0,22
+</data>
+  </layer>
+  <layer id="27" name="NoSpawn" width="3" height="3" locked="1">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="AutoFill" type="bool" value="true"/>
+    <property name="FillHoles" type="bool" value="true"/>
+   </properties>
+   <data encoding="csv">
+0,22,0,
+0,22,0,
+0,22,0
+</data>
+  </layer>
+  <layer id="12" name="Walls2" width="3" height="3" locked="1">
+   <properties>
+    <property name="Anchor" value="-1,0"/>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+    <property name="Materials" value="[walls]"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,2684354565,0,
+0,2684354565,0
+</data>
+  </layer>
+  <objectgroup id="26" name="Scenery" locked="1"/>
+  <objectgroup id="28" name="Objects" locked="1">
+   <object id="64" type="Spaceship" gid="38" x="100" y="50" width="50" height="50">
+    <properties>
+     <property name="Move" value="2;0;0"/>
+     <property name="Rotate" value="0;-11;0"/>
+     <property name="Scale" value="0.3"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="29" name="Gateway" locked="1">
+   <properties>
+    <property name="AutoFill" type="bool" value="true"/>
+   </properties>
+   <object id="65" type="Gateway" gid="38" x="100" y="50" width="50" height="50"/>
+   <object id="66" type="Gateway" gid="38" x="50" y="50" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>

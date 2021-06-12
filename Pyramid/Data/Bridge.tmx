@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="22" nextobjectid="104">
+ <properties>
+  <property name="Music" value="egyptian2.mp3"/>
+  <property name="NoSpawning" type="bool" value="false"/>
+  <property name="NoSpawning-traps" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <objectgroup id="18" name="Ground" locked="1">
+   <properties>
+    <property name="Type" value="/Base/Ground"/>
+    <property name="Walkable" type="bool" value="true"/>
+   </properties>
+   <object id="81" gid="4" x="0" y="50" width="50" height="50"/>
+   <object id="82" gid="4" x="50" y="50" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+   <object id="85" gid="4" x="0" y="100" width="50" height="50"/>
+   <object id="86" gid="4" x="0" y="150" width="50" height="50"/>
+   <object id="87" gid="4" x="50" y="150" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+   <object id="92" gid="4" x="50" y="100" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="16" name="Walls" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="61" gid="25" x="0" y="150" width="50" height="50"/>
+   <object id="68" gid="25" x="100" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+   <object id="69" gid="25" x="50" y="0" width="50" height="50" rotation="-180"/>
+   <object id="70" gid="25" x="0" y="0" width="50" height="50" rotation="90"/>
+   <object id="71" gid="25" x="0" y="50" width="50" height="50" rotation="90"/>
+   <object id="72" gid="25" x="0" y="100" width="50" height="50" rotation="90"/>
+  </objectgroup>
+  <objectgroup id="21" name="Walls2">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="99" gid="25" x="50" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,1"/>
+    </properties>
+   </object>
+   <object id="101" gid="25" x="0" y="50" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="0,-1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <layer id="2" name="Ceiling" width="3" height="3" visible="0" locked="1">
+   <properties>
+    <property name="AtCeiling" type="bool" value="true"/>
+    <property name="Type" value="/Base/Sandstone"/>
+   </properties>
+   <data encoding="csv">
+3,3,3,
+3,3,3,
+3,3,3
+</data>
+  </layer>
+  <objectgroup id="4" name="Transitions">
+   <object id="60" gid="20" x="50" y="150" width="50" height="50" rotation="-90"/>
+   <object id="103" type="MovingPlatform" gid="29" x="100" y="0" width="50" height="50" rotation="90">
+    <properties>
+     <property name="TargetLocation" value="BridgeTarget"/>
+     <property name="Variable" value="bridge"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="20" name="Blocker"/>
+  <objectgroup id="19" name="Objects">
+   <object id="102" gid="32" x="0" y="50" width="50" height="50"/>
+  </objectgroup>
+ </group>
+</map>

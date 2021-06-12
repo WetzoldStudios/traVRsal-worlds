@@ -88,7 +88,7 @@
                                 {
                                  "name":"Anchor",
                                  "type":"string",
-                                 "value":"1,0"
+                                 "value":"1,-1"
                                 }],
                          "rotation":-90,
                          "type":"",
@@ -134,6 +134,46 @@
                 }, 
                 {
                  "draworder":"topdown",
+                 "id":30,
+                 "name":"InnerWalls2",
+                 "objects":[
+                        {
+                         "gid":5,
+                         "height":50,
+                         "id":68,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"Anchor",
+                                 "type":"string",
+                                 "value":"-1,0"
+                                }],
+                         "rotation":90,
+                         "type":"",
+                         "visible":true,
+                         "width":50,
+                         "x":50,
+                         "y":100
+                        }],
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"ConnectToCeiling",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"Materials",
+                         "type":"string",
+                         "value":"[walls]"
+                        }],
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
                  "id":4,
                  "name":"Transitions",
                  "objects":[
@@ -146,7 +186,7 @@
                                 {
                                  "name":"TargetZone",
                                  "type":"string",
-                                 "value":"Gallery"
+                                 "value":"Climbing"
                                 }],
                          "rotation":90,
                          "type":"",
@@ -185,14 +225,14 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":30,
- "nextobjectid":68,
+ "nextlayerid":31,
+ "nextobjectid":69,
  "orientation":"orthogonal",
  "properties":[
         {
-         "name":"AudioEffect",
+         "name":"Chapter",
          "type":"string",
-         "value":"guide-floorheight.mp3"
+         "value":"walkthrough"
         }, 
         {
          "name":"NoAgents",
@@ -203,9 +243,14 @@
          "name":"NoSpawning",
          "type":"bool",
          "value":false
+        }, 
+        {
+         "name":"Speak",
+         "type":"string",
+         "value":"This zone features a much lower ceiling so duck to get through!"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.4.3",
+ "tiledversion":"1.7.0",
  "tileheight":50,
  "tilesets":[
         {
@@ -220,7 +265,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":25,
+         "tilecount":26,
          "tileheight":50,
          "tiles":[
                 {
@@ -373,6 +418,11 @@
                          "name":"RandomMusic",
                          "type":"string",
                          "value":""
+                        }, 
+                        {
+                         "name":"Reactivatable",
+                         "type":"bool",
+                         "value":false
                         }, 
                         {
                          "name":"Snap",
@@ -693,6 +743,11 @@
                          "value":""
                         }, 
                         {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
                          "name":"TargetLocation",
                          "type":"string",
                          "value":""
@@ -744,12 +799,25 @@
                          "value":""
                         }],
                  "type":"\/Base\/Trigger"
+                }, 
+                {
+                 "id":31,
+                 "image":"..\/..\/_Tiled\/Master Images\/explicit-spawn.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Virtual",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "type":"\/Base\/Explicit-Spawn"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":32,
+         "firstgid":33,
          "grid":
             {
              "height":1,
@@ -759,7 +827,7 @@
          "margin":0,
          "name":"Deco",
          "spacing":0,
-         "tilecount":4,
+         "tilecount":7,
          "tileheight":50,
          "tiles":[
                 {
@@ -838,6 +906,152 @@
                  "imagewidth":50,
                  "properties":[
                         {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/..\/_Tiled\/Master Images\/object2.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/..\/_Tiled\/Master Images\/object3.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Snap",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Text",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Y",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/..\/_Tiled\/Master Images\/object4.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
                          "name":"Move",
                          "type":"string",
                          "value":""
@@ -877,6 +1091,6 @@
         }],
  "tilewidth":50,
  "type":"map",
- "version":1.4,
+ "version":"1.6",
  "width":3
 }

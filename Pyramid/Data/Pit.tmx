@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="32" nextobjectid="55">
+ <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <group id="6" name="Underground" visible="0">
+  <properties>
+   <property name="Death" type="bool" value="true"/>
+   <property name="Height" type="float" value="4"/>
+   <property name="NoSpawning" type="bool" value="true"/>
+   <property name="Underground" type="bool" value="true"/>
+  </properties>
+  <layer id="10" name="Ground" width="3" height="3">
+   <properties>
+    <property name="Type" value="/Base/Sandstone"/>
+   </properties>
+   <data encoding="csv">
+4,4,4,
+4,4,4,
+4,4,4
+</data>
+  </layer>
+  <objectgroup id="27" name="Walls">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="24" gid="25" x="0" y="150" width="50" height="50"/>
+   <object id="25" gid="25" x="50" y="150" width="50" height="50"/>
+   <object id="26" gid="25" x="100" y="150" width="50" height="50"/>
+   <object id="27" gid="25" x="150" y="150" width="50" height="50" rotation="-90"/>
+   <object id="28" gid="25" x="150" y="100" width="50" height="50" rotation="-90"/>
+   <object id="29" gid="25" x="150" y="50" width="50" height="50" rotation="-90"/>
+   <object id="30" gid="25" x="150" y="0" width="50" height="50" rotation="-180"/>
+   <object id="31" gid="25" x="100" y="0" width="50" height="50" rotation="-180"/>
+   <object id="32" gid="25" x="50" y="0" width="50" height="50" rotation="-180"/>
+   <object id="33" gid="25" x="0" y="0" width="50" height="50" rotation="90"/>
+   <object id="34" gid="25" x="0" y="50" width="50" height="50" rotation="90"/>
+   <object id="35" gid="25" x="0" y="100" width="50" height="50" rotation="90"/>
+  </objectgroup>
+  <layer id="20" name="Spikes" width="3" height="3">
+   <properties>
+    <property name="AutoFill" type="bool" value="true"/>
+    <property name="Type" value="Spikes"/>
+   </properties>
+   <data encoding="csv">
+39,39,39,
+39,39,39,
+39,39,39
+</data>
+  </layer>
+ </group>
+ <group id="5" name="Floor 0">
+  <properties>
+   <property name="Height" type="float" value="2.5"/>
+  </properties>
+  <layer id="1" name="GroundLeft" width="3" height="3">
+   <properties>
+    <property name="Type" value="/Base/Ground"/>
+   </properties>
+   <data encoding="csv">
+0,0,0,
+0,0,0,
+0,0,0
+</data>
+  </layer>
+  <layer id="19" name="GroundRight" width="3" height="3">
+   <properties>
+    <property name="Type" value="/Base/Ground"/>
+   </properties>
+   <data encoding="csv">
+0,0,4,
+0,0,4,
+0,0,4
+</data>
+  </layer>
+  <objectgroup id="4" name="Transitions">
+   <object id="18" gid="8" x="100" y="100" width="50" height="50" rotation="-270">
+    <properties>
+     <property name="HoleProbability" type="float" value="70"/>
+     <property name="MazeTransitions" type="int" value="2"/>
+     <property name="MazeZones" value="/Base/HorizontalMaze"/>
+     <property name="TargetZone" value="SnakePit"/>
+    </properties>
+   </object>
+   <object id="23" gid="20" x="50" y="150" width="50" height="50" rotation="-90"/>
+  </objectgroup>
+  <objectgroup id="30" name="WallsRight" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="48" gid="25" x="100" y="50" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="0,1"/>
+    </properties>
+   </object>
+   <object id="49" gid="25" x="100" y="100" width="50" height="50" rotation="90"/>
+  </objectgroup>
+  <objectgroup id="31" name="WallsLeft" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="50" gid="25" x="50" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="0,-1"/>
+    </properties>
+   </object>
+   <object id="51" gid="25" x="0" y="50" width="50" height="50"/>
+   <object id="54" gid="25" x="50" y="100" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="0,1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="28" name="Walls" locked="1">
+   <properties>
+    <property name="ConnectToCeiling" type="bool" value="true"/>
+   </properties>
+   <object id="37" gid="25" x="50" y="150" width="50" height="50">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
+   <object id="38" gid="25" x="100" y="150" width="50" height="50"/>
+   <object id="39" gid="25" x="150" y="150" width="50" height="50" rotation="-90"/>
+   <object id="40" gid="25" x="150" y="100" width="50" height="50" rotation="-90"/>
+   <object id="41" gid="25" x="150" y="50" width="50" height="50" rotation="-90"/>
+   <object id="42" gid="25" x="150" y="0" width="50" height="50" rotation="-180"/>
+   <object id="43" gid="25" x="100" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
+   <object id="52" gid="25" x="50" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value=""/>
+    </properties>
+   </object>
+   <object id="53" gid="25" x="0" y="0" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value=""/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="18" name="PathMaze" locked="1">
+   <properties>
+    <property name="GenerateMaze" type="bool" value="true"/>
+    <property name="MazeType" value="Path"/>
+    <property name="ObjectKeys" value="WoodPlatform,WoodPlatformRotating"/>
+    <property name="Orientation" value="Random_Side"/>
+   </properties>
+   <object id="15" gid="17" x="100" y="50" width="50" height="50" rotation="-90">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+    </properties>
+   </object>
+   <object id="16" gid="17" x="50" y="100" width="50" height="50" rotation="90">
+    <properties>
+     <property name="Anchor" value="-1,0"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="22" name="NoSpawnZones" locked="1">
+   <properties>
+    <property name="AutoFill" type="bool" value="true"/>
+   </properties>
+   <object id="20" gid="22" x="0" y="100" width="50" height="50" rotation="90"/>
+   <object id="21" gid="22" x="0" y="100" width="50" height="50"/>
+   <object id="22" gid="22" x="0" y="50" width="50" height="50"/>
+  </objectgroup>
+  <layer id="2" name="Ceiling" width="3" height="3" visible="0">
+   <properties>
+    <property name="AtCeiling" type="bool" value="true"/>
+    <property name="Type" value="/Base/Sandstone"/>
+   </properties>
+   <data encoding="csv">
+3,3,3,
+3,3,3,
+3,3,3
+</data>
+  </layer>
+ </group>
+</map>

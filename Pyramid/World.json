@@ -1,17 +1,35 @@
 {
-    "version": "0.0.21",
+    "version": "0.0.266",
+    "versionCode": 42,
     "name": "The Pyramid",
     "shortDescription": "Survive the ancient pyramid's traps.",
-    "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Survive and find your way out again.",
+    "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Find all stone fragments, survive and find your way out again.",
     "coverImage": "Cover.png",
-    "minVersion": "0.5",
-    "deathSound": "voice_male_grunt_pain_death_07.wav",
-    "kpis": "0,3,4",
+    "minAppVersion": "1.1.124",
+    "measures": [
+        "Time",
+        "Distance",
+        "Targets",
+        "Deaths"
+    ],
+    "customHandHuds": [
+        {
+            "text": "Health",
+            "subText": "Health"
+        },
+        {
+            "text": "FirstRemainingTarget",
+            "subText": "Fragments Found"
+        }
+    ],
+    "defaultHandHudMain": "FirstRemainingTarget",
     "initialItemMain": "/Base/Flashlight",
+    "deathSound": "voice_male_grunt_pain_death_07.wav",
     "journeys": [
         {
             "segments": [
                 {
+                    "chapter": "beginning",
                     "length": 1,
                     "components": [
                         {
@@ -20,17 +38,31 @@
                     ]
                 },
                 {
-                    "length": 12,
+                    "chapter": "heat",
+                    "length": 16,
                     "components": [
                         {
                             "key": "Combination",
                             "max": 1
                         },
                         {
-                            "key": "Pathway"
+                            "key": "Pathway",
+                            "max": 1
                         },
                         {
-                            "key": "Pharao",
+                            "key": "Bridge",
+                            "max": 0
+                        },
+                        {
+                            "key": "BridgeTarget",
+                            "max": 0
+                        },
+                        {
+                            "key": "Pit",
+                            "max": 1
+                        },
+                        {
+                            "key": "SnakePit",
                             "max": 1
                         },
                         {
@@ -52,17 +84,25 @@
     "initialVariables": [
         {
             "key": "lights",
-            "value": "0"
+            "value": false,
+            "resetOnCheckpoint": false
         },
         {
             "key": "flashlight",
-            "value": "1"
+            "value": true,
+            "resetOnCheckpoint": false
         },
         {
             "key": "combo-door",
-            "value": "0",
+            "value": false,
             "imageFolder": "Glyphs",
-            "targetCount": 4
+            "targetCount": 4,
+            "resetOnCheckpoint": false
+        },
+        {
+            "key": "bridge",
+            "value": 0.05,
+            "resetOnCheckpoint": false
         }
     ],
     "replacements": [
@@ -78,32 +118,58 @@
         },
         {
             "key": "/Base/Ceiling",
-            "materials": "",
             "randomObjects": [
                 "/Base/Sandstone",
                 "/Base/Sandstone2"
             ],
-            "orientation": "Random_Side"
+            "orientation": "Random_Side",
+            "materials": ""
         },
         {
             "key": "/Base/Ground",
-            "materials": "",
             "randomObjects": [
                 "/Base/Sandstone",
                 "/Base/Sandstone2"
             ],
-            "orientation": "Random_Side"
+            "orientation": "Random_Side",
+            "materials": ""
         },
         {
             "key": "/Base/Wall",
-            "materials": "",
             "randomObjects": [
                 "/Base/StoneWall",
-                "/Base/StoneWall2"
-            ]
+                "/Base/StoneWall2",
+                "Stairs",
+                "Corridor",
+                "SkullWallFull2"
+            ],
+            "materials": ""
         }
     ],
     "spawnRules": [
+        {
+            "key": "Altars",
+            "objectKeys": [
+                "Altar"
+            ],
+            "orientation": "Random_Side",
+            "restrictions": [
+                "deadend"
+            ],
+            "rotateRandomly": "0;5;0",
+            "companions": [
+                {
+                    "key": "Fragments",
+                    "objectKeys": [
+                        "SignStone"
+                    ],
+                    "validSockets": [
+                        "fragment"
+                    ],
+                    "dontCountAsObstacle": true
+                }
+            ]
+        },
         {
             "key": "DeadEnds",
             "objectKeys": [
@@ -113,11 +179,11 @@
             ],
             "amountType": "Probability",
             "amount": 80,
-            "flipOrientation": true,
             "restrictions": [
                 "deadend"
             ],
-            "atCeiling": true
+            "atCeiling": true,
+            "flipOrientation": true
         },
         {
             "key": "CornerIvy",
@@ -141,7 +207,7 @@
                 "FallingSpikeGrate"
             ],
             "amountType": "Probability",
-            "amount": 20,
+            "amount": 15,
             "restrictions": [
                 "!NextToTransition"
             ],
@@ -155,7 +221,7 @@
                 "Wallblades"
             ],
             "amountType": "Probability",
-            "amount": 20,
+            "amount": 15,
             "orientation": "Free_Side",
             "restrictions": [
                 "FacingOuterBorder",
@@ -198,7 +264,46 @@
                 "z": 1.0
             },
             "height": 4,
+            "adjustMaterials": false,
             "pivotType": "Center"
+        },
+        {
+            "objectKey": "Bones",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Column",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Column2",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Corridor",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 2,
+            "height": 5,
+            "standalone": true
         },
         {
             "objectKey": "FallingSpikeGrate",
@@ -208,6 +313,15 @@
                 "z": 1.0
             },
             "atCeiling": true,
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Fireplace",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
             "pivotType": "Bottom_Center"
         },
         {
@@ -241,7 +355,82 @@
                 "z": 1.0
             },
             "height": 4,
+            "adjustMaterials": false,
             "pivotType": "Center"
+        },
+        {
+            "objectKey": "MetalVase",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Rail",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 3,
+            "height": 2
+        },
+        {
+            "objectKey": "Rail2",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 3,
+            "height": 2
+        },
+        {
+            "objectKey": "SignStone",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "SkeletonAltar",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 3
+        },
+        {
+            "objectKey": "SkullWall2X",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 2
+        },
+        {
+            "objectKey": "SkullWallFull",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 5
+        },
+        {
+            "objectKey": "SkullWallFull2",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 5
         },
         {
             "objectKey": "SpiderWeb",
@@ -259,6 +448,35 @@
             "pivotType": "Center"
         },
         {
+            "objectKey": "Stairs",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 2,
+            "height": 5,
+            "standalone": true
+        },
+        {
+            "objectKey": "Statue",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
+            "objectKey": "Statue2",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
             "objectKey": "StoneGate",
             "scale": {
                 "x": 1.0,
@@ -266,7 +484,19 @@
                 "z": 1.0
             },
             "height": 4,
+            "standalone": true,
             "pivotType": "Bottom_Front_Center"
+        },
+        {
+            "objectKey": "Torchfire",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "height": 3,
+            "standaloneAllSides": true,
+            "pivotType": "Bottom_Center"
         }
     ]
 }
