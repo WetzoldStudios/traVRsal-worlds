@@ -19,14 +19,14 @@
                                 {
                                  "name":"Move",
                                  "type":"string",
-                                 "value":"-0.5;0;-0.5"
+                                 "value":"-0.2;0;-0.2"
                                 }],
-                         "rotation":-90,
-                         "type":"Guard",
+                         "rotation":-180,
+                         "type":"CornerGuard",
                          "visible":true,
                          "width":50,
                          "x":150,
-                         "y":150
+                         "y":0
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -82,12 +82,7 @@
                                 {
                                  "name":"Move",
                                  "type":"string",
-                                 "value":"0;0;-1"
-                                }, 
-                                {
-                                 "name":"Rotate",
-                                 "type":"string",
-                                 "value":"0;-45;0"
+                                 "value":"-0.5;0;-1"
                                 }],
                          "rotation":0,
                          "type":"Stand2",
@@ -269,7 +264,7 @@
          "value":"Skybox"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.7.0",
+ "tiledversion":"1.7.1",
  "tileheight":50,
  "tilesets":[
         {

@@ -588,12 +588,12 @@
                                  "type":"string",
                                  "value":"planks[zone]-a"
                                 }],
-                         "rotation":-90,
+                         "rotation":90,
                          "type":"WoodPlatform",
                          "visible":true,
                          "width":50,
-                         "x":150,
-                         "y":50
+                         "x":100,
+                         "y":0
                         }, 
                         {
                          "gid":42,
@@ -606,12 +606,12 @@
                                  "type":"string",
                                  "value":"planks[zone]-b"
                                 }],
-                         "rotation":-90,
+                         "rotation":90,
                          "type":"WoodPlatform",
                          "visible":true,
                          "width":50,
-                         "x":150,
-                         "y":100
+                         "x":100,
+                         "y":50
                         }, 
                         {
                          "gid":42,
@@ -624,12 +624,12 @@
                                  "type":"string",
                                  "value":"planks[zone]-c"
                                 }],
-                         "rotation":-90,
+                         "rotation":90,
                          "type":"WoodPlatform",
                          "visible":true,
                          "width":50,
-                         "x":150,
-                         "y":150
+                         "x":100,
+                         "y":100
                         }],
                  "opacity":1,
                  "properties":[
@@ -673,7 +673,7 @@
                         }],
                  "opacity":1,
                  "type":"objectgroup",
-                 "visible":true,
+                 "visible":false,
                  "x":0,
                  "y":0
                 }, 
@@ -773,7 +773,7 @@
          "value":true
         }],
  "renderorder":"left-up",
- "tiledversion":"1.7.0",
+ "tiledversion":"1.7.1",
  "tileheight":50,
  "tilesets":[
         {
@@ -1350,7 +1350,7 @@
          "margin":0,
          "name":"Deco",
          "spacing":0,
-         "tilecount":7,
+         "tilecount":8,
          "tileheight":50,
          "tiles":[
                 {
@@ -1609,6 +1609,44 @@
                          "type":"int",
                          "value":0
                         }]
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/..\/_Tiled\/Master Images\/glb.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Url",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/GLB"
                 }],
          "tilewidth":50
         }],

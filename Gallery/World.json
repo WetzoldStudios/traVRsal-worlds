@@ -1,12 +1,13 @@
 {
     "key": "Gallery",
-    "version": "0.0.54",
-    "versionCode": 8,
+    "version": "0.0.83",
+    "versionCode": 37,
     "name": "The Gallery",
     "shortDescription": "A stunning virtual gallery full of amazing images.",
-    "longDescription": "Walk through a stunning virtual gallery composed of either the most recent amazing photos from Unsplash.com, GIPHY or use your own images you stored on your device before (see wiki).",
+    "longDescription": "Walk through a stunning virtual gallery composed of either the most recent amazing photos from Unsplash.com, GIPHY or use your own images you stored on your device before.",
     "coverImage": "Cover.png",
     "minAppVersion": "1.1.131",
+    "defaultConsiderPlayerHeight": true,
     "enableChallenges": false,
     "measures": [
         "Distance",
@@ -62,7 +63,7 @@
         },
         {
             "key": "imageProvider",
-            "defaultValue": "Giphy",
+            "defaultValue": "Unsplash",
             "name": "Image Source",
             "type": "ImageProvider"
         },
@@ -172,6 +173,7 @@
             "maxScale": 1.5,
             "y": 3.0,
             "snap": true,
+            "considerPlayerHeight": true,
             "companions": [
                 {
                     "key": "FrameLights",
@@ -182,6 +184,7 @@
                     "maxScale": 1.5,
                     "y": 4.0,
                     "snap": true,
+                    "considerPlayerHeight": true,
                     "dontCountAsObstacle": true
                 }
             ]
@@ -237,7 +240,8 @@
                 "maze"
             ],
             "maxScale": 1.5,
-            "y": 3.0
+            "y": 3.0,
+            "considerPlayerHeight": true
         },
         {
             "key": "CornerLamps",
@@ -285,6 +289,16 @@
             },
             "atCeiling": true,
             "pivotType": "Center"
+        },
+        {
+            "objectKey": "CornerGuard",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 2,
+            "height": 2
         },
         {
             "objectKey": "Decor_Pot01",
@@ -346,6 +360,15 @@
             "pivotType": "Bottom_Front_Center"
         },
         {
+            "objectKey": "Guard",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "width": 2
+        },
+        {
             "objectKey": "Stand",
             "scale": {
                 "x": 1.0,
@@ -383,5 +406,93 @@
             },
             "height": 4
         }
-    ]
+    ],
+    "dependencies": {
+        "referencedWorlds": [
+            "Base",
+            "Gallery"
+        ],
+        "referencedObjects": [
+            "/Base/Data/HorizontalMaze",
+            "/Base/Data/HorizontalMazeNoLeft",
+            "/Base/Data/HorizontalMazeNoRight",
+            "/Base/Data/Maze",
+            "/Base/Data/MazeLeftCorner",
+            "/Base/Data/MazeRightCorner",
+            "/Base/Data/Mazes",
+            "/Base/Pieces/Ceiling",
+            "/Base/Pieces/DirectionIndicator",
+            "/Base/Pieces/Door",
+            "/Base/Pieces/EntryPortal",
+            "/Base/Pieces/FeetIndicator",
+            "/Base/Pieces/FeetIndicatorSimple",
+            "/Base/Pieces/Flashlight",
+            "/Base/Pieces/Ground",
+            "/Base/Pieces/HeadLight",
+            "/Base/Pieces/maze",
+            "/Base/Pieces/Maze/MazeCorner",
+            "/Base/Pieces/Maze/MazeCorridor",
+            "/Base/Pieces/Maze/MazeCorridorEnd",
+            "/Base/Pieces/Maze/MazeCrossing",
+            "/Base/Pieces/Maze/MazeDeadlockCornerLeft",
+            "/Base/Pieces/Maze/MazeDeadlockCornerLeftRound",
+            "/Base/Pieces/Maze/MazeDeadlockCornerRight",
+            "/Base/Pieces/Maze/MazeDeadlockCornerRightRound",
+            "/Base/Pieces/Maze/MazeDoubleCorner",
+            "/Base/Pieces/Maze/MazeTripple",
+            "/Base/Pieces/Pistol",
+            "/Base/Pieces/Poster",
+            "/Base/Pieces/Scenery",
+            "/Base/Pieces/SilencedPistol",
+            "/Base/Pieces/Texture",
+            "/Base/Pieces/TimeGrenade",
+            "/Base/Pieces/Transition",
+            "/Base/Pieces/Wall",
+            "/Gallery/Audio/Music/AMBIENCE_Parking_Garage_Car_Boot_Sale_01_loop_stereo.wav",
+            "/Gallery/Audio/Music/AMBIENCE_Parking_Garage_Car_Boot_Sale_02_loop_stereo.wav",
+            "/Gallery/Audio/Music/AMBIENCE_Parking_Garage_Car_Boot_Sale_03_loop_stereo.wav",
+            "/Gallery/Audio/Music/Pack 01 - Ambiance - Forest 01 - City - v02N.mp3",
+            "/Gallery/Audio/Music/Pack 01 - Ambiance - Forest 01 - Nature - v02N.mp3",
+            "/Gallery/Audio/Music/Pack 01 - Ambiance - Forest 02 - Nature - v02N.mp3",
+            "/Gallery/Data/Intro",
+            "/Gallery/Data/LeftCorner",
+            "/Gallery/Data/RightCorner",
+            "/Gallery/Data/Room1",
+            "/Gallery/Data/Room2",
+            "/Gallery/Data/Room3",
+            "/Gallery/Materials/Ceiling_Blue",
+            "/Gallery/Materials/Ceiling_Green",
+            "/Gallery/Materials/Ceiling_Orange",
+            "/Gallery/Materials/Ceiling_Purple",
+            "/Gallery/Materials/Ceiling_Red",
+            "/Gallery/Materials/Ceiling_White",
+            "/Gallery/Materials/FloorLinoleum",
+            "/Gallery/Materials/PaintMatte",
+            "/Gallery/Materials/Skybox",
+            "/Gallery/Pieces/Bench",
+            "/Gallery/Pieces/ceiling_lamp",
+            "/Gallery/Pieces/Column",
+            "/Gallery/Pieces/CornerGuard",
+            "/Gallery/Pieces/Decor_Hands02",
+            "/Gallery/Pieces/Decor_Pot01",
+            "/Gallery/Pieces/DirectionIndicator",
+            "/Gallery/Pieces/Frame_01",
+            "/Gallery/Pieces/Frame_02",
+            "/Gallery/Pieces/Frame_03",
+            "/Gallery/Pieces/Frame_06",
+            "/Gallery/Pieces/Frame_07",
+            "/Gallery/Pieces/Guard",
+            "/Gallery/Pieces/Lamp_03",
+            "/Gallery/Pieces/Stand",
+            "/Gallery/Pieces/Stand2",
+            "/Gallery/Pieces/Stand3",
+            "/Gallery/Pieces/Stand3Single",
+            "/Gallery/Sceneries/Museum",
+            "/Gallery/Sceneries/Museum2",
+            "[exit]",
+            "[Random]"
+        ],
+        "referencedSpeech": [],
+        "totalObjects": 1159
+    }
 }

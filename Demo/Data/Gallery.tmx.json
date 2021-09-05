@@ -295,7 +295,7 @@
                  "value":true
                 }],
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -512,7 +512,7 @@
                  "value":2.5
                 }],
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
@@ -541,7 +541,7 @@
          "value":"You can load images at runtime, either from the world or device or from any URL, Unsplash or GIPHY.\n\nThis concludes the guided tour and you can continue to explore on your own. I might be the Robot Overloard, but please do support Robert who is developing this project as a solo dev by spreading the word and leaving a review. He will be very happy. And I will get my electricity. Take care and bye bye."
         }],
  "renderorder":"left-up",
- "tiledversion":"1.7.0",
+ "tiledversion":"1.7.1",
  "tileheight":50,
  "tilesets":[
         {
@@ -1118,7 +1118,7 @@
          "margin":0,
          "name":"Deco",
          "spacing":0,
-         "tilecount":7,
+         "tilecount":8,
          "tileheight":50,
          "tiles":[
                 {
@@ -1377,6 +1377,44 @@
                          "type":"int",
                          "value":0
                         }]
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/..\/_Tiled\/Master Images\/glb.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Url",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/GLB"
                 }],
          "tilewidth":50
         }],

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="22" nextobjectid="100">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="22" nextobjectid="100">
  <properties>
   <property name="Music" value="egyptian2.mp3"/>
   <property name="NoSpawning" type="bool" value="false"/>
@@ -137,23 +137,23 @@
    <properties>
     <property name="AutoFill" type="bool" value="true"/>
    </properties>
-   <object id="78" type="WoodPlatform" gid="42" x="150" y="50" width="50" height="50" rotation="-90">
+   <object id="78" type="WoodPlatform" gid="42" x="100" y="0" width="50" height="50" rotation="90">
     <properties>
      <property name="Variable" value="planks[zone]-a"/>
     </properties>
    </object>
-   <object id="79" type="WoodPlatform" gid="42" x="150" y="100" width="50" height="50" rotation="-90">
+   <object id="79" type="WoodPlatform" gid="42" x="100" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Variable" value="planks[zone]-b"/>
     </properties>
    </object>
-   <object id="80" type="WoodPlatform" gid="42" x="150" y="150" width="50" height="50" rotation="-90">
+   <object id="80" type="WoodPlatform" gid="42" x="100" y="100" width="50" height="50" rotation="90">
     <properties>
      <property name="Variable" value="planks[zone]-c"/>
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="20" name="Blocker">
+  <objectgroup id="20" name="Blocker" visible="0">
    <object id="98" type="StoneGate" gid="41" x="100" y="50" width="50" height="50">
     <properties>
      <property name="Move" value="0;1.5;0"/>

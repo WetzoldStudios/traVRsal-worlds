@@ -19,7 +19,7 @@
                                 {
                                  "name":"Move",
                                  "type":"string",
-                                 "value":"-0.5;0;-0.5"
+                                 "value":"-0.2;0;-0.2"
                                 }],
                          "rotation":90,
                          "type":"CornerGuard",
@@ -210,8 +210,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":32,
- "nextobjectid":73,
+ "nextlayerid":36,
+ "nextobjectid":76,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -250,7 +250,7 @@
          "value":"Skybox"
         }],
  "renderorder":"left-up",
- "tiledversion":"1.7.0",
+ "tiledversion":"1.7.1",
  "tileheight":50,
  "tilesets":[
         {

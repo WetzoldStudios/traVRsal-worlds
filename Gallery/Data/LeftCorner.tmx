@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="32" nextobjectid="84">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="32" nextobjectid="84">
  <properties>
   <property name="BackgroundColor" value="#88C1F0"/>
   <property name="NoAgents" type="bool" value="false"/>
@@ -7,32 +7,32 @@
   <property name="Skybox" value="Skybox"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="32" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
   <objectgroup id="30" name="Bounds" visible="0">
-   <object id="76" type="Guard" gid="38" x="150" y="150" width="50" height="50" rotation="-90">
+   <object id="76" type="Guard" gid="39" x="150" y="150" width="50" height="50" rotation="-90">
     <properties>
      <property name="Move" value="-0.5;0;-0.5"/>
     </properties>
    </object>
-   <object id="80" type="Guard" gid="38" x="0" y="0" width="50" height="50" rotation="90">
+   <object id="80" type="Guard" gid="39" x="0" y="0" width="50" height="50" rotation="90">
     <properties>
      <property name="Move" value="-0.5;0;-0.5"/>
     </properties>
    </object>
   </objectgroup>
   <objectgroup id="27" name="Scenery" visible="0" locked="1" opacity="0.47">
-   <object id="63" gid="37" x="50" y="50" width="50" height="50" rotation="90">
+   <object id="63" gid="38" x="50" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="SceneryName" value="Museum"/>
     </properties>
    </object>
   </objectgroup>
   <objectgroup id="29" name="Outer Stands">
-   <object id="79" type="Stand" gid="38" x="100" y="0" width="50" height="50" rotation="180">
+   <object id="79" type="Stand" gid="39" x="100" y="0" width="50" height="50" rotation="180">
     <properties>
      <property name="Anchor" value="1,0"/>
      <property name="Move" value="0;0;-1.5"/>
@@ -40,7 +40,7 @@
    </object>
   </objectgroup>
   <objectgroup id="31" name="Objects">
-   <object id="82" type="Bench" gid="38" x="50" y="150" width="50" height="50">
+   <object id="82" type="Bench" gid="39" x="50" y="150" width="50" height="50">
     <properties>
      <property name="Anchor" value="1,0"/>
      <property name="Move" value="0;0;-1"/>
@@ -48,7 +48,7 @@
    </object>
   </objectgroup>
   <objectgroup id="28" name="Stands">
-   <object id="69" type="Stand3Single" gid="38" x="150" y="50" width="50" height="50" rotation="180">
+   <object id="69" type="Stand3Single" gid="39" x="150" y="50" width="50" height="50" rotation="180">
     <properties>
      <property name="Anchor" value="0,1"/>
      <property name="ImageOrder-Back" type="int" value="0"/>
@@ -56,20 +56,20 @@
      <property name="Move" value="-0.1;0;0.1"/>
     </properties>
    </object>
-   <object id="70" type="Stand3" gid="38" x="50" y="100" width="50" height="50" rotation="-90">
+   <object id="70" type="Stand3" gid="39" x="50" y="100" width="50" height="50" rotation="-90">
     <properties>
      <property name="Anchor" value="0,-1"/>
      <property name="ImageOrder-Back" type="int" value="1"/>
      <property name="ImageOrder-Front" type="int" value="2"/>
     </properties>
    </object>
-   <object id="77" type="Stand3" gid="38" x="50" y="50" width="50" height="50" rotation="-90">
+   <object id="77" type="Stand3" gid="39" x="50" y="50" width="50" height="50" rotation="-90">
     <properties>
      <property name="ImageOrder-Back" type="int" value="1"/>
      <property name="ImageOrder-Front" type="int" value="2"/>
     </properties>
    </object>
-   <object id="78" type="Stand3" gid="38" x="100" y="50" width="50" height="50" rotation="90">
+   <object id="78" type="Stand3" gid="39" x="100" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="Anchor" value="0,1"/>
      <property name="ImageOrder-Back" type="int" value="0"/>

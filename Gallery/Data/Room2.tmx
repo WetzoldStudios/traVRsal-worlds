@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="73">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="74">
  <properties>
   <property name="BackgroundColor" value="#88C1F0"/>
   <property name="NoAgents" type="bool" value="false"/>
@@ -48,14 +48,20 @@
    </properties>
    <object id="70" type="Stand" gid="39" x="0" y="50" width="50" height="50" rotation="90">
     <properties>
-     <property name="Move" value="0;0;-1"/>
+     <property name="Move" value="-0.3;0;-1"/>
     </properties>
    </object>
   </objectgroup>
   <objectgroup id="30" name="Bounds">
-   <object id="71" type="CornerGuard" gid="39" x="150" y="150" width="50" height="50" rotation="-90">
+   <object id="71" type="Guard" gid="39" x="0" y="150" width="50" height="50">
     <properties>
-     <property name="Move" value="-0.5;0;-0.5"/>
+     <property name="Move" value="-0.2;0;-0.2"/>
+    </properties>
+   </object>
+   <object id="73" type="CornerGuard" gid="39" x="150" y="0" width="50" height="50" rotation="-180">
+    <properties>
+     <property name="Anchor" value="1,0"/>
+     <property name="Move" value="-0.2;0;-0.2"/>
     </properties>
    </object>
   </objectgroup>

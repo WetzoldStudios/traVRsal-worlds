@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="49" nextobjectid="106">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="49" nextobjectid="106">
  <properties>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
@@ -8,7 +8,7 @@
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
  <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
- <group id="36" name="Underground" visible="0">
+ <group id="36" name="Underground">
   <properties>
    <property name="Height" type="float" value="2.5"/>
    <property name="Underground" type="bool" value="true"/>
@@ -49,13 +49,12 @@
   <objectgroup id="42" name="Transitions">
    <object id="92" gid="8" x="50" y="150" width="50" height="50" rotation="-90">
     <properties>
-     <property name="MazeTransitions" type="int" value="0"/>
      <property name="TargetZone" value="[exit]"/>
     </properties>
    </object>
   </objectgroup>
  </group>
- <group id="5" name="Floor 0">
+ <group id="5" name="Floor 0" visible="0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
@@ -124,7 +123,7 @@
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="46" name="Platform">
+  <objectgroup id="46" name="Platform" visible="0">
    <object id="101" type="Platform" gid="29" x="100" y="50" width="50" height="50">
     <properties>
      <property name="Materials" value="DarkGrid"/>

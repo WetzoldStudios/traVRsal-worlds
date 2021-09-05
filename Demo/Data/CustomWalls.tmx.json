@@ -435,7 +435,7 @@
          "value":"Walls don't have to be all single tiles. You can also use segments spanning the whole height and also segments spanning multiple tiles in width."
         }],
  "renderorder":"left-up",
- "tiledversion":"1.7.0",
+ "tiledversion":"1.7.1",
  "tileheight":50,
  "tilesets":[
         {
@@ -1012,7 +1012,7 @@
          "margin":0,
          "name":"Deco",
          "spacing":0,
-         "tilecount":7,
+         "tilecount":8,
          "tileheight":50,
          "tiles":[
                 {
@@ -1271,6 +1271,44 @@
                          "type":"int",
                          "value":0
                         }]
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/..\/_Tiled\/Master Images\/glb.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Move",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Rotate",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Scale",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Url",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/GLB"
                 }],
          "tilewidth":50
         }],

@@ -1,6 +1,6 @@
 {
-    "version": "0.0.270",
-    "versionCode": 42,
+    "version": "0.0.404",
+    "versionCode": 176,
     "name": "A.I. Take-Over",
     "shortDescription": "Fight your way through a dangerous maze.",
     "longDescription": "A hostile A.I. has taken over an elite-forces training ground. Fight your way through and clear out all enemies.",
@@ -27,9 +27,11 @@
     "defaultHandHudSecondary": "RemainingTargets",
     "inventoryItems": [
         "/Base/Flashlight",
-        "/Base/TimeGrenade"
+        "/Base/TimeGrenade",
+        "/Base/Pistol"
     ],
-    "initialItemMain": "Pistol",
+    "initialItemMain": "/Base/Pistol",
+    "initialItemSecondary": "/Base/TimeGrenade",
     "deathSound": "voice_male_grunt_pain_death_07.wav",
     "defaultRandomSkybox": [
         "/Skybox/AllSky_FantasySky_Mid",
@@ -438,15 +440,6 @@
             "pivotType": "Bottom_Center"
         },
         {
-            "objectKey": "Pistol",
-            "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-            },
-            "pivotType": "Center"
-        },
-        {
             "objectKey": "Sandbag",
             "scale": {
                 "x": 1.0,
@@ -529,15 +522,6 @@
             },
             "atCeiling": true,
             "pivotType": "Bottom_Center"
-        },
-        {
-            "objectKey": "TimeGranade",
-            "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-            },
-            "pivotType": "Center"
         },
         {
             "objectKey": "VerticalLaserBeam",
@@ -684,5 +668,122 @@
             "height": 5,
             "standalone": true
         }
-    ]
+    ],
+    "usedTags": [
+        "Enemy"
+    ],
+    "dependencies": {
+        "referencedWorlds": [
+            "Base",
+            "Skybox",
+            "TrainingGround"
+        ],
+        "referencedObjects": [
+            "/Base/Audio/Music/FutureWorld_Loading_Loop.ogg",
+            "/Base/Data/HorizontalMaze",
+            "/Base/Data/HorizontalMazeNoLeft",
+            "/Base/Data/HorizontalMazeNoRight",
+            "/Base/Data/Maze",
+            "/Base/Data/MazeLeftCorner",
+            "/Base/Data/MazeRightCorner",
+            "/Base/Data/Mazes",
+            "/Base/Materials/Concrete",
+            "/Base/Materials/Metal",
+            "/Base/Materials/Stone",
+            "/Base/Pieces/Button",
+            "/Base/Pieces/Ceiling",
+            "/Base/Pieces/DirectionIndicator",
+            "/Base/Pieces/Door",
+            "/Base/Pieces/EntryPortal",
+            "/Base/Pieces/FeetIndicator",
+            "/Base/Pieces/FeetIndicatorSimple",
+            "/Base/Pieces/Flashlight",
+            "/Base/Pieces/Ground",
+            "/Base/Pieces/HeadLight",
+            "/Base/Pieces/maze",
+            "/Base/Pieces/Maze/MazeCorner",
+            "/Base/Pieces/Maze/MazeCorridor",
+            "/Base/Pieces/Maze/MazeCorridorEnd",
+            "/Base/Pieces/Maze/MazeCrossing",
+            "/Base/Pieces/Maze/MazeDeadlockCornerLeft",
+            "/Base/Pieces/Maze/MazeDeadlockCornerLeftRound",
+            "/Base/Pieces/Maze/MazeDeadlockCornerRight",
+            "/Base/Pieces/Maze/MazeDeadlockCornerRightRound",
+            "/Base/Pieces/Maze/MazeDoubleCorner",
+            "/Base/Pieces/Maze/MazeTripple",
+            "/Base/Pieces/maze-exit",
+            "/Base/Pieces/Pistol",
+            "/Base/Pieces/Poster",
+            "/Base/Pieces/Scenery",
+            "/Base/Pieces/SilencedPistol",
+            "/Base/Pieces/Switch",
+            "/Base/Pieces/Texture",
+            "/Base/Pieces/TimeGrenade",
+            "/Base/Pieces/Transition",
+            "/Base/Pieces/Wall",
+            "/Skybox/Materials/Cold Sunset",
+            "/TrainingGround/Audio/Music/Modern Dark LOOP.wav",
+            "/TrainingGround/Data/ElevatorMaze",
+            "/TrainingGround/Data/MiniBoss",
+            "/TrainingGround/Data/Pavilion",
+            "/TrainingGround/Data/ShootingRange",
+            "/TrainingGround/Materials/RedLaser",
+            "/TrainingGround/Materials/WoodenWall",
+            "/TrainingGround/Pieces/Barrel",
+            "/TrainingGround/Pieces/Barrel2",
+            "/TrainingGround/Pieces/Boots",
+            "/TrainingGround/Pieces/Can",
+            "/TrainingGround/Pieces/CCTV",
+            "/TrainingGround/Pieces/Elevator",
+            "/TrainingGround/Pieces/HeavyMissileTurret",
+            "/TrainingGround/Pieces/HorizontalLaserBeam",
+            "/TrainingGround/Pieces/InvincibleHorizontalLaserBeam",
+            "/TrainingGround/Pieces/Lamp3",
+            "/TrainingGround/Pieces/MiniBoss",
+            "/TrainingGround/Pieces/Oil",
+            "/TrainingGround/Pieces/Oil2",
+            "/TrainingGround/Pieces/RotatingLaser",
+            "/TrainingGround/Pieces/Sandbag",
+            "/TrainingGround/Pieces/ShootingRange",
+            "/TrainingGround/Pieces/Sign-HighVoltage",
+            "/TrainingGround/Pieces/Sign-NoDrinking",
+            "/TrainingGround/Pieces/Sign-Trespassing",
+            "/TrainingGround/Pieces/SpiderBot",
+            "/TrainingGround/Pieces/Spool",
+            "/TrainingGround/Pieces/SwitchBox",
+            "/TrainingGround/Pieces/TargetDisc",
+            "/TrainingGround/Pieces/TargetDummy",
+            "/TrainingGround/Pieces/TargetTurret",
+            "/TrainingGround/Pieces/TimeGranade",
+            "/TrainingGround/Pieces/VerticalLaserBeam",
+            "/TrainingGround/Pieces/Wheel",
+            "/TrainingGround/Pieces/WoodenDoorFrame",
+            "/TrainingGround/Pieces/WoodenSign",
+            "/TrainingGround/Pieces/WoodenWallBig",
+            "/TrainingGround/Pieces/WoodenWallBig2x",
+            "/TrainingGround/Pieces/WoodenWallBig3x",
+            "/TrainingGround/Pieces/WoodenWallBig4x",
+            "/TrainingGround/Pieces/WoodenWallHalf2x",
+            "/TrainingGround/Pieces/WoodenWallHalf3x",
+            "/TrainingGround/Pieces/WoodenWallHalf4x",
+            "/TrainingGround/Pieces/WoodenWallWindowBig",
+            "/TrainingGround/Pieces/WoodenWallWindowBig2x",
+            "/TrainingGround/Pieces/WoodenWallWindowBig3x",
+            "/TrainingGround/Pieces/WoodenWallWindowBig4x",
+            "/TrainingGround/Sceneries/Generic",
+            "/TrainingGround/Sceneries/ShootingRange",
+            "/TrainingGround/Sceneries/Towers",
+            "[exit]"
+        ],
+        "referencedSpeech": [
+            "A laser grid activated, blocking the way. Destroy the power source!",
+            "Do you hear that sound? Something is moving in this labyrinth.",
+            "I'd not try petting this thing if I were you.",
+            "Take cover! The turrets shoot on sight.",
+            "Test your gear and head on!",
+            "The laser grid is down! You should be able to proceed now.",
+            "This will not be easy."
+        ],
+        "totalObjects": 988
+    }
 }

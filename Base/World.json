@@ -1,6 +1,6 @@
 {
-    "version": "0.0.265",
-    "versionCode": 42,
+    "version": "0.0.400",
+    "versionCode": 177,
     "name": "Shared Level Assets",
     "shortDescription": "Contains common reusable items.",
     "isVirtual": true,
@@ -261,5 +261,8 @@
             },
             "pivotType": "Bottom_Front_Center"
         }
+    ],
+    "usedTags": [
+        "Interactable"
     ]
 }
