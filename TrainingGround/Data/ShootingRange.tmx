@@ -11,7 +11,7 @@
   <property name="Scenery" value="ShootingRange"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="34" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="3"/>
@@ -68,15 +68,15 @@
      <property name="Y" type="int" value="2"/>
     </properties>
    </object>
-   <object id="65" type="WoodenSign" gid="39" x="100" y="0" width="50" height="50" rotation="180">
+   <object id="65" type="WoodenSign" gid="40" x="100" y="0" width="50" height="50" rotation="180">
     <properties>
      <property name="Anchor" value="1,0"/>
      <property name="Offset" value="0.3;0;0.3"/>
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="20" name="Deco">
-   <object id="71" type="Sign-Trespassing" gid="41" x="50" y="0" width="50" height="50" rotation="90">
+  <objectgroup id="20" name="Deco" visible="0">
+   <object id="71" type="Sign-Trespassing" gid="42" x="50" y="0" width="50" height="50" rotation="90">
     <properties>
      <property name="Move" value="-1;0;0"/>
      <property name="Snap" type="bool" value="true"/>
@@ -86,7 +86,7 @@
   </objectgroup>
   <objectgroup id="18" name="Elevator" locked="1"/>
   <objectgroup id="14" name="Scenery">
-   <object id="56" gid="38" x="100" y="50" width="50" height="50" rotation="90">
+   <object id="56" gid="39" x="100" y="50" width="50" height="50" rotation="90">
     <properties>
      <property name="SceneryName" value="ShootingRange"/>
     </properties>

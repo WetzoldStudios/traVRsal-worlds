@@ -185,7 +185,7 @@
                  "y":0
                 }, 
                 {
-                 "data":[39, 39, 39, 39, 39, 39, 39, 39, 39],
+                 "data":[40, 40, 40, 40, 40, 40, 40, 40, 40],
                  "height":3,
                  "id":20,
                  "name":"Spikes",
@@ -599,24 +599,6 @@
                         {
                          "gid":17,
                          "height":50,
-                         "id":15,
-                         "name":"",
-                         "properties":[
-                                {
-                                 "name":"Anchor",
-                                 "type":"string",
-                                 "value":"1,0"
-                                }],
-                         "rotation":-90,
-                         "type":"",
-                         "visible":true,
-                         "width":50,
-                         "x":100,
-                         "y":50
-                        }, 
-                        {
-                         "gid":17,
-                         "height":50,
                          "id":16,
                          "name":"",
                          "properties":[
@@ -631,6 +613,24 @@
                          "width":50,
                          "x":50,
                          "y":100
+                        }, 
+                        {
+                         "gid":17,
+                         "height":50,
+                         "id":15,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"Anchor",
+                                 "type":"string",
+                                 "value":"1,0"
+                                }],
+                         "rotation":-90,
+                         "type":"",
+                         "visible":true,
+                         "width":50,
+                         "x":100,
+                         "y":50
                         }],
                  "opacity":1,
                  "properties":[
@@ -648,6 +648,11 @@
                          "name":"ObjectKeys",
                          "type":"string",
                          "value":"WoodPlatform,WoodPlatformRotating"
+                        }, 
+                        {
+                         "name":"ObjectKeysFirst",
+                         "type":"string",
+                         "value":"\/Base\/Sandstone2"
                         }, 
                         {
                          "name":"Orientation",
@@ -767,7 +772,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":27,
          "tileheight":50,
          "tiles":[
                 {
@@ -1314,12 +1319,30 @@
                          "value":true
                         }],
                  "type":"\/Base\/Explicit-Spawn"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/_Tiled\/Master Images\/waypoint.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Key",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Waypoint"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":33,
+         "firstgid":34,
          "grid":
             {
              "height":1,

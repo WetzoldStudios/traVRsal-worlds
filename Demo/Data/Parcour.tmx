@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="37" nextobjectid="78">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="37" nextobjectid="78">
  <properties>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Offset" value="0;0;-15"/>
+  <property name="Offset" value="0;0;-2zz"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="34" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -37,7 +37,7 @@
     <property name="Snap" type="bool" value="true"/>
     <property name="Y" value="*"/>
    </properties>
-   <object id="77" type="Grip" gid="41" x="50" y="150" width="50" height="50"/>
+   <object id="77" type="Grip" gid="42" x="50" y="150" width="50" height="50"/>
   </objectgroup>
  </group>
 </map>

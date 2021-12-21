@@ -1,11 +1,12 @@
 {
-    "version": "0.0.404",
-    "versionCode": 176,
+    "version": "0.0.628",
+    "versionCode": 400,
     "name": "A.I. Take-Over",
     "shortDescription": "Fight your way through a dangerous maze.",
     "longDescription": "A hostile A.I. has taken over an elite-forces training ground. Fight your way through and clear out all enemies.",
     "coverImage": "Cover.png",
     "minAppVersion": "1.1.124",
+    "minCompatibilityVersionCode": 134,
     "measures": [
         "Time",
         "Distance",
@@ -26,12 +27,13 @@
     ],
     "defaultHandHudSecondary": "RemainingTargets",
     "inventoryItems": [
-        "/Base/Flashlight",
+        "/Base/Pistol",
         "/Base/TimeGrenade",
-        "/Base/Pistol"
+        "/Base/PlasmaGun",
+        "/Base/PlasmaGun2"
     ],
-    "initialItemMain": "/Base/Pistol",
-    "initialItemSecondary": "/Base/TimeGrenade",
+    "initialItemMain": "/Base/PlasmaGun",
+    "initialItemSecondary": "/Base/PlasmaGun2",
     "deathSound": "voice_male_grunt_pain_death_07.wav",
     "defaultRandomSkybox": [
         "/Skybox/AllSky_FantasySky_Mid",
@@ -93,7 +95,8 @@
         {
             "key": "flashlight",
             "value": true,
-            "resetOnCheckpoint": false
+            "resetOnCheckpoint": false,
+            "isLocal": true
         }
     ],
     "speech": [
@@ -169,13 +172,30 @@
     ],
     "spawnRules": [
         {
-            "key": "SpiderBot",
+            "key": "SpiderBots",
+            "layer": "SpiderBots",
             "objectKeys": [
                 "SpiderBot"
             ],
-            "amount": 17,
             "orientation": "Random_Side",
             "progressionStart": 0.15,
+            "progressionEnd": 0.8,
+            "shieldProbability": 0.0,
+            "enabledFormula": "$spiderbots"
+        },
+        {
+            "key": "ShieldedSpiderBots",
+            "layer": "SpiderBots",
+            "objectKeys": [
+                "SpiderBot"
+            ],
+            "amount": 7,
+            "orientation": "Random_Side",
+            "progressionStart": 0.6,
+            "shieldProbability": 1.0,
+            "shieldRegenerationPeriod": 8.0,
+            "minShields": 1,
+            "maxShields": 4,
             "enabledFormula": "$spiderbots"
         },
         {
@@ -199,7 +219,8 @@
             "progressionStart": 0.2,
             "restrictions": [
                 "corridor",
-                "!nextToTransition"
+                "!nextToTransition",
+                "!behindTransition"
             ],
             "y": 2.0,
             "moveRandomly": "0.8;0.8;0"
@@ -214,7 +235,8 @@
             "progressionStart": 0.4,
             "restrictions": [
                 "corridor",
-                "!nextToTransition"
+                "!nextToTransition",
+                "!behindTransition"
             ],
             "moveRandomly": "0;0;0"
         },
@@ -229,7 +251,8 @@
             "progressionStart": 0.6,
             "restrictions": [
                 "corridor",
-                "!nextToTransition"
+                "!nextToTransition",
+                "!behindTransition"
             ],
             "y": 2.0,
             "moveRandomly": "0.8;0.8;0"
@@ -266,17 +289,65 @@
             "amountType": "Probability",
             "amount": 20,
             "orientation": "Free_Side",
-            "y": 4.0,
-            "minDistance": 1
+            "minDistance": 1,
+            "y": 4.0
         },
         {
-            "key": "Targets",
+            "key": "PlainTurrets",
+            "layer": "Turrets",
             "objectKeys": [
                 "TargetTurret"
             ],
-            "amount": 25,
+            "amount": 5,
             "orientation": "Path_Back",
-            "snap": true
+            "progressionEnd": 0.3,
+            "snap": true,
+            "shieldProbability": 0.0
+        },
+        {
+            "key": "PartiallyShieldedTurrets",
+            "layer": "Turrets",
+            "objectKeys": [
+                "TargetTurret"
+            ],
+            "amount": 6,
+            "orientation": "Path_Back",
+            "progressionStart": 0.3,
+            "progressionEnd": 0.6,
+            "snap": true,
+            "shieldProbability": 0.5,
+            "minShields": 1,
+            "maxShields": 3
+        },
+        {
+            "key": "ShieldedTurrets",
+            "layer": "Turrets",
+            "objectKeys": [
+                "TargetTurret"
+            ],
+            "amount": 5,
+            "orientation": "Path_Back",
+            "progressionStart": 0.6,
+            "progressionEnd": 0.8,
+            "snap": true,
+            "shieldProbability": 1.0,
+            "minShields": 2,
+            "maxShields": 5
+        },
+        {
+            "key": "HeavyShieldedTurrets",
+            "layer": "Turrets",
+            "objectKeys": [
+                "TargetTurret"
+            ],
+            "amount": 4,
+            "orientation": "Path_Back",
+            "progressionStart": 0.8,
+            "snap": true,
+            "shieldProbability": 1.0,
+            "shieldRegenerationPeriod": 3.0,
+            "minShields": 3,
+            "maxShields": 6
         },
         {
             "key": "Targets2",
@@ -315,6 +386,19 @@
             "dontCountAsTarget": true
         },
         {
+            "key": "TestShield",
+            "objectKeys": [
+                "TestShield"
+            ],
+            "amount": 1,
+            "validZones": [
+                "ShootingRange"
+            ],
+            "validSockets": [
+                "TestShield"
+            ]
+        },
+        {
             "key": "TowerTopTargets",
             "objectKeys": [
                 "TargetTurret"
@@ -326,8 +410,8 @@
             "validSockets": [
                 "TopEnemy"
             ],
-            "health": 5,
-            "scale": "4"
+            "scale": "4",
+            "health": 5
         },
         {
             "key": "TowerSideTargets",
@@ -367,6 +451,7 @@
                 "y": 0.5,
                 "z": 0.5
             },
+            "height": 3,
             "pivotType": "Bottom_Center"
         },
         {
@@ -376,6 +461,7 @@
                 "y": 0.5,
                 "z": 0.5
             },
+            "height": 3,
             "pivotType": "Bottom_Center"
         },
         {
@@ -667,12 +753,32 @@
             "width": 4,
             "height": 5,
             "standalone": true
+        },
+        {
+            "objectKey": "Sceneries/Generic",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Sceneries/Towers",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
         }
     ],
     "usedTags": [
         "Enemy"
     ],
     "dependencies": {
+        "totalObjects": 1001,
+        "totalAgents": 17,
         "referencedWorlds": [
             "Base",
             "Skybox",
@@ -691,6 +797,7 @@
             "/Base/Materials/Metal",
             "/Base/Materials/Stone",
             "/Base/Pieces/Button",
+            "/Base/Pieces/ButtonCentered",
             "/Base/Pieces/Ceiling",
             "/Base/Pieces/DirectionIndicator",
             "/Base/Pieces/Door",
@@ -713,15 +820,19 @@
             "/Base/Pieces/Maze/MazeTripple",
             "/Base/Pieces/maze-exit",
             "/Base/Pieces/Pistol",
+            "/Base/Pieces/PlasmaGun",
+            "/Base/Pieces/PlasmaGun2",
             "/Base/Pieces/Poster",
             "/Base/Pieces/Scenery",
+            "/Base/Pieces/Shotgun",
             "/Base/Pieces/SilencedPistol",
             "/Base/Pieces/Switch",
             "/Base/Pieces/Texture",
             "/Base/Pieces/TimeGrenade",
             "/Base/Pieces/Transition",
             "/Base/Pieces/Wall",
-            "/Skybox/Materials/Cold Sunset",
+            "/Base/Pieces/Waypoint",
+            "/Skybox/Materials/AllSky_FantasySky_Mid",
             "/TrainingGround/Audio/Music/Modern Dark LOOP.wav",
             "/TrainingGround/Data/ElevatorMaze",
             "/TrainingGround/Data/MiniBoss",
@@ -744,6 +855,8 @@
             "/TrainingGround/Pieces/Oil2",
             "/TrainingGround/Pieces/RotatingLaser",
             "/TrainingGround/Pieces/Sandbag",
+            "/TrainingGround/Pieces/Sceneries/Generic",
+            "/TrainingGround/Pieces/Sceneries/Towers",
             "/TrainingGround/Pieces/ShootingRange",
             "/TrainingGround/Pieces/Sign-HighVoltage",
             "/TrainingGround/Pieces/Sign-NoDrinking",
@@ -754,7 +867,7 @@
             "/TrainingGround/Pieces/TargetDisc",
             "/TrainingGround/Pieces/TargetDummy",
             "/TrainingGround/Pieces/TargetTurret",
-            "/TrainingGround/Pieces/TimeGranade",
+            "/TrainingGround/Pieces/TestShield",
             "/TrainingGround/Pieces/VerticalLaserBeam",
             "/TrainingGround/Pieces/Wheel",
             "/TrainingGround/Pieces/WoodenDoorFrame",
@@ -779,11 +892,11 @@
             "A laser grid activated, blocking the way. Destroy the power source!",
             "Do you hear that sound? Something is moving in this labyrinth.",
             "I'd not try petting this thing if I were you.",
+            "Step onto the marker to open the portal, and then walk through!",
             "Take cover! The turrets shoot on sight.",
             "Test your gear and head on!",
             "The laser grid is down! You should be able to proceed now.",
             "This will not be easy."
-        ],
-        "totalObjects": 988
+        ]
     }
 }

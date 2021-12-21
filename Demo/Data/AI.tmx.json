@@ -53,6 +53,35 @@
                 }, 
                 {
                  "draworder":"topdown",
+                 "id":31,
+                 "name":"Scenery",
+                 "objects":[
+                        {
+                         "gid":39,
+                         "height":50,
+                         "id":78,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"SceneryName",
+                                 "type":"string",
+                                 "value":"OuterRoom"
+                                }],
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":50,
+                         "x":50,
+                         "y":100
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
                  "id":30,
                  "name":"Walls",
                  "objects":[
@@ -260,7 +289,37 @@
                  "draworder":"topdown",
                  "id":27,
                  "name":"Objects",
-                 "objects":[],
+                 "objects":[
+                        {
+                         "gid":42,
+                         "height":50,
+                         "id":77,
+                         "name":"",
+                         "rotation":-180,
+                         "type":"Drone",
+                         "visible":true,
+                         "width":50,
+                         "x":150,
+                         "y":0
+                        }, 
+                        {
+                         "gid":43,
+                         "height":50,
+                         "id":79,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"Y",
+                                 "type":"int",
+                                 "value":1
+                                }],
+                         "rotation":0,
+                         "type":"Waves",
+                         "visible":true,
+                         "width":50,
+                         "x":100,
+                         "y":100
+                        }],
                  "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
@@ -280,10 +339,15 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":31,
- "nextobjectid":77,
+ "nextlayerid":32,
+ "nextobjectid":80,
  "orientation":"orthogonal",
  "properties":[
+        {
+         "name":"NavigationToScenery",
+         "type":"bool",
+         "value":true
+        }, 
         {
          "name":"NoAgents",
          "type":"bool",
@@ -297,7 +361,7 @@
         {
          "name":"Skybox",
          "type":"string",
-         "value":"\/Skybox\/mossymountains\n"
+         "value":"\/Skybox\/mossymountains"
         }],
  "renderorder":"left-up",
  "tiledversion":"1.7.1",
@@ -315,7 +379,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":27,
          "tileheight":50,
          "tiles":[
                 {
@@ -862,12 +926,30 @@
                          "value":true
                         }],
                  "type":"\/Base\/Explicit-Spawn"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/_Tiled\/Master Images\/waypoint.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Key",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Waypoint"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":33,
+         "firstgid":34,
          "grid":
             {
              "height":1,

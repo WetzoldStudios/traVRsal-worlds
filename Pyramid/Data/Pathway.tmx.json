@@ -578,7 +578,7 @@
                  "name":"Planks",
                  "objects":[
                         {
-                         "gid":42,
+                         "gid":43,
                          "height":50,
                          "id":78,
                          "name":"",
@@ -596,7 +596,7 @@
                          "y":0
                         }, 
                         {
-                         "gid":42,
+                         "gid":43,
                          "height":50,
                          "id":79,
                          "name":"",
@@ -614,7 +614,7 @@
                          "y":50
                         }, 
                         {
-                         "gid":42,
+                         "gid":43,
                          "height":50,
                          "id":80,
                          "name":"",
@@ -649,7 +649,7 @@
                  "name":"Blocker",
                  "objects":[
                         {
-                         "gid":41,
+                         "gid":42,
                          "height":50,
                          "id":98,
                          "name":"",
@@ -683,7 +683,7 @@
                  "name":"Objects",
                  "objects":[
                         {
-                         "gid":40,
+                         "gid":41,
                          "height":50,
                          "id":97,
                          "name":"",
@@ -712,7 +712,7 @@
                  "name":"Scenery",
                  "objects":[
                         {
-                         "gid":38,
+                         "gid":39,
                          "height":50,
                          "id":99,
                          "name":"",
@@ -788,7 +788,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":27,
          "tileheight":50,
          "tiles":[
                 {
@@ -1335,12 +1335,30 @@
                          "value":true
                         }],
                  "type":"\/Base\/Explicit-Spawn"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/_Tiled\/Master Images\/waypoint.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Key",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Waypoint"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":33,
+         "firstgid":34,
          "grid":
             {
              "height":1,

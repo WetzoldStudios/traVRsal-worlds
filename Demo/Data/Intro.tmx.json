@@ -299,7 +299,7 @@
                  "name":"Objects",
                  "objects":[
                         {
-                         "gid":39,
+                         "gid":40,
                          "height":50,
                          "id":66,
                          "name":"",
@@ -327,7 +327,7 @@
                          "y":50
                         }, 
                         {
-                         "gid":39,
+                         "gid":40,
                          "height":50,
                          "id":67,
                          "name":"",
@@ -339,7 +339,7 @@
                          "y":150
                         }, 
                         {
-                         "gid":39,
+                         "gid":40,
                          "height":50,
                          "id":71,
                          "name":"",
@@ -459,7 +459,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":27,
          "tileheight":50,
          "tiles":[
                 {
@@ -1006,12 +1006,30 @@
                          "value":true
                         }],
                  "type":"\/Base\/Explicit-Spawn"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/_Tiled\/Master Images\/waypoint.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Key",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Waypoint"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":33,
+         "firstgid":34,
          "grid":
             {
              "height":1,

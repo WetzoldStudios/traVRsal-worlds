@@ -1,7 +1,7 @@
 {
     "key": "Gallery",
-    "version": "0.0.83",
-    "versionCode": 37,
+    "version": "0.0.91",
+    "versionCode": 45,
     "name": "The Gallery",
     "shortDescription": "A stunning virtual gallery full of amazing images.",
     "longDescription": "Walk through a stunning virtual gallery composed of either the most recent amazing photos from Unsplash.com, GIPHY or use your own images you stored on your device before.",
@@ -76,6 +76,7 @@
     "imageProviders": [
         {
             "key": "photos",
+            "order": "Random",
             "repeatWhenDepleted": true,
             "providerFormula": "$imageProvider"
         }
@@ -114,6 +115,19 @@
     ],
     "spawnRules": [
         {
+            "companions": [
+                {
+                    "key": "FrameLights",
+                    "objectKeys": [
+                        "Lamp_03"
+                    ],
+                    "orientation": "Same",
+                    "y": 4.0,
+                    "maxScale": 1.5,
+                    "snap": true,
+                    "dontCountAsObstacle": true
+                }
+            ],
             "key": "Frames",
             "objectKeys": [
                 "Frame_01",
@@ -134,7 +148,9 @@
                 "Frame"
             ],
             "scale": "1.2",
-            "maxScale": 1.5,
+            "maxScale": 1.5
+        },
+        {
             "companions": [
                 {
                     "key": "FrameLights",
@@ -142,14 +158,13 @@
                         "Lamp_03"
                     ],
                     "orientation": "Same",
-                    "maxScale": 1.5,
                     "y": 4.0,
+                    "maxScale": 1.5,
                     "snap": true,
+                    "considerPlayerHeight": true,
                     "dontCountAsObstacle": true
                 }
-            ]
-        },
-        {
+            ],
             "key": "MazeFrames",
             "objectKeys": [
                 "Frame_01",
@@ -170,24 +185,10 @@
             "restrictions": [
                 "maze"
             ],
-            "maxScale": 1.5,
             "y": 3.0,
+            "maxScale": 1.5,
             "snap": true,
-            "considerPlayerHeight": true,
-            "companions": [
-                {
-                    "key": "FrameLights",
-                    "objectKeys": [
-                        "Lamp_03"
-                    ],
-                    "orientation": "Same",
-                    "maxScale": 1.5,
-                    "y": 4.0,
-                    "snap": true,
-                    "considerPlayerHeight": true,
-                    "dontCountAsObstacle": true
-                }
-            ]
+            "considerPlayerHeight": true
         },
         {
             "key": "BigFrames",
@@ -239,8 +240,8 @@
                 "deadend",
                 "maze"
             ],
-            "maxScale": 1.5,
             "y": 3.0,
+            "maxScale": 1.5,
             "considerPlayerHeight": true
         },
         {
@@ -408,6 +409,7 @@
         }
     ],
     "dependencies": {
+        "totalObjects": 1163,
         "referencedWorlds": [
             "Base",
             "Gallery"
@@ -441,6 +443,8 @@
             "/Base/Pieces/Maze/MazeDoubleCorner",
             "/Base/Pieces/Maze/MazeTripple",
             "/Base/Pieces/Pistol",
+            "/Base/Pieces/PlasmaGun",
+            "/Base/Pieces/PlasmaGun2",
             "/Base/Pieces/Poster",
             "/Base/Pieces/Scenery",
             "/Base/Pieces/SilencedPistol",
@@ -492,7 +496,8 @@
             "[exit]",
             "[Random]"
         ],
-        "referencedSpeech": [],
-        "totalObjects": 1159
+        "referencedSpeech": [
+            "Step onto the marker to open the portal, and then walk through!"
+        ]
     }
 }

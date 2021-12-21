@@ -1,4 +1,6 @@
 {
+    "totalObjects": 940,
+    "totalAgents": 0,
     "referencedWorlds": [
         "Base",
         "Pyramid"
@@ -14,6 +16,7 @@
         "/Base/Materials/FlatPlates",
         "/Base/Materials/Stone",
         "/Base/Pieces/Button",
+        "/Base/Pieces/ButtonCentered",
         "/Base/Pieces/Ceiling",
         "/Base/Pieces/DirectionIndicator",
         "/Base/Pieces/Door",
@@ -39,11 +42,14 @@
         "/Base/Pieces/MultiDisplay",
         "/Base/Pieces/no-spawn",
         "/Base/Pieces/Pistol",
+        "/Base/Pieces/PlasmaGun",
+        "/Base/Pieces/PlasmaGun2",
         "/Base/Pieces/Poster",
         "/Base/Pieces/Redirection",
         "/Base/Pieces/Sandstone",
         "/Base/Pieces/Sandstone2",
         "/Base/Pieces/Scenery",
+        "/Base/Pieces/Shotgun",
         "/Base/Pieces/SilencedPistol",
         "/Base/Pieces/StoneWall",
         "/Base/Pieces/StoneWall2",
@@ -51,6 +57,7 @@
         "/Base/Pieces/TimeGrenade",
         "/Base/Pieces/Transition",
         "/Base/Pieces/Wall",
+        "/Base/Pieces/Waypoint",
         "/Pyramid/Audio/Music/egyptian2.mp3",
         "/Pyramid/Audio/Music/FutureWorld_Darkness_Loop_02.ogg",
         "/Pyramid/Data/Breach",
@@ -100,6 +107,7 @@
         "/Pyramid/Sceneries/SnakePit",
         "[exit]"
     ],
-    "referencedSpeech": [],
-    "totalObjects": 935
+    "referencedSpeech": [
+        "Step onto the marker to open the portal, and then walk through!"
+    ]
 }

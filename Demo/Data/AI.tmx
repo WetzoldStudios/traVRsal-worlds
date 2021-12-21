@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="31" nextobjectid="77">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="32" nextobjectid="80">
  <properties>
+  <property name="NavigationToScenery" type="bool" value="true"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Skybox">/Skybox/mossymountains
-</property>
+  <property name="Skybox" value="/Skybox/mossymountains"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="34" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -34,6 +34,13 @@
 3,3,3
 </data>
   </layer>
+  <objectgroup id="31" name="Scenery">
+   <object id="78" gid="39" x="50" y="100" width="50" height="50">
+    <properties>
+     <property name="SceneryName" value="OuterRoom"/>
+    </properties>
+   </object>
+  </objectgroup>
   <objectgroup id="30" name="Walls">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="true"/>
@@ -65,6 +72,13 @@
 </data>
   </layer>
   <objectgroup id="4" name="Transitions"/>
-  <objectgroup id="27" name="Objects"/>
+  <objectgroup id="27" name="Objects">
+   <object id="77" type="Drone" gid="42" x="150" y="0" width="50" height="50" rotation="-180"/>
+   <object id="79" type="Waves" gid="43" x="100" y="100" width="50" height="50">
+    <properties>
+     <property name="Y" type="int" value="1"/>
+    </properties>
+   </object>
+  </objectgroup>
  </group>
 </map>

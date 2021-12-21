@@ -15,7 +15,7 @@
                         {
                          "name":"Materials",
                          "type":"string",
-                         "value":"[ground]"
+                         "value":"DarkGrid"
                         }, 
                         {
                          "name":"Walkable",
@@ -23,7 +23,7 @@
                          "value":true
                         }],
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":3,
                  "x":0,
                  "y":0
@@ -82,7 +82,7 @@
                         {
                          "name":"Materials",
                          "type":"string",
-                         "value":"[walls]"
+                         "value":"DarkGrid"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -105,6 +105,16 @@
                                  "name":"Anchor",
                                  "type":"string",
                                  "value":"0,1"
+                                }, 
+                                {
+                                 "name":"Materials",
+                                 "type":"string",
+                                 "value":"DarkGrid"
+                                }, 
+                                {
+                                 "name":"Virtual",
+                                 "type":"bool",
+                                 "value":true
                                 }],
                          "rotation":180,
                          "type":"",
@@ -175,7 +185,7 @@
                  "name":"Posters",
                  "objects":[
                         {
-                         "gid":39,
+                         "gid":40,
                          "height":50,
                          "id":68,
                          "name":"",
@@ -227,7 +237,7 @@
          "y":0
         }],
  "nextlayerid":33,
- "nextobjectid":69,
+ "nextobjectid":74,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -251,6 +261,11 @@
          "value":"\/Skybox\/AllSky_Space_AnotherPlanet"
         }, 
         {
+         "name":"SkyboxPosition",
+         "type":"string",
+         "value":"0;100;0"
+        }, 
+        {
          "name":"Speak",
          "type":"string",
          "value":"Another way to get to a different zone, and especially to widen the perceived play-area, is to use a moving platform. Hop on!"
@@ -271,7 +286,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":27,
          "tileheight":50,
          "tiles":[
                 {
@@ -818,12 +833,30 @@
                          "value":true
                         }],
                  "type":"\/Base\/Explicit-Spawn"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/_Tiled\/Master Images\/waypoint.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Key",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Waypoint"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":33,
+         "firstgid":34,
          "grid":
             {
              "height":1,

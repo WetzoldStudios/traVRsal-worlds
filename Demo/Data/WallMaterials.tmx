@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="35" nextobjectid="83">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="35" nextobjectid="83">
  <properties>
   <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
-  <property name="Offset" value="15;0;0"/>
+  <property name="Offset" value="2zx;0;0"/>
   <property name="Speak" value="Now let's get into world building. The easiest way is to simply exchange the materials of the walls, either for the whole wall, per tile or randomly. Check out the walls around you."/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="34" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
@@ -105,7 +105,7 @@
    </object>
   </objectgroup>
   <objectgroup id="30" name="Signs" visible="0">
-   <object id="66" type="SignRight" gid="39" x="100" y="0" width="50" height="50" rotation="-180">
+   <object id="66" type="SignRight" gid="40" x="100" y="0" width="50" height="50" rotation="-180">
     <properties>
      <property name="Anchor" value="-1,0"/>
      <property name="Snap" type="bool" value="true"/>

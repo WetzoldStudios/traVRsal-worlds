@@ -1,6 +1,6 @@
 {
-    "version": "0.0.400",
-    "versionCode": 177,
+    "version": "0.0.626",
+    "versionCode": 403,
     "name": "Shared Level Assets",
     "shortDescription": "Contains common reusable items.",
     "isVirtual": true,
@@ -32,6 +32,15 @@
         }
     ],
     "objectSpecs": [
+        {
+            "objectKey": "ButtonCentered",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
         {
             "objectKey": "DirectionIndicator",
             "scale": {
@@ -217,7 +226,34 @@
             "pivotType": "Center"
         },
         {
+            "objectKey": "PlasmaGun",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "PlasmaGun2",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
             "objectKey": "Poster",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Shotgun",
             "scale": {
                 "x": 1.0,
                 "y": 1.0,
@@ -260,6 +296,16 @@
                 "z": 1.0
             },
             "pivotType": "Bottom_Front_Center"
+        },
+        {
+            "objectKey": "Waypoint",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "adjustMaterials": false,
+            "pivotType": "Bottom_Center"
         }
     ],
     "usedTags": [

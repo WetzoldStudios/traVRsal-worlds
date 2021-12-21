@@ -1,7 +1,7 @@
 {
     "key": "SpaceMan",
-    "version": "0.0.84",
-    "versionCode": 26,
+    "version": "0.0.133",
+    "versionCode": 75,
     "name": "Space-Man",
     "shortDescription": "Hurry and loot the station without getting caught!",
     "longDescription": "Having just landed on an automated space station, try to collect as much scrap as possible without getting caught and beat your previous highscore!",
@@ -180,21 +180,10 @@
                 "Orb"
             ],
             "amount": 4,
-            "dontCountAsObstacle": true,
-            "enabledFormula": "$drones"
+            "enabledFormula": "$drones",
+            "dontCountAsObstacle": true
         },
         {
-            "key": "SafetyZone",
-            "objectKeys": [
-                "SafetyZone"
-            ],
-            "amountType": "Probability",
-            "amount": 100,
-            "restrictions": [
-                "deadend"
-            ],
-            "stretchToCeiling": true,
-            "dontCountAsObstacle": true,
             "companions": [
                 {
                     "key": "SafetyZoneLight",
@@ -206,7 +195,18 @@
                     "snap": true
                 }
             ],
-            "enabledFormula": "$drones"
+            "key": "SafetyZone",
+            "objectKeys": [
+                "SafetyZone"
+            ],
+            "amountType": "Probability",
+            "amount": 100,
+            "restrictions": [
+                "deadend"
+            ],
+            "stretchToCeiling": true,
+            "enabledFormula": "$drones",
+            "dontCountAsObstacle": true
         },
         {
             "key": "Pipes",
@@ -307,8 +307,8 @@
             ],
             "amountType": "Probability",
             "amount": 30,
-            "y": 2.5,
             "minDistance": 1,
+            "y": 2.5,
             "dontCountAsObstacle": true
         }
     ],
@@ -506,6 +506,8 @@
         "Enemy"
     ],
     "dependencies": {
+        "totalObjects": 449,
+        "totalAgents": 4,
         "referencedWorlds": [
             "Base",
             "SpaceMan"
@@ -519,6 +521,7 @@
             "/Base/Data/MazeRightCorner",
             "/Base/Data/Mazes",
             "/Base/Materials/Skyboxes/Stars",
+            "/Base/Pieces/ButtonCentered",
             "/Base/Pieces/Ceiling",
             "/Base/Pieces/Corner",
             "/Base/Pieces/DirectionIndicator",
@@ -542,12 +545,16 @@
             "/Base/Pieces/Maze/MazeTripple",
             "/Base/Pieces/no-spawn",
             "/Base/Pieces/Pistol",
+            "/Base/Pieces/PlasmaGun",
+            "/Base/Pieces/PlasmaGun2",
             "/Base/Pieces/Poster",
+            "/Base/Pieces/Shotgun",
             "/Base/Pieces/SilencedPistol",
             "/Base/Pieces/Texture",
             "/Base/Pieces/TimeGrenade",
             "/Base/Pieces/Transition",
             "/Base/Pieces/Wall",
+            "/Base/Pieces/Waypoint",
             "/SpaceMan/Audio/Music/Space Station LOOP.wav",
             "/SpaceMan/Data/Intro",
             "/SpaceMan/Materials/Wall-Middle",
@@ -588,8 +595,8 @@
             "Be careful. You are cloaked so the drones cannot see you but when you get too close they will detect and kill you.",
             "Do you hear that sound? Seems like we are not alone in here.",
             "Gravity boots engaged. Hurry, time is ticking. Collect as much scrap as you can and find your way out again.",
+            "Step onto the marker to open the portal, and then walk through!",
             "There is some sort of magnetic field in the corners. Maybe it keeps bots away?"
-        ],
-        "totalObjects": 444
+        ]
     }
 }

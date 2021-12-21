@@ -1,11 +1,12 @@
 {
-    "version": "0.0.402",
-    "versionCode": 178,
+    "version": "0.0.628",
+    "versionCode": 404,
     "name": "The Pyramid",
     "shortDescription": "Survive the ancient pyramid's traps.",
     "longDescription": "Discover the secrets of an ancient pyramid, filled with riddles and obstacles. Find all stone fragments, survive and find your way out again.",
     "coverImage": "Cover.png",
     "minAppVersion": "1.1.124",
+    "minCompatibilityVersionCode": 180,
     "measures": [
         "Time",
         "Distance",
@@ -90,7 +91,8 @@
         {
             "key": "flashlight",
             "value": true,
-            "resetOnCheckpoint": false
+            "resetOnCheckpoint": false,
+            "isLocal": true
         },
         {
             "key": "combo-door",
@@ -149,15 +151,6 @@
     ],
     "spawnRules": [
         {
-            "key": "Altars",
-            "objectKeys": [
-                "Altar"
-            ],
-            "orientation": "Random_Side",
-            "restrictions": [
-                "deadend"
-            ],
-            "rotateRandomly": "0;5;0",
             "companions": [
                 {
                     "key": "Fragments",
@@ -169,7 +162,16 @@
                     ],
                     "dontCountAsObstacle": true
                 }
-            ]
+            ],
+            "key": "Altars",
+            "objectKeys": [
+                "Altar"
+            ],
+            "orientation": "Random_Side",
+            "restrictions": [
+                "deadend"
+            ],
+            "rotateRandomly": "0;5;0"
         },
         {
             "key": "DeadEnds",
@@ -210,7 +212,8 @@
             "amountType": "Probability",
             "amount": 15,
             "restrictions": [
-                "!NextToTransition"
+                "!NextToTransition",
+                "!BehindTransition"
             ],
             "minDistance": 1,
             "enabledFormula": "$traps"
@@ -226,10 +229,11 @@
             "orientation": "Free_Side",
             "restrictions": [
                 "FacingOuterBorder",
-                "!NextToTransition"
+                "!NextToTransition",
+                "!BehindTransition"
             ],
-            "y": 2.0,
             "minDistance": 1,
+            "y": 2.0,
             "enabledFormula": "$traps"
         },
         {
@@ -504,6 +508,7 @@
         "Enemy"
     ],
     "dependencies": {
+        "totalObjects": 940,
         "referencedWorlds": [
             "Base",
             "Pyramid"
@@ -519,6 +524,7 @@
             "/Base/Materials/FlatPlates",
             "/Base/Materials/Stone",
             "/Base/Pieces/Button",
+            "/Base/Pieces/ButtonCentered",
             "/Base/Pieces/Ceiling",
             "/Base/Pieces/DirectionIndicator",
             "/Base/Pieces/Door",
@@ -544,11 +550,14 @@
             "/Base/Pieces/MultiDisplay",
             "/Base/Pieces/no-spawn",
             "/Base/Pieces/Pistol",
+            "/Base/Pieces/PlasmaGun",
+            "/Base/Pieces/PlasmaGun2",
             "/Base/Pieces/Poster",
             "/Base/Pieces/Redirection",
             "/Base/Pieces/Sandstone",
             "/Base/Pieces/Sandstone2",
             "/Base/Pieces/Scenery",
+            "/Base/Pieces/Shotgun",
             "/Base/Pieces/SilencedPistol",
             "/Base/Pieces/StoneWall",
             "/Base/Pieces/StoneWall2",
@@ -556,6 +565,7 @@
             "/Base/Pieces/TimeGrenade",
             "/Base/Pieces/Transition",
             "/Base/Pieces/Wall",
+            "/Base/Pieces/Waypoint",
             "/Pyramid/Audio/Music/egyptian2.mp3",
             "/Pyramid/Audio/Music/FutureWorld_Darkness_Loop_02.ogg",
             "/Pyramid/Data/Breach",
@@ -605,7 +615,8 @@
             "/Pyramid/Sceneries/SnakePit",
             "[exit]"
         ],
-        "referencedSpeech": [],
-        "totalObjects": 935
+        "referencedSpeech": [
+            "Step onto the marker to open the portal, and then walk through!"
+        ]
     }
 }

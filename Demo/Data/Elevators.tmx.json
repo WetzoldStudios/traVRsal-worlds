@@ -15,7 +15,7 @@
                         {
                          "name":"Materials",
                          "type":"string",
-                         "value":"[ground]"
+                         "value":"DarkGrid"
                         }, 
                         {
                          "name":"Walkable",
@@ -126,6 +126,12 @@
                          "y":50
                         }],
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"Materials",
+                         "type":"string",
+                         "value":"DarkGrid"
+                        }],
                  "type":"objectgroup",
                  "visible":false,
                  "x":0,
@@ -146,7 +152,7 @@
                         {
                          "name":"Materials",
                          "type":"string",
-                         "value":"[ceiling]"
+                         "value":"DarkGrid"
                         }],
                  "type":"tilelayer",
                  "visible":false,
@@ -193,12 +199,12 @@
                         {
                          "name":"ConnectToCeiling",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"Materials",
                          "type":"string",
-                         "value":"[walls]"
+                         "value":"DarkGrid"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -279,7 +285,7 @@
                  "name":"Signs",
                  "objects":[
                         {
-                         "gid":39,
+                         "gid":40,
                          "height":50,
                          "id":75,
                          "name":"",
@@ -321,7 +327,7 @@
                  "value":2.5
                 }],
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -334,6 +340,12 @@
                  "id":31,
                  "name":"Ground",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"Materials",
+                         "type":"string",
+                         "value":"DarkGrid"
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":3,
@@ -383,10 +395,72 @@
                          "value":true
                         }, 
                         {
+                         "name":"Materials",
+                         "type":"string",
+                         "value":"DarkGrid"
+                        }, 
+                        {
                          "name":"Virtual",
                          "type":"bool",
                          "value":true
                         }],
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "id":37,
+                 "name":"Waypoints",
+                 "objects":[
+                        {
+                         "gid":33,
+                         "height":50,
+                         "id":85,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"Key",
+                                 "type":"string",
+                                 "value":"[zone]-w1"
+                                }, 
+                                {
+                                 "name":"Move",
+                                 "type":"string",
+                                 "value":"1;0;0"
+                                }],
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":50,
+                         "x":100,
+                         "y":150
+                        }, 
+                        {
+                         "gid":33,
+                         "height":50,
+                         "id":87,
+                         "name":"",
+                         "properties":[
+                                {
+                                 "name":"Key",
+                                 "type":"string",
+                                 "value":"[zone]-w2"
+                                }, 
+                                {
+                                 "name":"Move",
+                                 "type":"string",
+                                 "value":"2;-4;0"
+                                }],
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":50,
+                         "x":100,
+                         "y":150
+                        }],
+                 "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
                  "x":0,
@@ -412,6 +486,11 @@
                                  "name":"TargetLocation",
                                  "type":"string",
                                  "value":"WallMaterials"
+                                }, 
+                                {
+                                 "name":"Waypoints",
+                                 "type":"string",
+                                 "value":"[zone]-w1,[zone]-w2"
                                 }],
                          "rotation":0,
                          "type":"Platform",
@@ -433,8 +512,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":37,
- "nextobjectid":84,
+ "nextlayerid":38,
+ "nextobjectid":88,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -455,7 +534,7 @@
         {
          "name":"Offset",
          "type":"string",
-         "value":"0;0;-15"
+         "value":"0;0;-2zz"
         }, 
         {
          "name":"Speak",
@@ -478,7 +557,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":27,
          "tileheight":50,
          "tiles":[
                 {
@@ -1025,12 +1104,30 @@
                          "value":true
                         }],
                  "type":"\/Base\/Explicit-Spawn"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/_Tiled\/Master Images\/waypoint.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Key",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Waypoint"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":33,
+         "firstgid":34,
          "grid":
             {
              "height":1,

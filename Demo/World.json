@@ -1,7 +1,7 @@
 {
     "key": "Demo",
-    "version": "0.0.157",
-    "versionCode": 65,
+    "version": "0.0.259",
+    "versionCode": 167,
     "name": "World-Building Demo",
     "shortDescription": "Show-casing locomotion and available world-building features.",
     "longDescription": "This is an example for world creators to show-case what is possible. Use this for inspiration and as a copy paste resource. The accompanying Unity project including all assets can be downloaded from github and is constantly expanded.",
@@ -29,10 +29,21 @@
         "Time",
         "Distance"
     ],
+    "qualityRules": [
+        {
+            "restrictions": [
+                "LowMemory"
+            ],
+            "overrideRenderScale": true,
+            "renderScale": 0.8,
+            "overrideHQShaders": true
+        }
+    ],
     "deathSound": "death.mp3",
     "imageProviders": [
         {
             "key": "unsplash",
+            "order": "Random",
             "repeatWhenDepleted": true
         }
     ],
@@ -98,11 +109,23 @@
             ],
             "validZones": [
                 "CustomWallsByRule",
-                "Labyrinths"
+                "AI"
             ]
         }
     ],
     "spawnRules": [
+        {
+            "key": "AI",
+            "objectKeys": [
+                "HomingDrone"
+            ],
+            "amount": 1,
+            "validSockets": [
+                "AI"
+            ],
+            "speed": 3.0,
+            "waypoints": "W1,W2,W3"
+        },
         {
             "key": "TransitionFrames",
             "objectKeys": [
@@ -120,7 +143,7 @@
         {
             "key": "DeadEnds",
             "objectKeys": [
-                "SampleObject"
+                "TrackingSampleObject"
             ],
             "amountType": "Probability",
             "amount": 100,
@@ -129,14 +152,14 @@
                 "deadend",
                 "maze"
             ],
+            "y": 3.0,
             "scale": "1.5",
-            "maxScale": 1.5,
-            "y": 3.0
+            "maxScale": 1.5
         },
         {
             "key": "Corners",
             "objectKeys": [
-                "SampleObject"
+                "TrackingSampleObject"
             ],
             "amountType": "Probability",
             "amount": 100,
@@ -145,9 +168,9 @@
                 "corner",
                 "maze"
             ],
+            "y": 4.0,
             "scale": "0.5",
-            "maxScale": 1.5,
-            "y": 4.0
+            "maxScale": 1.5
         },
         {
             "key": "Directions",
@@ -175,8 +198,8 @@
             "validZones": [
                 "Gallery"
             ],
-            "maxScale": 1.5,
             "y": 2.0,
+            "maxScale": 1.5,
             "snap": true
         }
     ],
@@ -191,7 +214,34 @@
             "pivotType": "Center"
         },
         {
+            "objectKey": "BlueBall",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "Drone",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
             "objectKey": "GalleryImage",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "GreenBall",
             "scale": {
                 "x": 1.0,
                 "y": 1.0,
@@ -209,7 +259,25 @@
             "pivotType": "Center"
         },
         {
+            "objectKey": "HomingDrone",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
+        },
+        {
             "objectKey": "Poster",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
+            "objectKey": "RedBall",
             "scale": {
                 "x": 1.0,
                 "y": 1.0,
@@ -236,6 +304,15 @@
             "pivotType": "Center"
         },
         {
+            "objectKey": "TrackingSampleObject",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Center"
+        },
+        {
             "objectKey": "Window",
             "scale": {
                 "x": 1.0,
@@ -253,9 +330,20 @@
             },
             "width": 2,
             "height": 5
+        },
+        {
+            "objectKey": "Sceneries/OuterRoom",
+            "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "pivotType": "Bottom_Center"
         }
     ],
     "dependencies": {
+        "totalObjects": 2302,
+        "totalAgents": 2,
         "referencedWorlds": [
             "Base",
             "Demo",
@@ -274,6 +362,7 @@
             "/Base/Materials/Proto/Green",
             "/Base/Materials/Proto/Red",
             "/Base/Materials/Proto/White",
+            "/Base/Pieces/ButtonCentered",
             "/Base/Pieces/Ceiling",
             "/Base/Pieces/Corner",
             "/Base/Pieces/DirectionIndicator",
@@ -297,16 +386,22 @@
             "/Base/Pieces/Maze/MazeDoubleCorner",
             "/Base/Pieces/Maze/MazeTripple",
             "/Base/Pieces/Pistol",
+            "/Base/Pieces/PlasmaGun",
+            "/Base/Pieces/PlasmaGun2",
             "/Base/Pieces/Poster",
             "/Base/Pieces/Redirection",
+            "/Base/Pieces/Scenery",
+            "/Base/Pieces/Shotgun",
             "/Base/Pieces/SilencedPistol",
             "/Base/Pieces/Texture",
             "/Base/Pieces/TimeGrenade",
             "/Base/Pieces/Transition",
             "/Base/Pieces/Trigger",
             "/Base/Pieces/Wall",
+            "/Base/Pieces/Waypoint",
             "/Demo/Audio/Effects/guide-intro.mp3",
             "/Demo/Audio/Music/Sample.mp3",
+            "/Demo/Data/AI",
             "/Demo/Data/Climbing",
             "/Demo/Data/Construction",
             "/Demo/Data/Crouching",
@@ -318,7 +413,6 @@
             "/Demo/Data/Gravity",
             "/Demo/Data/Hub",
             "/Demo/Data/Intro",
-            "/Demo/Data/Labyrinths",
             "/Demo/Data/MovingPlatform",
             "/Demo/Data/Parcour",
             "/Demo/Data/PlayerDamage",
@@ -328,36 +422,45 @@
             "/Demo/Materials/DarkGrid",
             "/Demo/Pieces/Arrow",
             "/Demo/Pieces/Beam",
+            "/Demo/Pieces/BlueBall",
             "/Demo/Pieces/Climbing",
             "/Demo/Pieces/Crouching",
             "/Demo/Pieces/CustomGround",
             "/Demo/Pieces/CustomObjects",
             "/Demo/Pieces/CustomWalls",
             "/Demo/Pieces/CustomWallsByRule",
+            "/Demo/Pieces/Drone",
             "/Demo/Pieces/Elevator",
             "/Demo/Pieces/Elevators",
             "/Demo/Pieces/Gallery",
             "/Demo/Pieces/GalleryImage",
             "/Demo/Pieces/Gravity",
+            "/Demo/Pieces/GreenBall",
             "/Demo/Pieces/Grip",
+            "/Demo/Pieces/HomingDrone",
             "/Demo/Pieces/Intro",
             "/Demo/Pieces/MovingPlatform",
             "/Demo/Pieces/Platform",
             "/Demo/Pieces/PlayerDamage",
             "/Demo/Pieces/PortalFrame",
             "/Demo/Pieces/Poster",
+            "/Demo/Pieces/RedBall",
             "/Demo/Pieces/SampleObject",
+            "/Demo/Pieces/Sceneries/OuterRoom",
             "/Demo/Pieces/SignLeft",
             "/Demo/Pieces/SignRight",
             "/Demo/Pieces/Sound",
             "/Demo/Pieces/Spike",
             "/Demo/Pieces/TileCube",
             "/Demo/Pieces/Timer",
+            "/Demo/Pieces/TrackingSampleObject",
             "/Demo/Pieces/Wall",
             "/Demo/Pieces/WallMaterials",
+            "/Demo/Pieces/Waves",
             "/Demo/Pieces/Window",
             "/Demo/Pieces/Window2X",
             "/Demo/Pieces/WorldTimer",
+            "/Demo/Sceneries/OuterRoom",
             "/Skybox/Materials/AllSky_Space_AnotherPlanet",
             "/Skybox/Materials/Cartoon_Airbrush_Day_NoSun",
             "/Skybox/Materials/Cartoon_SunSetLightClouds",
@@ -377,14 +480,16 @@
             "Here you see some objects that show basic placement and rotation options as well as data binding and timers in action.",
             "Now let's get into world building. The easiest way is to simply exchange the materials of the walls, either for the whole wall, per tile or randomly. Check out the walls around you.",
             "Now that we have tackled walls and the outside, let's focus on what can be done inside. A very interesting way to connect zones is to create small labyrinths. The arrows on the floor will guide you. Inside the labyrinth objects can be placed through rules. These can include constraints like targeting only corners, dead-ends or to set limits to the amount, minimum distance and more.",
+            "Objects like the cubes over there are placed onto the grid, either manually or through rules. Each grid with all objects in it is called a zone. You can travel between zones by different means. The most immersive one is to simply walk there using a portal like the one in front of you. Step through!",
+            "Step onto the marker to open the portal, and then walk through!",
             "This zone features a much lower ceiling so duck to get through!",
             "This zone is all about sound and effects.",
             "Transitions to other zones can trigger audio like this text, and as you hear also cross-fade in new music in the background.",
+            "Triggers like the one you just entered can cause sound to be played or text to be spoken",
             "Walls don't have to be all single tiles. You can also use segments spanning the whole height and also segments spanning multiple tiles in width.",
             "What does go up, must come down. And gravity will do the job for you. Falling can be a great form of locomotion in itself. And also your demise.",
             "You can also take damage. This zone contains a trap which you should avoid and a pit you should not fall down into. Try both. Upon death, custom audio can be played.",
             "You can load images at runtime, either from the world or device or from any URL, Unsplash or GIPHY.\n\nThis concludes the guided tour and you can continue to explore on your own. I might be the Robot Overloard, but please do support Robert who is developing this project as a solo dev by spreading the word and leaving a review. He will be very happy. And I will get my electricity. Take care and bye bye."
-        ],
-        "totalObjects": 2261
+        ]
     }
 }

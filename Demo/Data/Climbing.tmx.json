@@ -137,7 +137,7 @@
                  "name":"Grips",
                  "objects":[
                         {
-                         "gid":41,
+                         "gid":42,
                          "height":50,
                          "id":72,
                          "name":"",
@@ -155,7 +155,7 @@
                          "y":50
                         }, 
                         {
-                         "gid":41,
+                         "gid":42,
                          "height":50,
                          "id":73,
                          "name":"",
@@ -167,7 +167,7 @@
                          "y":0
                         }, 
                         {
-                         "gid":41,
+                         "gid":42,
                          "height":50,
                          "id":77,
                          "name":"",
@@ -347,7 +347,7 @@
                  "name":"Grips",
                  "objects":[
                         {
-                         "gid":41,
+                         "gid":42,
                          "height":50,
                          "id":71,
                          "name":"",
@@ -365,7 +365,7 @@
                          "y":50
                         }, 
                         {
-                         "gid":41,
+                         "gid":42,
                          "height":50,
                          "id":75,
                          "name":"",
@@ -377,7 +377,7 @@
                          "y":0
                         }, 
                         {
-                         "gid":41,
+                         "gid":42,
                          "height":50,
                          "id":76,
                          "name":"",
@@ -472,7 +472,7 @@
          "margin":0,
          "name":"Master",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":27,
          "tileheight":50,
          "tiles":[
                 {
@@ -1019,12 +1019,30 @@
                          "value":true
                         }],
                  "type":"\/Base\/Explicit-Spawn"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/..\/_Tiled\/Master Images\/waypoint.png",
+                 "imageheight":50,
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"Anchor",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"Key",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "type":"\/Base\/Waypoint"
                 }],
          "tilewidth":50
         }, 
         {
          "columns":0,
-         "firstgid":33,
+         "firstgid":34,
          "grid":
             {
              "height":1,

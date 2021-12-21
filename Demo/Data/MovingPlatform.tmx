@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="33" nextobjectid="69">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="3" height="3" tilewidth="50" tileheight="50" infinite="0" nextlayerid="33" nextobjectid="74">
  <properties>
   <property name="Chapter" value="walkthrough"/>
   <property name="NoAgents" type="bool" value="false"/>
   <property name="NoSpawning" type="bool" value="false"/>
   <property name="Skybox" value="/Skybox/AllSky_Space_AnotherPlanet"/>
+  <property name="SkyboxPosition" value="0;100;0"/>
   <property name="Speak" value="Another way to get to a different zone, and especially to widen the perceived play-area, is to use a moving platform. Hop on!"/>
  </properties>
  <tileset firstgid="1" source="../../_Tiled/Master.tsx"/>
- <tileset firstgid="33" source="../../_Tiled/Deco.tsx"/>
+ <tileset firstgid="34" source="../../_Tiled/Deco.tsx"/>
  <group id="5" name="Floor 0">
   <properties>
    <property name="Height" type="float" value="2.5"/>
   </properties>
-  <layer id="1" name="Ground" width="3" height="3">
+  <layer id="1" name="Ground" width="3" height="3" visible="0">
    <properties>
-    <property name="Materials" value="[ground]"/>
+    <property name="Materials" value="DarkGrid"/>
     <property name="Walkable" type="bool" value="true"/>
    </properties>
    <data encoding="csv">
@@ -24,7 +25,7 @@
 4,0,4
 </data>
   </layer>
-  <objectgroup id="29" name="Ground" locked="1">
+  <objectgroup id="29" name="Ground">
    <object id="65" gid="4" x="50" y="150" width="50" height="50">
     <properties>
      <property name="Anchor" value="-1,0"/>
@@ -36,7 +37,7 @@
   <layer id="3" name="Walls" width="3" height="3">
    <properties>
     <property name="ConnectToCeiling" type="bool" value="false"/>
-    <property name="Materials" value="[walls]"/>
+    <property name="Materials" value="DarkGrid"/>
    </properties>
    <data encoding="csv">
 2684354566,3221225477,3221225478,
@@ -48,10 +49,12 @@
    <object id="67" gid="5" x="100" y="50" width="50" height="50" rotation="180">
     <properties>
      <property name="Anchor" value="0,1"/>
+     <property name="Materials" value="DarkGrid"/>
+     <property name="Virtual" type="bool" value="true"/>
     </properties>
    </object>
   </objectgroup>
-  <objectgroup id="4" name="Transitions">
+  <objectgroup id="4" name="Transitions" locked="1">
    <object id="66" type="Platform" gid="29" x="50" y="150" width="50" height="50">
     <properties>
      <property name="Anchor" value="-1,0"/>
@@ -62,7 +65,7 @@
   </objectgroup>
   <objectgroup id="27" name="Objects"/>
   <objectgroup id="32" name="Posters">
-   <object id="68" type="Poster" gid="39" x="100" y="0" width="50" height="50" rotation="180">
+   <object id="68" type="Poster" gid="40" x="100" y="0" width="50" height="50" rotation="180">
     <properties>
      <property name="Image" value="https://travrsal.com/img/OutOrDead_EngineDescription.jpg"/>
      <property name="Move" value="0;0;-3"/>

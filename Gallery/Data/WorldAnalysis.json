@@ -1,4 +1,6 @@
 {
+    "totalObjects": 1163,
+    "totalAgents": 0,
     "referencedWorlds": [
         "Base",
         "Gallery"
@@ -32,6 +34,8 @@
         "/Base/Pieces/Maze/MazeDoubleCorner",
         "/Base/Pieces/Maze/MazeTripple",
         "/Base/Pieces/Pistol",
+        "/Base/Pieces/PlasmaGun",
+        "/Base/Pieces/PlasmaGun2",
         "/Base/Pieces/Poster",
         "/Base/Pieces/Scenery",
         "/Base/Pieces/SilencedPistol",
@@ -83,6 +87,7 @@
         "[exit]",
         "[Random]"
     ],
-    "referencedSpeech": [],
-    "totalObjects": 1159
+    "referencedSpeech": [
+        "Step onto the marker to open the portal, and then walk through!"
+    ]
 }
